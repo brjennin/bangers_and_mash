@@ -1,0 +1,18 @@
+PODS:
+  - Fleet (3.3.0)
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
+
+DEPENDENCIES:
+  - Fleet
+  - Nimble
+  - Quick
+
+SPEC CHECKSUMS:
+  Fleet: 9620199386ff6da0b5a53556935ce7847259bc77
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+
+PODFILE CHECKSUM: cf0784fd44c0cec9a8d5644a1bf7a4bf3398bc68
+
+COCOAPODS: 1.2.1

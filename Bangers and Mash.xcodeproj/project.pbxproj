@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785408949DF4C140025F8CAB /* Pods_Bangers_and_MashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */; };
+		A60BE110DC42D84BCA118505 /* Pods_Bangers_and_MashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */; };
+		AE471F011F26702D00BB03B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE471F001F26702D00BB03B6 /* main.swift */; };
 		AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */; };
 		AE97EB3E1F26605800E3F8B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB3D1F26605800E3F8B7 /* ViewController.swift */; };
 		AE97EB411F26605800E3F8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB3F1F26605800E3F8B7 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		AE97EB461F26605800E3F8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB441F26605800E3F8B7 /* LaunchScreen.storyboard */; };
 		AE97EB511F26605800E3F8B7 /* Bangers_and_MashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB501F26605800E3F8B7 /* Bangers_and_MashTests.swift */; };
 		AE97EB5C1F26605800E3F8B7 /* Bangers_and_MashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */; };
+		ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08CA56B1CA1570BD68DBA59F /* Pods-Bangers and MashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D7D804B5D41DB1FDC24CAB9 /* Pods-Bangers and Mash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.release.xcconfig"; sourceTree = "<group>"; };
+		62B1D9A56A9B68584F3CFC19 /* Pods-Bangers and MashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.release.xcconfig"; sourceTree = "<group>"; };
+		64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_MashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_MashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE471F001F26702D00BB03B6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AE97EB381F26605800E3F8B7 /* Bangers and Mash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bangers and Mash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE97EB3D1F26605800E3F8B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,10 @@
 		AE97EB571F26605800E3F8B7 /* Bangers and MashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bangers and MashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bangers_and_MashUITests.swift; sourceTree = "<group>"; };
 		AE97EB5D1F26605800E3F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_Mash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A40EB490794CCFE95372E6 /* Pods-Bangers and Mash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.debug.xcconfig"; sourceTree = "<group>"; };
+		E9BA577600F50C4AB9521A01 /* Pods-Bangers and MashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785408949DF4C140025F8CAB /* Pods_Bangers_and_MashTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60BE110DC42D84BCA118505 /* Pods_Bangers_and_MashUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22513DE7058956DC3AA7C5BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */,
+				64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */,
+				871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AE97EB2F1F26605800E3F8B7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,8 @@
 				AE97EB4F1F26605800E3F8B7 /* Bangers and MashTests */,
 				AE97EB5A1F26605800E3F8B7 /* Bangers and MashUITests */,
 				AE97EB391F26605800E3F8B7 /* Products */,
+				E8BF5C3CC321B0F563FC9B39 /* Pods */,
+				22513DE7058956DC3AA7C5BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +132,7 @@
 				AE97EB421F26605800E3F8B7 /* Assets.xcassets */,
 				AE97EB441F26605800E3F8B7 /* LaunchScreen.storyboard */,
 				AE97EB471F26605800E3F8B7 /* Info.plist */,
+				AE471F001F26702D00BB03B6 /* main.swift */,
 			);
 			path = "Bangers and Mash";
 			sourceTree = "<group>";
@@ -125,6 +155,19 @@
 			path = "Bangers and MashUITests";
 			sourceTree = "<group>";
 		};
+		E8BF5C3CC321B0F563FC9B39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8A40EB490794CCFE95372E6 /* Pods-Bangers and Mash.debug.xcconfig */,
+				5D7D804B5D41DB1FDC24CAB9 /* Pods-Bangers and Mash.release.xcconfig */,
+				B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */,
+				62B1D9A56A9B68584F3CFC19 /* Pods-Bangers and MashTests.release.xcconfig */,
+				E9BA577600F50C4AB9521A01 /* Pods-Bangers and MashUITests.debug.xcconfig */,
+				08CA56B1CA1570BD68DBA59F /* Pods-Bangers and MashUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE97EB601F26605800E3F8B7 /* Build configuration list for PBXNativeTarget "Bangers and Mash" */;
 			buildPhases = (
+				6DDDC3C7C820BAE4DC69A2D1 /* [CP] Check Pods Manifest.lock */,
 				AE97EB341F26605800E3F8B7 /* Sources */,
 				AE97EB351F26605800E3F8B7 /* Frameworks */,
 				AE97EB361F26605800E3F8B7 /* Resources */,
+				436F9B79162BAAC400BB3034 /* [CP] Embed Pods Frameworks */,
+				04701665C8DF216FFA830B7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE97EB631F26605800E3F8B7 /* Build configuration list for PBXNativeTarget "Bangers and MashTests" */;
 			buildPhases = (
+				8FBFE04812426BD56FE82431 /* [CP] Check Pods Manifest.lock */,
 				AE97EB481F26605800E3F8B7 /* Sources */,
 				AE97EB491F26605800E3F8B7 /* Frameworks */,
 				AE97EB4A1F26605800E3F8B7 /* Resources */,
+				BE4FC74921FD84AC9CC3BBCC /* [CP] Embed Pods Frameworks */,
+				AD4D079F750E5C8D20530C8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE97EB661F26605800E3F8B7 /* Build configuration list for PBXNativeTarget "Bangers and MashUITests" */;
 			buildPhases = (
+				1DCB54715B6DF3CE9D5C2A9F /* [CP] Check Pods Manifest.lock */,
 				AE97EB531F26605800E3F8B7 /* Sources */,
 				AE97EB541F26605800E3F8B7 /* Frameworks */,
 				AE97EB551F26605800E3F8B7 /* Resources */,
+				57949562B68FCD8D318C9AFB /* [CP] Embed Pods Frameworks */,
+				6918AE766F3D29337537ACF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +306,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04701665C8DF216FFA830B7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DCB54715B6DF3CE9D5C2A9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		436F9B79162BAAC400BB3034 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57949562B68FCD8D318C9AFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6918AE766F3D29337537ACF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DDDC3C7C820BAE4DC69A2D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8FBFE04812426BD56FE82431 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD4D079F750E5C8D20530C8A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE4FC74921FD84AC9CC3BBCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE97EB341F26605800E3F8B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +451,7 @@
 			files = (
 				AE97EB3E1F26605800E3F8B7 /* ViewController.swift in Sources */,
 				AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */,
+				AE471F011F26702D00BB03B6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +603,7 @@
 		};
 		AE97EB611F26605800E3F8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A40EB490794CCFE95372E6 /* Pods-Bangers and Mash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Bangers and Mash/Info.plist";
@@ -424,6 +616,7 @@
 		};
 		AE97EB621F26605800E3F8B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D7D804B5D41DB1FDC24CAB9 /* Pods-Bangers and Mash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Bangers and Mash/Info.plist";
@@ -436,8 +629,9 @@
 		};
 		AE97EB641F26605800E3F8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Bangers and MashTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -450,8 +644,9 @@
 		};
 		AE97EB651F26605800E3F8B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62B1D9A56A9B68584F3CFC19 /* Pods-Bangers and MashTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Bangers and MashTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -464,8 +659,9 @@
 		};
 		AE97EB671F26605800E3F8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9BA577600F50C4AB9521A01 /* Pods-Bangers and MashUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = "Bangers and MashUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-MashUITests";
@@ -477,8 +673,9 @@
 		};
 		AE97EB681F26605800E3F8B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08CA56B1CA1570BD68DBA59F /* Pods-Bangers and MashUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = "Bangers and MashUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-MashUITests";
