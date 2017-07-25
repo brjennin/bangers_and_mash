@@ -1,18 +1,24 @@
 PODS:
   - Fleet (3.3.0)
+  - FontAwesome.swift (1.2.0)
   - Nimble (7.0.1)
   - Quick (1.1.0)
+  - SwiftyCam (2.4.0)
 
 DEPENDENCIES:
   - Fleet
+  - FontAwesome.swift
   - Nimble
   - Quick
+  - SwiftyCam
 
 SPEC CHECKSUMS:
   Fleet: 9620199386ff6da0b5a53556935ce7847259bc77
+  FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  SwiftyCam: cb83b9a8e181f70fb741d30cea724c6b045a4549
 
-PODFILE CHECKSUM: cf0784fd44c0cec9a8d5644a1bf7a4bf3398bc68
+PODFILE CHECKSUM: 05339893e7a1d291b7eb1efda03c36d4041a5ec7
 
 COCOAPODS: 1.2.1
