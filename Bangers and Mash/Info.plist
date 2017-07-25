@@ -32,6 +32,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We&apos;ll need access to your camera to capture those sick moves!</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need microphone access to record videos.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

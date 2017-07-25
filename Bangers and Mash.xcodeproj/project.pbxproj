@@ -10,13 +10,38 @@
 		785408949DF4C140025F8CAB /* Pods_Bangers_and_MashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */; };
 		A60BE110DC42D84BCA118505 /* Pods_Bangers_and_MashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */; };
 		AE471F011F26702D00BB03B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE471F001F26702D00BB03B6 /* main.swift */; };
+		AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724791F2679F0002AB658 /* CameraViewController.swift */; };
+		AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */; };
+		AE67247E1F267ACF002AB658 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67247D1F267ACF002AB658 /* RecordButton.swift */; };
+		AE6724801F267AF4002AB658 /* RecordButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67247F1F267AF4002AB658 /* RecordButtonSpec.swift */; };
+		AE6724821F267E4F002AB658 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724811F267E4F002AB658 /* Animator.swift */; };
+		AE6724841F267F0C002AB658 /* FakeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724831F267F0C002AB658 /* FakeAnimator.swift */; };
+		AE6724861F2699F6002AB658 /* CameraControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724851F2699F6002AB658 /* CameraControllerProvider.swift */; };
+		AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724871F269B3D002AB658 /* FakeCameraViewControllerProvider.swift */; };
+		AE67248A1F269C7C002AB658 /* FakeSwiftyCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724891F269C7C002AB658 /* FakeSwiftyCamViewController.swift */; };
+		AE67248C1F269ED8002AB658 /* SubviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67248B1F269ED8002AB658 /* SubviewPresenter.swift */; };
+		AE67248E1F269EF3002AB658 /* FakeSubviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67248D1F269EF3002AB658 /* FakeSubviewPresenter.swift */; };
+		AE6724901F269F03002AB658 /* SubviewPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67248F1F269F03002AB658 /* SubviewPresenterSpec.swift */; };
+		AE6724921F269FCB002AB658 /* TestViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724911F269FCB002AB658 /* TestViewRenderer.swift */; };
+		AE6724941F26A035002AB658 /* ViewLifecycleSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724931F26A035002AB658 /* ViewLifecycleSwizzler.swift */; };
+		AE6724961F26A7A4002AB658 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724951F26A7A4002AB658 /* Scheduler.swift */; };
+		AE6724981F26A8C2002AB658 /* FakeScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724971F26A8C2002AB658 /* FakeScheduler.swift */; };
+		AE67249A1F26AFED002AB658 /* CameraViewControllerProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724991F26AFED002AB658 /* CameraViewControllerProviderSpec.swift */; };
+		AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67249B1F26B711002AB658 /* FakeRecordButton.swift */; };
+		AE67249E1F26B91B002AB658 /* BallDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67249D1F26B91B002AB658 /* BallDrop.swift */; };
+		AE6724A01F26B9FD002AB658 /* FakeBallDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67249F1F26B9FD002AB658 /* FakeBallDrop.swift */; };
+		AE6724A21F26BA75002AB658 /* BallDropSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A11F26BA75002AB658 /* BallDropSpec.swift */; };
+		AE6724A41F27A95A002AB658 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A31F27A95A002AB658 /* ReviewViewController.swift */; };
+		AE6724A61F27A9C0002AB658 /* SeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A51F27A9C0002AB658 /* SeguePresenter.swift */; };
+		AE6724A81F27AA76002AB658 /* FakeSeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A71F27AA76002AB658 /* FakeSeguePresenter.swift */; };
+		AE6724AA1F27AB78002AB658 /* FakeReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A91F27AB78002AB658 /* FakeReviewViewController.swift */; };
 		AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */; };
-		AE97EB3E1F26605800E3F8B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB3D1F26605800E3F8B7 /* ViewController.swift */; };
 		AE97EB411F26605800E3F8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB3F1F26605800E3F8B7 /* Main.storyboard */; };
 		AE97EB431F26605800E3F8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB421F26605800E3F8B7 /* Assets.xcassets */; };
 		AE97EB461F26605800E3F8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB441F26605800E3F8B7 /* LaunchScreen.storyboard */; };
-		AE97EB511F26605800E3F8B7 /* Bangers_and_MashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB501F26605800E3F8B7 /* Bangers_and_MashTests.swift */; };
 		AE97EB5C1F26605800E3F8B7 /* Bangers_and_MashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */; };
+		DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */; };
+		DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */; };
 		ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,27 +64,55 @@
 
 /* Begin PBXFileReference section */
 		08CA56B1CA1570BD68DBA59F /* Pods-Bangers and MashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests.release.xcconfig"; sourceTree = "<group>"; };
+		10F2C6EF830410333B1A436F /* Pods-Bangers and MashTests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.test.xcconfig"; sourceTree = "<group>"; };
 		5D7D804B5D41DB1FDC24CAB9 /* Pods-Bangers and Mash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.release.xcconfig"; sourceTree = "<group>"; };
 		62B1D9A56A9B68584F3CFC19 /* Pods-Bangers and MashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.release.xcconfig"; sourceTree = "<group>"; };
 		64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_MashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86ED4C5175C3F4E0FE496D83 /* Pods-Bangers and MashUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests.test.xcconfig"; sourceTree = "<group>"; };
 		871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_MashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE471F001F26702D00BB03B6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AE6724791F2679F0002AB658 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewControllerSpec.swift; sourceTree = "<group>"; };
+		AE67247D1F267ACF002AB658 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		AE67247F1F267AF4002AB658 /* RecordButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButtonSpec.swift; sourceTree = "<group>"; };
+		AE6724811F267E4F002AB658 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		AE6724831F267F0C002AB658 /* FakeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAnimator.swift; sourceTree = "<group>"; };
+		AE6724851F2699F6002AB658 /* CameraControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraControllerProvider.swift; sourceTree = "<group>"; };
+		AE6724871F269B3D002AB658 /* FakeCameraViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCameraViewControllerProvider.swift; sourceTree = "<group>"; };
+		AE6724891F269C7C002AB658 /* FakeSwiftyCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSwiftyCamViewController.swift; sourceTree = "<group>"; };
+		AE67248B1F269ED8002AB658 /* SubviewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubviewPresenter.swift; sourceTree = "<group>"; };
+		AE67248D1F269EF3002AB658 /* FakeSubviewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSubviewPresenter.swift; sourceTree = "<group>"; };
+		AE67248F1F269F03002AB658 /* SubviewPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubviewPresenterSpec.swift; sourceTree = "<group>"; };
+		AE6724911F269FCB002AB658 /* TestViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewRenderer.swift; sourceTree = "<group>"; };
+		AE6724931F26A035002AB658 /* ViewLifecycleSwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLifecycleSwizzler.swift; sourceTree = "<group>"; };
+		AE6724951F26A7A4002AB658 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		AE6724971F26A8C2002AB658 /* FakeScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeScheduler.swift; sourceTree = "<group>"; };
+		AE6724991F26AFED002AB658 /* CameraViewControllerProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewControllerProviderSpec.swift; sourceTree = "<group>"; };
+		AE67249B1F26B711002AB658 /* FakeRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRecordButton.swift; sourceTree = "<group>"; };
+		AE67249D1F26B91B002AB658 /* BallDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallDrop.swift; sourceTree = "<group>"; };
+		AE67249F1F26B9FD002AB658 /* FakeBallDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeBallDrop.swift; sourceTree = "<group>"; };
+		AE6724A11F26BA75002AB658 /* BallDropSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallDropSpec.swift; sourceTree = "<group>"; };
+		AE6724A31F27A95A002AB658 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		AE6724A51F27A9C0002AB658 /* SeguePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguePresenter.swift; sourceTree = "<group>"; };
+		AE6724A71F27AA76002AB658 /* FakeSeguePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSeguePresenter.swift; sourceTree = "<group>"; };
+		AE6724A91F27AB78002AB658 /* FakeReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReviewViewController.swift; sourceTree = "<group>"; };
 		AE97EB381F26605800E3F8B7 /* Bangers and Mash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bangers and Mash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE97EB3D1F26605800E3F8B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE97EB401F26605800E3F8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE97EB421F26605800E3F8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE97EB451F26605800E3F8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE97EB471F26605800E3F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE97EB4C1F26605800E3F8B7 /* Bangers and MashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bangers and MashTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE97EB501F26605800E3F8B7 /* Bangers_and_MashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bangers_and_MashTests.swift; sourceTree = "<group>"; };
 		AE97EB521F26605800E3F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE97EB571F26605800E3F8B7 /* Bangers and MashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bangers and MashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bangers_and_MashUITests.swift; sourceTree = "<group>"; };
 		AE97EB5D1F26605800E3F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_Mash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.test.xcconfig"; sourceTree = "<group>"; };
 		D8A40EB490794CCFE95372E6 /* Pods-Bangers and Mash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.debug.xcconfig"; sourceTree = "<group>"; };
+		DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MashupTakesViewControllerSpec.swift; sourceTree = "<group>"; };
+		DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MashupTakesViewController.swift; sourceTree = "<group>"; };
 		E9BA577600F50C4AB9521A01 /* Pods-Bangers and MashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,12 +180,15 @@
 			isa = PBXGroup;
 			children = (
 				AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */,
-				AE97EB3D1F26605800E3F8B7 /* ViewController.swift */,
 				AE97EB3F1F26605800E3F8B7 /* Main.storyboard */,
 				AE97EB421F26605800E3F8B7 /* Assets.xcassets */,
 				AE97EB441F26605800E3F8B7 /* LaunchScreen.storyboard */,
 				AE97EB471F26605800E3F8B7 /* Info.plist */,
 				AE471F001F26702D00BB03B6 /* main.swift */,
+				DE99CED47F1F9A10BC13BB4E /* Mashup */,
+				DE99CD92E33E239BAAD4CAD7 /* Recording */,
+				DE99C70BCDA747667B99B529 /* Wrappers */,
+				DE99C7A9A3477985D01B6C49 /* Presentation */,
 			);
 			path = "Bangers and Mash";
 			sourceTree = "<group>";
@@ -140,8 +196,12 @@
 		AE97EB4F1F26605800E3F8B7 /* Bangers and MashTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE97EB501F26605800E3F8B7 /* Bangers_and_MashTests.swift */,
 				AE97EB521F26605800E3F8B7 /* Info.plist */,
+				DE99C378C53BA6170E9E7265 /* Mashup */,
+				DE99C5E6F2822F356CDAE593 /* Recording */,
+				DE99CFEA3271E6FE06AA3F81 /* Fakes */,
+				DE99CCBCC5F488C3B645C836 /* Presentation */,
+				DE99C763565C7D73B99F97FF /* Support */,
 			);
 			path = "Bangers and MashTests";
 			sourceTree = "<group>";
@@ -155,6 +215,96 @@
 			path = "Bangers and MashUITests";
 			sourceTree = "<group>";
 		};
+		DE99C378C53BA6170E9E7265 /* Mashup */ = {
+			isa = PBXGroup;
+			children = (
+				DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */,
+			);
+			path = Mashup;
+			sourceTree = "<group>";
+		};
+		DE99C5E6F2822F356CDAE593 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */,
+				AE67247F1F267AF4002AB658 /* RecordButtonSpec.swift */,
+				AE6724991F26AFED002AB658 /* CameraViewControllerProviderSpec.swift */,
+				AE6724A11F26BA75002AB658 /* BallDropSpec.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		DE99C70BCDA747667B99B529 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				AE6724811F267E4F002AB658 /* Animator.swift */,
+				AE6724951F26A7A4002AB658 /* Scheduler.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		DE99C763565C7D73B99F97FF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AE6724911F269FCB002AB658 /* TestViewRenderer.swift */,
+				AE6724931F26A035002AB658 /* ViewLifecycleSwizzler.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		DE99C7A9A3477985D01B6C49 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AE67248B1F269ED8002AB658 /* SubviewPresenter.swift */,
+				AE6724A51F27A9C0002AB658 /* SeguePresenter.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DE99CCBCC5F488C3B645C836 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AE67248F1F269F03002AB658 /* SubviewPresenterSpec.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DE99CD92E33E239BAAD4CAD7 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				AE6724791F2679F0002AB658 /* CameraViewController.swift */,
+				AE67247D1F267ACF002AB658 /* RecordButton.swift */,
+				AE6724851F2699F6002AB658 /* CameraControllerProvider.swift */,
+				AE67249D1F26B91B002AB658 /* BallDrop.swift */,
+				AE6724A31F27A95A002AB658 /* ReviewViewController.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		DE99CED47F1F9A10BC13BB4E /* Mashup */ = {
+			isa = PBXGroup;
+			children = (
+				DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */,
+			);
+			path = Mashup;
+			sourceTree = "<group>";
+		};
+		DE99CFEA3271E6FE06AA3F81 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				AE6724831F267F0C002AB658 /* FakeAnimator.swift */,
+				AE6724871F269B3D002AB658 /* FakeCameraViewControllerProvider.swift */,
+				AE6724891F269C7C002AB658 /* FakeSwiftyCamViewController.swift */,
+				AE67248D1F269EF3002AB658 /* FakeSubviewPresenter.swift */,
+				AE6724971F26A8C2002AB658 /* FakeScheduler.swift */,
+				AE67249B1F26B711002AB658 /* FakeRecordButton.swift */,
+				AE67249F1F26B9FD002AB658 /* FakeBallDrop.swift */,
+				AE6724A71F27AA76002AB658 /* FakeSeguePresenter.swift */,
+				AE6724A91F27AB78002AB658 /* FakeReviewViewController.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
 		E8BF5C3CC321B0F563FC9B39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +314,9 @@
 				62B1D9A56A9B68584F3CFC19 /* Pods-Bangers and MashTests.release.xcconfig */,
 				E9BA577600F50C4AB9521A01 /* Pods-Bangers and MashUITests.debug.xcconfig */,
 				08CA56B1CA1570BD68DBA59F /* Pods-Bangers and MashUITests.release.xcconfig */,
+				C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */,
+				10F2C6EF830410333B1A436F /* Pods-Bangers and MashTests.test.xcconfig */,
+				86ED4C5175C3F4E0FE496D83 /* Pods-Bangers and MashUITests.test.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -201,6 +354,7 @@
 				AE97EB4A1F26605800E3F8B7 /* Resources */,
 				BE4FC74921FD84AC9CC3BBCC /* [CP] Embed Pods Frameworks */,
 				AD4D079F750E5C8D20530C8A /* [CP] Copy Pods Resources */,
+				AE6724AB1F27ADD7002AB658 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +399,7 @@
 				TargetAttributes = {
 					AE97EB371F26605800E3F8B7 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = U2J974NN6J;
 						ProvisioningStyle = Automatic;
 					};
 					AE97EB4B1F26605800E3F8B7 = {
@@ -427,6 +582,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE6724AB1F27ADD7002AB658 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/Pods/Fleet/Fleet/Script/copy_storyboard_info_files.sh";
+		};
 		BE4FC74921FD84AC9CC3BBCC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,9 +617,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE97EB3E1F26605800E3F8B7 /* ViewController.swift in Sources */,
+				AE6724A61F27A9C0002AB658 /* SeguePresenter.swift in Sources */,
+				AE6724821F267E4F002AB658 /* Animator.swift in Sources */,
+				AE6724861F2699F6002AB658 /* CameraControllerProvider.swift in Sources */,
 				AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */,
+				AE67249E1F26B91B002AB658 /* BallDrop.swift in Sources */,
+				AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */,
 				AE471F011F26702D00BB03B6 /* main.swift in Sources */,
+				DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */,
+				AE6724A41F27A95A002AB658 /* ReviewViewController.swift in Sources */,
+				AE6724961F26A7A4002AB658 /* Scheduler.swift in Sources */,
+				AE67248C1F269ED8002AB658 /* SubviewPresenter.swift in Sources */,
+				AE67247E1F267ACF002AB658 /* RecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +636,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE97EB511F26605800E3F8B7 /* Bangers_and_MashTests.swift in Sources */,
+				AE6724A01F26B9FD002AB658 /* FakeBallDrop.swift in Sources */,
+				AE67249A1F26AFED002AB658 /* CameraViewControllerProviderSpec.swift in Sources */,
+				AE67248E1F269EF3002AB658 /* FakeSubviewPresenter.swift in Sources */,
+				AE6724801F267AF4002AB658 /* RecordButtonSpec.swift in Sources */,
+				AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */,
+				AE6724AA1F27AB78002AB658 /* FakeReviewViewController.swift in Sources */,
+				DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */,
+				AE6724A21F26BA75002AB658 /* BallDropSpec.swift in Sources */,
+				AE67248A1F269C7C002AB658 /* FakeSwiftyCamViewController.swift in Sources */,
+				AE6724981F26A8C2002AB658 /* FakeScheduler.swift in Sources */,
+				AE6724901F269F03002AB658 /* SubviewPresenterSpec.swift in Sources */,
+				AE6724841F267F0C002AB658 /* FakeAnimator.swift in Sources */,
+				AE6724A81F27AA76002AB658 /* FakeSeguePresenter.swift in Sources */,
+				AE6724921F269FCB002AB658 /* TestViewRenderer.swift in Sources */,
+				AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */,
+				AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */,
+				AE6724941F26A035002AB658 /* ViewLifecycleSwizzler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +699,100 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE471F021F2675F700BB03B6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		AE471F031F2675F700BB03B6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2J974NN6J;
+				INFOPLIST_FILE = "Bangers and Mash/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-Mash";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Test;
+		};
+		AE471F041F2675F700BB03B6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10F2C6EF830410333B1A436F /* Pods-Bangers and MashTests.test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bangers and MashTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-MashTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bangers and Mash.app/Bangers and Mash";
+			};
+			name = Test;
+		};
+		AE471F051F2675F700BB03B6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86ED4C5175C3F4E0FE496D83 /* Pods-Bangers and MashUITests.test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				INFOPLIST_FILE = "Bangers and MashUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-MashUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Bangers and Mash";
+			};
+			name = Test;
+		};
 		AE97EB5E1F26605800E3F8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -606,6 +893,7 @@
 			baseConfigurationReference = D8A40EB490794CCFE95372E6 /* Pods-Bangers and Mash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2J974NN6J;
 				INFOPLIST_FILE = "Bangers and Mash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-Mash";
@@ -619,6 +907,7 @@
 			baseConfigurationReference = 5D7D804B5D41DB1FDC24CAB9 /* Pods-Bangers and Mash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2J974NN6J;
 				INFOPLIST_FILE = "Bangers and Mash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketbeltlabs.Bangers-and-Mash";
@@ -692,6 +981,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE97EB5E1F26605800E3F8B7 /* Debug */,
+				AE471F021F2675F700BB03B6 /* Test */,
 				AE97EB5F1F26605800E3F8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -701,6 +991,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE97EB611F26605800E3F8B7 /* Debug */,
+				AE471F031F2675F700BB03B6 /* Test */,
 				AE97EB621F26605800E3F8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -710,6 +1001,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE97EB641F26605800E3F8B7 /* Debug */,
+				AE471F041F2675F700BB03B6 /* Test */,
 				AE97EB651F26605800E3F8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -719,6 +1011,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE97EB671F26605800E3F8B7 /* Debug */,
+				AE471F051F2675F700BB03B6 /* Test */,
 				AE97EB681F26605800E3F8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

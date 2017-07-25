@@ -1,14 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qwh-WM-hG7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="iOe-KU-h4U">
+            <objects>
+                <navigationController id="qwh-WM-hG7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CyY-ga-xmS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pwF-Cm-NLJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQl-qF-qsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1574" y="-637"/>
+        </scene>
+        <!--Mashup Takes View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MashupTakesViewController" id="BYZ-38-t0r" customClass="MashupTakesViewController" customModule="Bangers_and_Mash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +38,129 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnk-Ym-weF">
+                                <rect key="frame" x="172" y="617" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="Oga-C8-7he" kind="show" id="jyI-45-Dy9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nnk-Ym-weF" secondAttribute="bottom" constant="20" id="grA-kq-LMB"/>
+                            <constraint firstItem="Nnk-Ym-weF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nDD-Xb-XBb"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="p4B-Iz-mIZ"/>
+                    <connections>
+                        <outlet property="addVideoButton" destination="Nnk-Ym-weF" id="UAI-p1-8sB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-770" y="-637"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="323-sA-4BR">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="Oga-C8-7he" customClass="CameraViewController" customModule="Bangers_and_Mash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UzI-c2-LuD"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdq-v4-iJT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWP-Ms-Z99">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fy-7R-rFu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGm-va-Gmn">
+                                <rect key="frame" x="20" y="84" width="18" height="30"/>
+                                <state key="normal" image="flashOutline"/>
+                                <connections>
+                                    <action selector="didToggleFlash:" destination="Oga-C8-7he" eventType="touchUpInside" id="b5I-bw-ySN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpf-sK-Wgt">
+                                <rect key="frame" x="325" y="87.5" width="30" height="23"/>
+                                <state key="normal" image="flipCamera"/>
+                                <connections>
+                                    <action selector="didSwitchCamera:" destination="Oga-C8-7he" eventType="touchUpInside" id="OeW-Xk-OWr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL6-aA-aIs" customClass="RecordButton" customModule="Bangers_and_Mash" customModuleProvider="target">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GL6-aA-aIs" secondAttribute="height" multiplier="1:1" id="MSs-KM-DRp"/>
+                                    <constraint firstAttribute="width" constant="75" id="Sgi-DX-KqN"/>
+                                </constraints>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="didTapCapture:" destination="Oga-C8-7he" eventType="touchUpInside" id="ts2-rp-5H8"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="80" translatesAutoresizingMaskIntoConstraints="NO" id="FrM-2R-Zz6">
+                                <rect key="frame" x="50" y="272" width="275" height="191"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="160"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oGm-va-Gmn" firstAttribute="top" secondItem="UzI-c2-LuD" secondAttribute="bottom" constant="20" id="3Mt-gt-EH9"/>
+                            <constraint firstAttribute="trailing" secondItem="Tpf-sK-Wgt" secondAttribute="trailing" constant="20" id="7eg-DK-GAP"/>
+                            <constraint firstAttribute="trailing" secondItem="2Fy-7R-rFu" secondAttribute="trailing" id="8TD-hj-RM6"/>
+                            <constraint firstItem="Tpf-sK-Wgt" firstAttribute="centerY" secondItem="oGm-va-Gmn" secondAttribute="centerY" id="D6L-D5-c1k"/>
+                            <constraint firstItem="oGm-va-Gmn" firstAttribute="leading" secondItem="hWP-Ms-Z99" secondAttribute="leading" constant="20" id="Swb-OW-4tN"/>
+                            <constraint firstItem="hdq-v4-iJT" firstAttribute="top" secondItem="2Fy-7R-rFu" secondAttribute="bottom" id="UZQ-fS-JeG"/>
+                            <constraint firstItem="2Fy-7R-rFu" firstAttribute="leading" secondItem="hWP-Ms-Z99" secondAttribute="leading" id="ciT-en-PYU"/>
+                            <constraint firstAttribute="trailing" secondItem="FrM-2R-Zz6" secondAttribute="trailing" constant="50" id="dLS-uL-NcZ"/>
+                            <constraint firstItem="GL6-aA-aIs" firstAttribute="centerX" secondItem="hWP-Ms-Z99" secondAttribute="centerX" id="hxE-Ha-9OA"/>
+                            <constraint firstItem="hdq-v4-iJT" firstAttribute="top" secondItem="GL6-aA-aIs" secondAttribute="bottom" constant="20" id="of7-as-IUW"/>
+                            <constraint firstItem="FrM-2R-Zz6" firstAttribute="leading" secondItem="hWP-Ms-Z99" secondAttribute="leading" constant="50" id="pIe-9u-RpR"/>
+                            <constraint firstItem="2Fy-7R-rFu" firstAttribute="top" secondItem="UzI-c2-LuD" secondAttribute="bottom" id="sWu-WA-IaI"/>
+                            <constraint firstItem="FrM-2R-Zz6" firstAttribute="centerY" secondItem="hWP-Ms-Z99" secondAttribute="centerY" multiplier="1.1" id="siV-L5-f7P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraContainer" destination="2Fy-7R-rFu" id="OjL-j2-fjM"/>
+                        <outlet property="captureButton" destination="GL6-aA-aIs" id="nx1-pX-fuN"/>
+                        <outlet property="countdownLabel" destination="FrM-2R-Zz6" id="5uF-bp-Jf1"/>
+                        <outlet property="flashButton" destination="oGm-va-Gmn" id="UGf-zr-AOu"/>
+                        <outlet property="flipCameraButton" destination="Tpf-sK-Wgt" id="xVn-fG-78F"/>
+                        <segue destination="rf1-0K-JK3" kind="show" identifier="reviewVideo" id="4dF-fw-phH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddo-MN-sgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-637"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="6fD-nL-8cb">
+            <objects>
+                <viewController storyboardIdentifier="ReviewViewController" id="rf1-0K-JK3" customClass="ReviewViewController" customModule="Bangers_and_Mash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KEg-cF-lF5"/>
+                        <viewControllerLayoutGuide type="bottom" id="H8y-gb-4u5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FYf-gH-fXC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCd-QF-ELb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="-637"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flashOutline" width="18" height="30"/>
+        <image name="flipCamera" width="30" height="23"/>
+    </resources>
 </document>
