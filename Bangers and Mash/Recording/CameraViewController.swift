@@ -9,6 +9,7 @@ class CameraViewController: UIViewController {
     var scheduler: SchedulerProtocol = Scheduler()
     var seguePresenter: SeguePresenterProtocol = SeguePresenter()
     var focusTouch: FocusTouchProtocol = FocusTouch()
+    var navigationPoppinOff: NavigationPoppinOffProtocol = NavigationPoppinOff()
 
     static let countdownTime = 3
     static let videoDuration: TimeInterval = 15
@@ -31,7 +32,11 @@ class CameraViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let reviewViewController = segue.destination as? ReviewViewController {
-            reviewViewController.configureWith(videoUrl: lastVideoUrl!)
+            reviewViewController.configureWith(videoUrl: lastVideoUrl!, videoKeptCallback: { [weak self] in
+                if let weakSelf = self {
+                    weakSelf.navigationPoppinOff.pop(from: weakSelf.navigationController!, animated: false)
+                }
+            })
         }
     }
 

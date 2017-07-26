@@ -27,6 +27,59 @@
             </objects>
             <point key="canvasLocation" x="-1574" y="-637"/>
         </scene>
+        <!--Video Collection View Controller-->
+        <scene sceneID="RIb-2g-8kS">
+            <objects>
+                <tableViewController storyboardIdentifier="VideoCollectionViewController" id="euA-S7-wHL" customClass="VideoCollectionViewController" customModule="Bangers_and_Mash" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Wk-S9-XaO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="siC-Fl-nrm">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="Vqt-Vc-zSs" customClass="VideoCell" customModule="Bangers_and_Mash" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqt-Vc-zSs" id="xsm-je-eaH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usO-CO-qRd">
+                                            <rect key="frame" x="20" y="10" width="335" height="23.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="usO-CO-qRd" secondAttribute="bottom" constant="10" id="LYG-Uo-q6A"/>
+                                        <constraint firstAttribute="trailing" secondItem="usO-CO-qRd" secondAttribute="trailing" constant="20" id="joS-I3-kg2"/>
+                                        <constraint firstItem="usO-CO-qRd" firstAttribute="leading" secondItem="xsm-je-eaH" secondAttribute="leading" constant="20" id="l9w-ch-YbM"/>
+                                        <constraint firstItem="usO-CO-qRd" firstAttribute="top" secondItem="xsm-je-eaH" secondAttribute="top" constant="10" id="yoG-RI-FxH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="usO-CO-qRd" id="LgG-ZH-vqT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="euA-S7-wHL" id="AGw-Tp-SjK"/>
+                            <outlet property="delegate" destination="euA-S7-wHL" id="piQ-Kz-VXl"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="footerView" destination="siC-Fl-nrm" id="0gh-HW-l1n"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpz-VB-ODS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="-1327"/>
+        </scene>
         <!--Mashup Takes View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -46,16 +99,25 @@
                                     <segue destination="Oga-C8-7he" kind="show" id="jyI-45-Dy9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvg-dG-WpX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vvg-dG-WpX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3qR-cE-sMi"/>
+                            <constraint firstAttribute="trailing" secondItem="vvg-dG-WpX" secondAttribute="trailing" id="H1Q-1s-5XI"/>
+                            <constraint firstItem="vvg-dG-WpX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gTL-ps-cyY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nnk-Ym-weF" secondAttribute="bottom" constant="20" id="grA-kq-LMB"/>
+                            <constraint firstItem="Nnk-Ym-weF" firstAttribute="top" secondItem="vvg-dG-WpX" secondAttribute="bottom" id="jzj-SN-S7V"/>
                             <constraint firstItem="Nnk-Ym-weF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nDD-Xb-XBb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p4B-Iz-mIZ"/>
                     <connections>
                         <outlet property="addVideoButton" destination="Nnk-Ym-weF" id="UAI-p1-8sB"/>
+                        <outlet property="mashupListView" destination="vvg-dG-WpX" id="9Kd-nV-4UI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,7 +194,7 @@
                         <outlet property="countdownLabel" destination="FrM-2R-Zz6" id="5uF-bp-Jf1"/>
                         <outlet property="flashButton" destination="oGm-va-Gmn" id="UGf-zr-AOu"/>
                         <outlet property="flipCameraButton" destination="Tpf-sK-Wgt" id="xVn-fG-78F"/>
-                        <segue destination="rf1-0K-JK3" kind="show" identifier="reviewVideo" id="4dF-fw-phH"/>
+                        <segue destination="rf1-0K-JK3" kind="presentation" identifier="reviewVideo" id="4dF-fw-phH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddo-MN-sgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,25 +214,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wz6-Wn-KX7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hth-6V-zHu">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-KN-BnA">
+                                        <rect key="frame" x="290" y="20" width="35" height="30"/>
+                                        <state key="normal" title="Keep"/>
+                                        <connections>
+                                            <action selector="didTapKeepTake:" destination="rf1-0K-JK3" eventType="touchUpInside" id="uJ2-nn-6VB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7T-br-lHb">
+                                        <rect key="frame" x="50" y="20" width="47" height="30"/>
+                                        <state key="normal" title="Retake"/>
+                                        <connections>
+                                            <action selector="didTapRetake:" destination="rf1-0K-JK3" eventType="touchUpInside" id="Ne8-Ga-Hn1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wGS-KN-BnA" firstAttribute="centerY" secondItem="Hth-6V-zHu" secondAttribute="centerY" id="Bho-sX-iwv"/>
+                                    <constraint firstItem="q7T-br-lHb" firstAttribute="leading" secondItem="Hth-6V-zHu" secondAttribute="leading" constant="50" id="EjY-Wa-ZGy"/>
+                                    <constraint firstItem="q7T-br-lHb" firstAttribute="centerY" secondItem="wGS-KN-BnA" secondAttribute="centerY" id="Eoc-Sn-1mc"/>
+                                    <constraint firstAttribute="height" constant="70" id="Yxx-zo-CmK"/>
+                                    <constraint firstAttribute="trailing" secondItem="wGS-KN-BnA" secondAttribute="trailing" constant="50" id="kLo-OG-lYD"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="H8y-gb-4u5" firstAttribute="top" secondItem="Wz6-Wn-KX7" secondAttribute="bottom" id="E8d-Y7-7UQ"/>
+                            <constraint firstItem="Hth-6V-zHu" firstAttribute="top" secondItem="Wz6-Wn-KX7" secondAttribute="bottom" id="3GX-GF-qwC"/>
+                            <constraint firstAttribute="trailing" secondItem="Hth-6V-zHu" secondAttribute="trailing" id="Dvz-1j-otu"/>
+                            <constraint firstItem="Hth-6V-zHu" firstAttribute="leading" secondItem="FYf-gH-fXC" secondAttribute="leading" id="NHw-YC-6af"/>
                             <constraint firstItem="Wz6-Wn-KX7" firstAttribute="top" secondItem="KEg-cF-lF5" secondAttribute="bottom" id="b2p-jO-vvz"/>
                             <constraint firstItem="Wz6-Wn-KX7" firstAttribute="leading" secondItem="FYf-gH-fXC" secondAttribute="leading" id="clE-Iu-Fcr"/>
+                            <constraint firstItem="H8y-gb-4u5" firstAttribute="top" secondItem="Hth-6V-zHu" secondAttribute="bottom" id="d4c-ro-HnP"/>
                             <constraint firstAttribute="trailing" secondItem="Wz6-Wn-KX7" secondAttribute="trailing" id="hBx-j1-4FE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="keepButton" destination="wGS-KN-BnA" id="jjC-F5-Ke2"/>
                         <outlet property="playerView" destination="Wz6-Wn-KX7" id="TWK-sw-j3t"/>
+                        <outlet property="retakeButton" destination="q7T-br-lHb" id="8Dx-8C-07l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCd-QF-ELb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="-637"/>
+            <point key="canvasLocation" x="765.60000000000002" y="-637.33133433283365"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="GRC-cJ-4LG">

@@ -3,7 +3,9 @@ import UIKit
 
 class FakeReviewViewController: ReviewViewController {
     var capturedVideoUrlForConfigure: URL?
-    override func configureWith(videoUrl: URL) {
+    var capturedVideoKeptCallbackForConfigure: (() -> ())?
+    override func configureWith(videoUrl: URL, videoKeptCallback: @escaping () -> ()) {
         capturedVideoUrlForConfigure = videoUrl
+        capturedVideoKeptCallbackForConfigure = videoKeptCallback
     }
 }

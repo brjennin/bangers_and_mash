@@ -11,6 +11,7 @@ class CameraViewControllerSpec: QuickSpec {
         describe("CameraViewController") {
             var storyboard: UIStoryboard!
             var subject: CameraViewController!
+            var navController: UINavigationController!
             var cameraViewControllerProvider: FakeCameraViewControllerProvider!
             var subviewPresenter: FakeSubviewPresenter!
             var ballDrop: FakeBallDrop!
@@ -18,6 +19,7 @@ class CameraViewControllerSpec: QuickSpec {
             var scheduler: FakeScheduler!
             var seguePresenter: FakeSeguePresenter!
             var focusTouch: FakeFocusTouch!
+            var navigationPoppinOff: FakeNavigationPoppinOff!
 
             beforeEach {
                 storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -43,6 +45,9 @@ class CameraViewControllerSpec: QuickSpec {
 
                 focusTouch = FakeFocusTouch()
                 subject.focusTouch = focusTouch
+
+                navigationPoppinOff = FakeNavigationPoppinOff()
+                subject.navigationPoppinOff = navigationPoppinOff
             }
 
             describe("viewDidLoad") {
@@ -53,7 +58,8 @@ class CameraViewControllerSpec: QuickSpec {
                     swiftCamViewController = FakeSwiftyCamViewController()
                     cameraViewControllerProvider.returnedControllerForGet = swiftCamViewController
 
-                    TestViewRenderer.initiateViewLifeCycle(controller: subject)
+                    navController = UINavigationController(rootViewController: subject)
+                    TestViewRenderer.initiateViewLifeCycle(controller: navController)
 
                     recordButton = FakeRecordButton()
                     subject.captureButton = recordButton
@@ -292,6 +298,17 @@ class CameraViewControllerSpec: QuickSpec {
 
                             it("configures the video URL on the review view controller") {
                                 expect(reviewViewController.capturedVideoUrlForConfigure).to(equal(url))
+                            }
+
+                            describe("When the user keeps their video take") {
+                                beforeEach {
+                                    reviewViewController.capturedVideoKeptCallbackForConfigure?()
+                                }
+
+                                it("pops back to the mashup view controller") {
+                                    expect(navigationPoppinOff.capturedAnimatedForPop).to(beFalse())
+                                    expect(navigationPoppinOff.capturedNavControllerForPop).to(be(navController))
+                                }
                             }
                         }
                     }
