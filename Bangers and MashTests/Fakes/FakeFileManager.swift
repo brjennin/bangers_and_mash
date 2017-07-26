@@ -29,4 +29,14 @@ class FakeFileManager: FileManagerProtocol {
         }
         return returnUrlsForContentsOfDirectory
     }
+
+    var removeItemDoesThrow = false
+    var capturedUrlForRemoveItem: URL?
+    func removeItem(at URL: URL) throws {
+        capturedUrlForRemoveItem = URL
+
+        if removeItemDoesThrow {
+            throw NSError(domain: "domain", code: 100, userInfo: nil)
+        }
+    }
 }

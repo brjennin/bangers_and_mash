@@ -2,6 +2,7 @@ import Foundation
 
 protocol VideoRepositoryProtocol {
     func getVideos(callback: @escaping ([URL]) -> ())
+    func delete(url: URL)
 }
 
 class VideoRepository: VideoRepositoryProtocol {
@@ -12,5 +13,9 @@ class VideoRepository: VideoRepositoryProtocol {
         let documentsDir = directoryFinder.getDocumentsDirectory()
         let videos = try! fileManager.contentsOfDirectory(at: documentsDir, includingPropertiesForKeys: nil, options: [])
         callback(videos)
+    }
+
+    func delete(url: URL) {
+        try! fileManager.removeItem(at: url)
     }
 }

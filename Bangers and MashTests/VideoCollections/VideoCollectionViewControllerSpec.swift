@@ -55,11 +55,7 @@ class VideoCollectionViewControllerSpec: QuickSpec {
                         URL(string: "file:///private/var/mobile/Containers/Data/Application/20067031-DBC0-4DD5-9BCC-2D1D6616B8DF/tmp/videos2.mov")!
                     ]
 
-                    context("Without deletion") {
-                        beforeEach {
-                            subject.load(videos: videos)
-                        }
-                        
+                    sharedExamples("loading videos into the table") {
                         describe("As a table view data source") {
                             it("has 1 section") {
                                 expect(subject.numberOfSections(in: subject.tableView)).to(equal(1))
@@ -86,6 +82,68 @@ class VideoCollectionViewControllerSpec: QuickSpec {
                                 let cell2 = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as! FakeVideoCell
                                 expect(cell2.capturedVideoForConfigure).to(equal(videos[1]))
                             }
+                        }
+                    }
+
+                    context("With deletion") {
+                        var capturedUrlForDeleteCallback: URL?
+
+                        beforeEach {
+                            capturedUrlForDeleteCallback = nil
+                            subject.load(videos: videos, deleteCallback: { url in
+                                capturedUrlForDeleteCallback = url
+                            })
+                        }
+
+                        itBehavesLike("loading videos into the table")
+
+                        it("allows editing of rows") {
+                            expect(subject.tableView(subject.tableView, canEditRowAt: IndexPath(row: 0, section: 0))).to(beTrue())
+                        }
+
+                        context("When action was a deletion") {
+                            beforeEach {
+                                subject.tableView(subject.tableView, commit: .delete, forRowAt: IndexPath(row: 1, section: 0))
+                            }
+
+                            it("calls deletion callback") {
+                                expect(capturedUrlForDeleteCallback).to(equal(videos.last!))
+                            }
+
+                            it("hides the visible cell") {
+                                expect(subject.tableView.visibleCells.count).to(equal(1))
+                            }
+
+                            it("doesn't come back when reloading the table data") {
+                                subject.tableView.reloadData()
+                                expect(subject.tableView.visibleCells.count).to(equal(1))
+                            }
+                        }
+
+                        context("When action was an insert") {
+                            beforeEach {
+                                subject.tableView(subject.tableView, commit: .insert, forRowAt: IndexPath(row: 1, section: 0))
+                            }
+                            
+                            it("does not call deletion callback") {
+                                expect(capturedUrlForDeleteCallback).to(beNil())
+                            }
+                            
+                            it("does not modify the number of visible cells") {
+                                expect(subject.tableView.visibleCells.count).to(equal(2))
+                            }
+                        }
+                    }
+
+                    context("Without deletion") {
+                        beforeEach {
+                            subject.load(videos: videos, deleteCallback: nil)
+                        }
+                        
+                        itBehavesLike("loading videos into the table")
+
+                        it("prevents editing of rows") {
+                            expect(subject.tableView(subject.tableView, canEditRowAt: IndexPath(row: 0, section: 0))).to(beFalse())
                         }
                     }
                 }

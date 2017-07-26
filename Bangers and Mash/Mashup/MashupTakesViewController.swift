@@ -24,7 +24,13 @@ class MashupTakesViewController: UIViewController {
         super.viewDidAppear(animated)
 
         videoRepository.getVideos() { [weak self] videos in
-            self?.videoCollectionViewController.load(videos: videos)
+            if let weakSelf = self {
+                weakSelf.videoCollectionViewController.load(videos: videos, deleteCallback: weakSelf.deleteVideo)
+            }
         }
+    }
+
+    private func deleteVideo(url: URL) {
+        videoRepository.delete(url: url)
     }
 }

@@ -49,6 +49,20 @@ class VideoRepositorySpec: QuickSpec {
                     expect(returnedVideos).to(equal(videoUrls))
                 }
             }
+
+            describe("deleting a video") {
+                var url: URL!
+
+                beforeEach {
+                    url = URL(string: "file:///private/var/mobile/Containers/Data/Application/20067031-DBC0-4DD5-9BCC-2D1D6616B8DF/tmp/video1.mov")!
+
+                    subject.delete(url: url)
+                }
+
+                it("removes the item with the file manager") {
+                    expect(fileManager.capturedUrlForRemoveItem).to(equal(url))
+                }
+            }
         }
     }
 }

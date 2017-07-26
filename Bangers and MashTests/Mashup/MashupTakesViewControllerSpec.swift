@@ -71,6 +71,20 @@ class MashupTakesViewControllerSpec: QuickSpec {
                         it("loads videos into the collection view controller") {
                             expect(videoCollectionViewController.capturedVideosForLoad).to(equal(videos))
                         }
+
+                        it("has a delete callback") {
+                            expect(videoCollectionViewController.capturedDeleteCallbackForLoad).toNot(beNil())
+                        }
+
+                        describe("when the delete callback is called") {
+                            beforeEach {
+                                videoCollectionViewController.capturedDeleteCallbackForLoad?(videos.first!)
+                            }
+
+                            it("deletes the video from the filesystem") {
+                                expect(videoRepository.capturedUrlForDelete).to(equal(videos.first!))
+                            }
+                        }
                     }
                 }
             }

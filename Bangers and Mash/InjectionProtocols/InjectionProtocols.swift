@@ -9,5 +9,6 @@ extension NotificationCenter: NotificationCenterProtocol {}
 protocol FileManagerProtocol {
     func moveItem(at srcURL: URL, to dstURL: URL) throws
     func contentsOfDirectory(at url: URL, includingPropertiesForKeys keys: [URLResourceKey]?, options mask: FileManager.DirectoryEnumerationOptions) throws -> [URL]
+    func removeItem(at URL: URL) throws
 }
 extension FileManager: FileManagerProtocol {}

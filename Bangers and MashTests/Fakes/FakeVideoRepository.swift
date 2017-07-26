@@ -6,4 +6,9 @@ class FakeVideoRepository: VideoRepositoryProtocol {
     func getVideos(callback: @escaping ([URL]) -> ()) {
         capturedCallbackForGetVideos = callback
     }
+
+    var capturedUrlForDelete: URL?
+    func delete(url: URL) {
+        capturedUrlForDelete = url
+    }
 }

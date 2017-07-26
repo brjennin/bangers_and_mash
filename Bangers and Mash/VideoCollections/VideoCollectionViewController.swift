@@ -4,9 +4,11 @@ class VideoCollectionViewController: UITableViewController {
     @IBOutlet weak var footerView: UIView!
 
     var videos = [URL]()
+    var deleteCallback: ((URL) -> ())?
 
-    func load(videos: [URL]) {
+    func load(videos: [URL], deleteCallback: ((URL) -> ())?) {
         self.videos = videos
+        self.deleteCallback = deleteCallback
         tableView.reloadData()
     }
 
@@ -25,5 +27,17 @@ class VideoCollectionViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
         cell.configure(video: videos[indexPath.row])
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return deleteCallback != nil
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if let deleteCallback = deleteCallback, editingStyle == .delete {
+            let video = self.videos.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            deleteCallback(video)
+        }
     }
 }
