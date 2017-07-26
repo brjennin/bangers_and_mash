@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		785408949DF4C140025F8CAB /* Pods_Bangers_and_MashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */; };
 		A60BE110DC42D84BCA118505 /* Pods_Bangers_and_MashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */; };
+		AE33986B1F2816BD00A3FB8B /* VideoPlayerViewControllerProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33986A1F2816BD00A3FB8B /* VideoPlayerViewControllerProviderSpec.swift */; };
+		AE33986D1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33986C1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift */; };
+		AE33986F1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33986E1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift */; };
 		AE471F011F26702D00BB03B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE471F001F26702D00BB03B6 /* main.swift */; };
 		AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724791F2679F0002AB658 /* CameraViewController.swift */; };
 		AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */; };
@@ -35,9 +38,27 @@
 		AE6724A61F27A9C0002AB658 /* SeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A51F27A9C0002AB658 /* SeguePresenter.swift */; };
 		AE6724A81F27AA76002AB658 /* FakeSeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A71F27AA76002AB658 /* FakeSeguePresenter.swift */; };
 		AE6724AA1F27AB78002AB658 /* FakeReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724A91F27AB78002AB658 /* FakeReviewViewController.swift */; };
+		AE675BC91F281343005A7B4F /* ReviewViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE675BC81F281343005A7B4F /* ReviewViewControllerSpec.swift */; };
+		AE675BCB1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE675BCA1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift */; };
+		AE675BCD1F281447005A7B4F /* AVPlayerProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE675BCC1F281447005A7B4F /* AVPlayerProviderSpec.swift */; };
 		AE6A10611F27EC3F00BC6317 /* FocusTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10601F27EC3F00BC6317 /* FocusTouch.swift */; };
 		AE6A10631F27ECE200BC6317 /* FakeFocusTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10621F27ECE200BC6317 /* FakeFocusTouch.swift */; };
 		AE6A10651F27EE9F00BC6317 /* FocusTouchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10641F27EE9F00BC6317 /* FocusTouchSpec.swift */; };
+		AE6A10671F27FE2600BC6317 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10661F27FE2600BC6317 /* VideoPlayerViewController.swift */; };
+		AE6A106A1F27FEB300BC6317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6A10681F27FEB300BC6317 /* AVFoundation.framework */; };
+		AE6A106B1F27FEB300BC6317 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6A10691F27FEB300BC6317 /* AVKit.framework */; };
+		AE6A106D1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A106C1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift */; };
+		AE6A106F1F28026800BC6317 /* hot.m4v in Resources */ = {isa = PBXBuildFile; fileRef = AE6A106E1F28026800BC6317 /* hot.m4v */; };
+		AE6A10701F28026800BC6317 /* hot.m4v in Resources */ = {isa = PBXBuildFile; fileRef = AE6A106E1F28026800BC6317 /* hot.m4v */; };
+		AE6A10721F28027500BC6317 /* youngn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE6A10711F28027500BC6317 /* youngn.mp3 */; };
+		AE6A10731F28027500BC6317 /* youngn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE6A10711F28027500BC6317 /* youngn.mp3 */; };
+		AE6A10751F2804A700BC6317 /* AVPlayerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10741F2804A700BC6317 /* AVPlayerProvider.swift */; };
+		AE6A10771F28052200BC6317 /* FakeAVPlayerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10761F28052200BC6317 /* FakeAVPlayerProvider.swift */; };
+		AE6A10791F28067900BC6317 /* FakeAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10781F28067900BC6317 /* FakeAVPlayer.swift */; };
+		AE6A107B1F280B6D00BC6317 /* FakeNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A107A1F280B6D00BC6317 /* FakeNotificationCenter.swift */; };
+		AE6A107D1F280BBA00BC6317 /* InjectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A107C1F280BBA00BC6317 /* InjectionProtocols.swift */; };
+		AE6A107F1F280CAC00BC6317 /* Array+BangersAndMash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A107E1F280CAC00BC6317 /* Array+BangersAndMash.swift */; };
+		AE6A10811F280CCE00BC6317 /* Array+BangersAndMashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10801F280CCE00BC6317 /* Array+BangersAndMashSpec.swift */; };
 		AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */; };
 		AE97EB411F26605800E3F8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB3F1F26605800E3F8B7 /* Main.storyboard */; };
 		AE97EB431F26605800E3F8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB421F26605800E3F8B7 /* Assets.xcassets */; };
@@ -73,6 +94,9 @@
 		64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_MashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86ED4C5175C3F4E0FE496D83 /* Pods-Bangers and MashUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashUITests/Pods-Bangers and MashUITests.test.xcconfig"; sourceTree = "<group>"; };
 		871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_MashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE33986A1F2816BD00A3FB8B /* VideoPlayerViewControllerProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewControllerProviderSpec.swift; sourceTree = "<group>"; };
+		AE33986C1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoPlayerViewControllerProvider.swift; sourceTree = "<group>"; };
+		AE33986E1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		AE471F001F26702D00BB03B6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AE6724791F2679F0002AB658 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -99,9 +123,25 @@
 		AE6724A51F27A9C0002AB658 /* SeguePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguePresenter.swift; sourceTree = "<group>"; };
 		AE6724A71F27AA76002AB658 /* FakeSeguePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSeguePresenter.swift; sourceTree = "<group>"; };
 		AE6724A91F27AB78002AB658 /* FakeReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReviewViewController.swift; sourceTree = "<group>"; };
+		AE675BC81F281343005A7B4F /* ReviewViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewControllerSpec.swift; sourceTree = "<group>"; };
+		AE675BCA1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewControllerProvider.swift; sourceTree = "<group>"; };
+		AE675BCC1F281447005A7B4F /* AVPlayerProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerProviderSpec.swift; sourceTree = "<group>"; };
 		AE6A10601F27EC3F00BC6317 /* FocusTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusTouch.swift; sourceTree = "<group>"; };
 		AE6A10621F27ECE200BC6317 /* FakeFocusTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeFocusTouch.swift; sourceTree = "<group>"; };
 		AE6A10641F27EE9F00BC6317 /* FocusTouchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusTouchSpec.swift; sourceTree = "<group>"; };
+		AE6A10661F27FE2600BC6317 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		AE6A10681F27FEB300BC6317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE6A10691F27FEB300BC6317 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		AE6A106C1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewControllerSpec.swift; sourceTree = "<group>"; };
+		AE6A106E1F28026800BC6317 /* hot.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hot.m4v; sourceTree = "<group>"; };
+		AE6A10711F28027500BC6317 /* youngn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youngn.mp3; sourceTree = "<group>"; };
+		AE6A10741F2804A700BC6317 /* AVPlayerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerProvider.swift; sourceTree = "<group>"; };
+		AE6A10761F28052200BC6317 /* FakeAVPlayerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVPlayerProvider.swift; sourceTree = "<group>"; };
+		AE6A10781F28067900BC6317 /* FakeAVPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVPlayer.swift; sourceTree = "<group>"; };
+		AE6A107A1F280B6D00BC6317 /* FakeNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNotificationCenter.swift; sourceTree = "<group>"; };
+		AE6A107C1F280BBA00BC6317 /* InjectionProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionProtocols.swift; sourceTree = "<group>"; };
+		AE6A107E1F280CAC00BC6317 /* Array+BangersAndMash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+BangersAndMash.swift"; sourceTree = "<group>"; };
+		AE6A10801F280CCE00BC6317 /* Array+BangersAndMashSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+BangersAndMashSpec.swift"; sourceTree = "<group>"; };
 		AE97EB381F26605800E3F8B7 /* Bangers and Mash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bangers and Mash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE97EB401F26605800E3F8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6A106A1F27FEB300BC6317 /* AVFoundation.framework in Frameworks */,
+				AE6A106B1F27FEB300BC6317 /* AVKit.framework in Frameworks */,
 				ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +195,8 @@
 		22513DE7058956DC3AA7C5BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE6A10681F27FEB300BC6317 /* AVFoundation.framework */,
+				AE6A10691F27FEB300BC6317 /* AVKit.framework */,
 				C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */,
 				64E96BA88A489E72E5009782 /* Pods_Bangers_and_MashTests.framework */,
 				871B94FC7FDB3F75A8FF7E64 /* Pods_Bangers_and_MashUITests.framework */,
@@ -195,6 +239,9 @@
 				DE99CD92E33E239BAAD4CAD7 /* Recording */,
 				DE99C70BCDA747667B99B529 /* Wrappers */,
 				DE99C7A9A3477985D01B6C49 /* Presentation */,
+				DE99CC065F40110A506653D4 /* Playing */,
+				DE99C25E9D32B644F38CADEC /* InjectionProtocols */,
+				DE99C65A1159BD64FFB533B2 /* Extensions */,
 			);
 			path = "Bangers and Mash";
 			sourceTree = "<group>";
@@ -208,6 +255,8 @@
 				DE99CFEA3271E6FE06AA3F81 /* Fakes */,
 				DE99CCBCC5F488C3B645C836 /* Presentation */,
 				DE99C763565C7D73B99F97FF /* Support */,
+				DE99C6ED75AF13A10C00B8AF /* Playing */,
+				DE99CB376B8BC8F9D41BE955 /* Extensions */,
 			);
 			path = "Bangers and MashTests";
 			sourceTree = "<group>";
@@ -219,6 +268,23 @@
 				AE97EB5D1F26605800E3F8B7 /* Info.plist */,
 			);
 			path = "Bangers and MashUITests";
+			sourceTree = "<group>";
+		};
+		DE99C207C14E76D611CE1819 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A10711F28027500BC6317 /* youngn.mp3 */,
+				AE6A106E1F28026800BC6317 /* hot.m4v */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE99C25E9D32B644F38CADEC /* InjectionProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A107C1F280BBA00BC6317 /* InjectionProtocols.swift */,
+			);
+			path = InjectionProtocols;
 			sourceTree = "<group>";
 		};
 		DE99C378C53BA6170E9E7265 /* Mashup */ = {
@@ -237,8 +303,27 @@
 				AE6724991F26AFED002AB658 /* CameraViewControllerProviderSpec.swift */,
 				AE6724A11F26BA75002AB658 /* BallDropSpec.swift */,
 				AE6A10641F27EE9F00BC6317 /* FocusTouchSpec.swift */,
+				AE675BC81F281343005A7B4F /* ReviewViewControllerSpec.swift */,
 			);
 			path = Recording;
+			sourceTree = "<group>";
+		};
+		DE99C65A1159BD64FFB533B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A107E1F280CAC00BC6317 /* Array+BangersAndMash.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DE99C6ED75AF13A10C00B8AF /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A106C1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift */,
+				AE675BCC1F281447005A7B4F /* AVPlayerProviderSpec.swift */,
+				AE33986A1F2816BD00A3FB8B /* VideoPlayerViewControllerProviderSpec.swift */,
+			);
+			path = Playing;
 			sourceTree = "<group>";
 		};
 		DE99C70BCDA747667B99B529 /* Wrappers */ = {
@@ -255,6 +340,7 @@
 			children = (
 				AE6724911F269FCB002AB658 /* TestViewRenderer.swift */,
 				AE6724931F26A035002AB658 /* ViewLifecycleSwizzler.swift */,
+				DE99C207C14E76D611CE1819 /* Resources */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -266,6 +352,24 @@
 				AE6724A51F27A9C0002AB658 /* SeguePresenter.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DE99CB376B8BC8F9D41BE955 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A10801F280CCE00BC6317 /* Array+BangersAndMashSpec.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DE99CC065F40110A506653D4 /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A10661F27FE2600BC6317 /* VideoPlayerViewController.swift */,
+				AE6A10741F2804A700BC6317 /* AVPlayerProvider.swift */,
+				AE675BCA1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift */,
+			);
+			path = Playing;
 			sourceTree = "<group>";
 		};
 		DE99CCBCC5F488C3B645C836 /* Presentation */ = {
@@ -310,6 +414,11 @@
 				AE6724A71F27AA76002AB658 /* FakeSeguePresenter.swift */,
 				AE6724A91F27AB78002AB658 /* FakeReviewViewController.swift */,
 				AE6A10621F27ECE200BC6317 /* FakeFocusTouch.swift */,
+				AE6A10761F28052200BC6317 /* FakeAVPlayerProvider.swift */,
+				AE6A10781F28067900BC6317 /* FakeAVPlayer.swift */,
+				AE6A107A1F280B6D00BC6317 /* FakeNotificationCenter.swift */,
+				AE33986C1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift */,
+				AE33986E1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -457,6 +566,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6A10721F28027500BC6317 /* youngn.mp3 in Resources */,
+				AE6A106F1F28026800BC6317 /* hot.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +575,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6A10731F28027500BC6317 /* youngn.mp3 in Resources */,
+				AE6A10701F28026800BC6317 /* hot.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,12 +728,17 @@
 				AE6724A61F27A9C0002AB658 /* SeguePresenter.swift in Sources */,
 				AE6724821F267E4F002AB658 /* Animator.swift in Sources */,
 				AE6724861F2699F6002AB658 /* CameraControllerProvider.swift in Sources */,
+				AE6A10671F27FE2600BC6317 /* VideoPlayerViewController.swift in Sources */,
 				AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */,
 				AE67249E1F26B91B002AB658 /* BallDrop.swift in Sources */,
+				AE675BCB1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift in Sources */,
 				AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */,
 				AE471F011F26702D00BB03B6 /* main.swift in Sources */,
+				AE6A10751F2804A700BC6317 /* AVPlayerProvider.swift in Sources */,
 				DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */,
 				AE6724A41F27A95A002AB658 /* ReviewViewController.swift in Sources */,
+				AE6A107F1F280CAC00BC6317 /* Array+BangersAndMash.swift in Sources */,
+				AE6A107D1F280BBA00BC6317 /* InjectionProtocols.swift in Sources */,
 				AE6724961F26A7A4002AB658 /* Scheduler.swift in Sources */,
 				AE6A10611F27EC3F00BC6317 /* FocusTouch.swift in Sources */,
 				AE67248C1F269ED8002AB658 /* SubviewPresenter.swift in Sources */,
@@ -633,23 +751,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6724A01F26B9FD002AB658 /* FakeBallDrop.swift in Sources */,
+				AE6A107B1F280B6D00BC6317 /* FakeNotificationCenter.swift in Sources */,
 				AE67249A1F26AFED002AB658 /* CameraViewControllerProviderSpec.swift in Sources */,
 				AE67248E1F269EF3002AB658 /* FakeSubviewPresenter.swift in Sources */,
+				AE6A10811F280CCE00BC6317 /* Array+BangersAndMashSpec.swift in Sources */,
 				AE6A10651F27EE9F00BC6317 /* FocusTouchSpec.swift in Sources */,
 				AE6724801F267AF4002AB658 /* RecordButtonSpec.swift in Sources */,
+				AE33986D1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift in Sources */,
+				AE33986F1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift in Sources */,
 				AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */,
 				AE6A10631F27ECE200BC6317 /* FakeFocusTouch.swift in Sources */,
 				AE6724AA1F27AB78002AB658 /* FakeReviewViewController.swift in Sources */,
+				AE6A10791F28067900BC6317 /* FakeAVPlayer.swift in Sources */,
 				DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */,
 				AE6724A21F26BA75002AB658 /* BallDropSpec.swift in Sources */,
 				AE67248A1F269C7C002AB658 /* FakeSwiftyCamViewController.swift in Sources */,
 				AE6724981F26A8C2002AB658 /* FakeScheduler.swift in Sources */,
+				AE6A106D1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift in Sources */,
 				AE6724901F269F03002AB658 /* SubviewPresenterSpec.swift in Sources */,
 				AE6724841F267F0C002AB658 /* FakeAnimator.swift in Sources */,
+				AE33986B1F2816BD00A3FB8B /* VideoPlayerViewControllerProviderSpec.swift in Sources */,
+				AE6A10771F28052200BC6317 /* FakeAVPlayerProvider.swift in Sources */,
 				AE6724A81F27AA76002AB658 /* FakeSeguePresenter.swift in Sources */,
 				AE6724921F269FCB002AB658 /* TestViewRenderer.swift in Sources */,
 				AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */,
 				AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */,
+				AE675BCD1F281447005A7B4F /* AVPlayerProviderSpec.swift in Sources */,
+				AE675BC91F281343005A7B4F /* ReviewViewControllerSpec.swift in Sources */,
 				AE6724941F26A035002AB658 /* ViewLifecycleSwizzler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
