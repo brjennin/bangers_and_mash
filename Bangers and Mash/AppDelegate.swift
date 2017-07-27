@@ -32,3 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
+
+// Play song in review phase
+// Mash
+// Select to play video in mashup list// Upload video
+// Selective Mash
+// Shuffle Mash
+// Save Mash to phone
+// Watermark video
+// Deep link invitation only
+// New song
+// Make sure downloaded videos aren't included in phone backups
+// Preview song before recording
+// Recording progress bar
+// Marquee the song title
+// AVAudioSession stuff?
