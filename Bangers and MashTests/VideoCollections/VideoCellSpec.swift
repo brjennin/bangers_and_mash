@@ -8,13 +8,17 @@ class VideoCellSpec: QuickSpec {
     override func spec() {
         describe("VideoCell") {
             var subject: VideoCell!
-            var titleLabel: UILabel!
+            var previewBuilder: FakePreviewBuilder!
+            var videoThumbImageView: UIImageView!
 
             beforeEach {
                 subject = VideoCell()
 
-                titleLabel = UILabel()
-                subject.titleLabel = titleLabel
+                previewBuilder = FakePreviewBuilder()
+                subject.previewBuilder = previewBuilder
+
+                videoThumbImageView = UIImageView()
+                subject.videoThumbImageView = videoThumbImageView
             }
 
             describe("Configuring for a video") {
@@ -22,11 +26,18 @@ class VideoCellSpec: QuickSpec {
 
                 beforeEach {
                     video = URL(string: "file:///private/var/mobile/Containers/Data/Application/20067031-DBC0-4DD5-9BCC-2D1D6616B8DF/tmp/video1.mov")!
+
+                    previewBuilder.returnImageForImage = #imageLiteral(resourceName: "focus")
+
                     subject.configure(video: video)
                 }
 
-                it("sets the title label") {
-                    expect(subject.titleLabel.text).to(equal("video1"))
+                it("generates a preview image from the video url") {
+                    expect(previewBuilder.capturedUrlForImage).to(equal(video))
+                }
+
+                it("sets the image view image") {
+                    expect(subject.videoThumbImageView.image).to(equal(#imageLiteral(resourceName: "focus")))
                 }
             }
         }

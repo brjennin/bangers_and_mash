@@ -36,34 +36,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="siC-Fl-nrm">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="278" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="Vqt-Vc-zSs" customClass="VideoCell" customModule="Bangers_and_Mash" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="250" id="Vqt-Vc-zSs" customClass="VideoCell" customModule="Bangers_and_Mash" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vqt-Vc-zSs" id="xsm-je-eaH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usO-CO-qRd">
-                                            <rect key="frame" x="20" y="10" width="335" height="23.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3T-Ls-8he">
+                                            <rect key="frame" x="10" y="10" width="355" height="229.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="229.5" id="XdT-pX-Mfj"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="usO-CO-qRd" secondAttribute="bottom" constant="10" id="LYG-Uo-q6A"/>
-                                        <constraint firstAttribute="trailing" secondItem="usO-CO-qRd" secondAttribute="trailing" constant="20" id="joS-I3-kg2"/>
-                                        <constraint firstItem="usO-CO-qRd" firstAttribute="leading" secondItem="xsm-je-eaH" secondAttribute="leading" constant="20" id="l9w-ch-YbM"/>
-                                        <constraint firstItem="usO-CO-qRd" firstAttribute="top" secondItem="xsm-je-eaH" secondAttribute="top" constant="10" id="yoG-RI-FxH"/>
+                                        <constraint firstItem="A3T-Ls-8he" firstAttribute="leading" secondItem="xsm-je-eaH" secondAttribute="leading" constant="10" id="IHI-b1-Hg8"/>
+                                        <constraint firstAttribute="bottom" secondItem="A3T-Ls-8he" secondAttribute="bottom" constant="10" id="NwK-gh-HyI"/>
+                                        <constraint firstItem="A3T-Ls-8he" firstAttribute="top" secondItem="xsm-je-eaH" secondAttribute="top" constant="10" id="u8H-Mo-Wx9"/>
+                                        <constraint firstAttribute="trailing" secondItem="A3T-Ls-8he" secondAttribute="trailing" constant="10" id="xRD-1U-HeZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLabel" destination="usO-CO-qRd" id="LgG-ZH-vqT"/>
+                                    <outlet property="videoThumbImageView" destination="A3T-Ls-8he" id="Qib-Nh-mpd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpz-VB-ODS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-770" y="-1327"/>
+            <point key="canvasLocation" x="-771" y="-1388"/>
         </scene>
         <!--Mashup Takes View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uph-3s-A6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="60"/>
+            <point key="canvasLocation" x="766" y="109"/>
         </scene>
     </scenes>
     <resources>

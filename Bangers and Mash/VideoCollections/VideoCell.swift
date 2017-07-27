@@ -1,9 +1,11 @@
 import UIKit
 
 class VideoCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
+    var previewBuilder: PreviewBuilderProtocol = PreviewBuilder()
+
+    @IBOutlet weak var videoThumbImageView: UIImageView!
 
     func configure(video: URL) {
-        titleLabel.text = video.lastPathComponent.components(separatedBy: ".").first
+        videoThumbImageView.image = previewBuilder.image(for: video)
     }
 }
