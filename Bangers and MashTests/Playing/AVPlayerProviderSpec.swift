@@ -27,6 +27,21 @@ class AVPlayerProviderSpec: QuickSpec {
                     expect(result).toNot(be(subject.get(url: url)))
                 }
             }
+
+            describe("getting a new audio player") {
+                let bundle = Bundle(for: type(of: self))
+                let path = bundle.path(forResource: "wild_thoughts", ofType: "mp3")!
+                let url = URL(fileURLWithPath: path)
+                var result: AVAudioPlayer!
+
+                beforeEach {
+                    result = subject.getAudioPlayer(url: url)
+                }
+
+                it("returns a new player each time") {
+                    expect(result).toNot(be(subject.getAudioPlayer(url: url)))
+                }
+            }
         }
     }
 }

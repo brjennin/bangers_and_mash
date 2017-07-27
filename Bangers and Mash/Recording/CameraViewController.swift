@@ -10,9 +10,9 @@ class CameraViewController: UIViewController {
     var seguePresenter: SeguePresenterProtocol = SeguePresenter()
     var focusTouch: FocusTouchProtocol = FocusTouch()
     var navigationPoppinOff: NavigationPoppinOffProtocol = NavigationPoppinOff()
+    var songPlayer: SongPlayerProtocol = SongPlayer()
 
     static let countdownTime = 3
-    static let videoDuration: TimeInterval = 15
 
     @IBOutlet weak var cameraContainer: UIView!
     @IBOutlet weak var flashButton: UIButton!
@@ -22,6 +22,12 @@ class CameraViewController: UIViewController {
 
     var swiftyCamController: SwiftyCamViewControllerProtocol!
     var lastVideoUrl: URL?
+    var song: Song!
+
+    func configure(song: Song) {
+        self.song = song
+        songPlayer.load(song: song)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +59,7 @@ class CameraViewController: UIViewController {
             }, completion: nil)
 
         let timeToDrop = TimeInterval(exactly: CameraViewController.countdownTime)!
+        songPlayer.playSong(fromCountdown: timeToDrop)
         ballDrop.start(dropTime: timeToDrop, secondsLeftCallback: { [weak self] timeLeft in
             if timeLeft > 0 {
                 self?.countdownLabel.text = "\(timeLeft)"
@@ -84,7 +91,7 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: SwiftyCamViewControllerDelegate {
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didBeginRecordingVideo camera: SwiftyCamViewController.CameraSelection) {
-        scheduler.fireOnce(after: CameraViewController.videoDuration, block: { [weak self] timer in
+        scheduler.fireOnce(after: song.recordDuration, block: { [weak self] timer in
             self?.swiftyCamController.stopVideoRecording()
         })
     }
@@ -94,6 +101,7 @@ extension CameraViewController: SwiftyCamViewControllerDelegate {
         captureButton.isEnabled = true
         flashButton.isEnabled = true
         flipCameraButton.isEnabled = true
+        songPlayer.stopSong()
         animator.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: { [weak self] in
             self?.flashButton.alpha = 1
             self?.flipCameraButton.alpha = 1

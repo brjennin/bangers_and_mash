@@ -47,6 +47,10 @@ class MashupTakesViewControllerSpec: QuickSpec {
                     expect(subviewPresenter.capturedParentControllerForAdd).to(be(subject))
                 }
 
+                it("sets the song label text") {
+                    expect(subject.songLabel.text).to(equal("DJ Khaled, Rihanna, Bryson Tiller - Wild Thoughts (Medasin Dance Remix)"))
+                }
+
                 describe("view did appear") {
                     beforeEach {
                         subject.viewDidAppear(false)
@@ -85,6 +89,20 @@ class MashupTakesViewControllerSpec: QuickSpec {
                                 expect(videoRepository.capturedUrlForDelete).to(equal(videos.first!))
                             }
                         }
+                    }
+                }
+
+                describe("when adding a video to the mashup") {
+                    var cameraViewController: FakeCameraViewController!
+
+                    beforeEach {
+                        cameraViewController = FakeCameraViewController()
+                        let segue = UIStoryboardSegue(identifier: "addVideo", source: subject, destination: cameraViewController)
+                        subject.prepare(for: segue, sender: nil)
+                    }
+
+                    it("passes the song to the camera view controller") {
+                        expect(cameraViewController.capturedSongForConfigure).to(equal(subject.song()))
                     }
                 }
             }

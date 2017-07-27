@@ -10,4 +10,12 @@ class FakeAVPlayerProvider: AVPlayerProviderProtocol {
 
         return returnedPlayerForGet
     }
+
+    var capturedUrlForGetAudioPlayer: URL?
+    var returnedPlayerForGetAudioPlayer: AVAudioPlayer!
+    func getAudioPlayer(url: URL) -> AVAudioPlayer {
+        capturedUrlForGetAudioPlayer = url
+
+        return returnedPlayerForGetAudioPlayer
+    }
 }

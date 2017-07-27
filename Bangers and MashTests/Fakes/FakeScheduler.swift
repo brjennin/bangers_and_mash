@@ -4,9 +4,12 @@ import Foundation
 class FakeScheduler: SchedulerProtocol {
     var capturedSecondsForFireOnce: TimeInterval?
     var capturedBlockForFireOnce: ((Timer) -> ())?
-    func fireOnce(after seconds: TimeInterval, block: @escaping (Timer) -> ()) {
+    var returnTimerForFireOnce: Timer!
+    func fireOnce(after seconds: TimeInterval, block: @escaping (Timer) -> ()) -> Timer {
         capturedSecondsForFireOnce = seconds
         capturedBlockForFireOnce = block
+
+        return returnTimerForFireOnce
     }
 
     var capturedSecondsForFireRepeatedly: TimeInterval?

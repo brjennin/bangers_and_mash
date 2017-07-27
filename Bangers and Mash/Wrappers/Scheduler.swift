@@ -1,14 +1,14 @@
 import Foundation
 
 protocol SchedulerProtocol {
-    func fireOnce(after seconds: TimeInterval, block: @escaping (Timer) -> ())
+    func fireOnce(after seconds: TimeInterval, block: @escaping (Timer) -> ()) -> Timer
 
     func fireRepeatedly(every seconds: TimeInterval, block: @escaping (Timer) -> ()) -> Timer
 }
 
 class Scheduler: SchedulerProtocol {
-    func fireOnce(after seconds: TimeInterval, block: @escaping (Timer) -> ()) {
-        Timer.scheduledTimer(withTimeInterval: seconds, repeats: false, block: block)
+    func fireOnce(after seconds: TimeInterval, block: @escaping (Timer) -> ()) -> Timer {
+        return Timer.scheduledTimer(withTimeInterval: seconds, repeats: false, block: block)
     }
 
     func fireRepeatedly(every seconds: TimeInterval, block: @escaping (Timer) -> ()) -> Timer {

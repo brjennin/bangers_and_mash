@@ -87,11 +87,21 @@
 		AE9024351F2A4DE000B56A11 /* FakePreviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9024341F2A4DE000B56A11 /* FakePreviewBuilder.swift */; };
 		AE9024371F2A4F7400B56A11 /* perrier.MOV in Resources */ = {isa = PBXBuildFile; fileRef = AE9024361F2A4F7400B56A11 /* perrier.MOV */; };
 		AE9024381F2A4F7B00B56A11 /* perrier.MOV in Resources */ = {isa = PBXBuildFile; fileRef = AE9024361F2A4F7400B56A11 /* perrier.MOV */; };
+		AE90243A1F2A583200B56A11 /* wild_thoughts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE9024391F2A583200B56A11 /* wild_thoughts.mp3 */; };
+		AE90243B1F2A583200B56A11 /* wild_thoughts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE9024391F2A583200B56A11 /* wild_thoughts.mp3 */; };
+		AE90243D1F2A58C500B56A11 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90243C1F2A58C500B56A11 /* Song.swift */; };
+		AE90243E1F2A5D6900B56A11 /* wild_thoughts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE9024391F2A583200B56A11 /* wild_thoughts.mp3 */; };
+		AE9024401F2A5F1C00B56A11 /* FakeCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90243F1F2A5F1C00B56A11 /* FakeCameraViewController.swift */; };
+		AE9024421F2A614500B56A11 /* SongPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9024411F2A614500B56A11 /* SongPlayer.swift */; };
+		AE9024441F2A61A200B56A11 /* SongPlayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9024431F2A61A200B56A11 /* SongPlayerSpec.swift */; };
+		AE9024461F2A647100B56A11 /* SongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9024451F2A647100B56A11 /* SongSpec.swift */; };
 		AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */; };
 		AE97EB411F26605800E3F8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB3F1F26605800E3F8B7 /* Main.storyboard */; };
 		AE97EB431F26605800E3F8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB421F26605800E3F8B7 /* Assets.xcassets */; };
 		AE97EB461F26605800E3F8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97EB441F26605800E3F8B7 /* LaunchScreen.storyboard */; };
 		AE97EB5C1F26605800E3F8B7 /* Bangers_and_MashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */; };
+		AEE3AC691F2A6CA700D10EF4 /* FakeSongPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC681F2A6CA700D10EF4 /* FakeSongPlayer.swift */; };
+		AEE3AC6B1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC6A1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift */; };
 		DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */; };
 		DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */; };
 		ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */; };
@@ -198,6 +208,12 @@
 		AE9024321F2A48BB00B56A11 /* PreviewBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewBuilderSpec.swift; sourceTree = "<group>"; };
 		AE9024341F2A4DE000B56A11 /* FakePreviewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePreviewBuilder.swift; sourceTree = "<group>"; };
 		AE9024361F2A4F7400B56A11 /* perrier.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = perrier.MOV; sourceTree = "<group>"; };
+		AE9024391F2A583200B56A11 /* wild_thoughts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wild_thoughts.mp3; sourceTree = "<group>"; };
+		AE90243C1F2A58C500B56A11 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		AE90243F1F2A5F1C00B56A11 /* FakeCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCameraViewController.swift; sourceTree = "<group>"; };
+		AE9024411F2A614500B56A11 /* SongPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongPlayer.swift; sourceTree = "<group>"; };
+		AE9024431F2A61A200B56A11 /* SongPlayerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongPlayerSpec.swift; sourceTree = "<group>"; };
+		AE9024451F2A647100B56A11 /* SongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSpec.swift; sourceTree = "<group>"; };
 		AE97EB381F26605800E3F8B7 /* Bangers and Mash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bangers and Mash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB3B1F26605800E3F8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE97EB401F26605800E3F8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +225,8 @@
 		AE97EB571F26605800E3F8B7 /* Bangers and MashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bangers and MashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bangers_and_MashUITests.swift; sourceTree = "<group>"; };
 		AE97EB5D1F26605800E3F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEE3AC681F2A6CA700D10EF4 /* FakeSongPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSongPlayer.swift; sourceTree = "<group>"; };
+		AEE3AC6A1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVAudioPlayer.swift; sourceTree = "<group>"; };
 		B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_Mash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.test.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +319,7 @@
 				DE99C98E08E5C6E53A321A20 /* Filesystem */,
 				DE99C3316EDFC93C346865C3 /* VideoCollections */,
 				DE99C27CCF4F3CD8E92F77BB /* ThumbnailBuilding */,
+				AE90243C1F2A58C500B56A11 /* Song.swift */,
 			);
 			path = "Bangers and Mash";
 			sourceTree = "<group>";
@@ -319,6 +338,7 @@
 				DE99CE810120666E47E26BDB /* Filesystem */,
 				DE99CD509EB86939A8DA44B1 /* VideoCollections */,
 				DE99C06AB586A1D55291AF4A /* ThumbnailBuilding */,
+				AE9024451F2A647100B56A11 /* SongSpec.swift */,
 			);
 			path = "Bangers and MashTests";
 			sourceTree = "<group>";
@@ -343,6 +363,7 @@
 		DE99C207C14E76D611CE1819 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AE9024391F2A583200B56A11 /* wild_thoughts.mp3 */,
 				AE9024361F2A4F7400B56A11 /* perrier.MOV */,
 				AE6A10711F28027500BC6317 /* youngn.mp3 */,
 			);
@@ -411,6 +432,7 @@
 				AE6A106C1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift */,
 				AE675BCC1F281447005A7B4F /* AVPlayerProviderSpec.swift */,
 				AE33986A1F2816BD00A3FB8B /* VideoPlayerViewControllerProviderSpec.swift */,
+				AE9024431F2A61A200B56A11 /* SongPlayerSpec.swift */,
 			);
 			path = Playing;
 			sourceTree = "<group>";
@@ -468,6 +490,7 @@
 				AE6A10661F27FE2600BC6317 /* VideoPlayerViewController.swift */,
 				AE6A10741F2804A700BC6317 /* AVPlayerProvider.swift */,
 				AE675BCA1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift */,
+				AE9024411F2A614500B56A11 /* SongPlayer.swift */,
 			);
 			path = Playing;
 			sourceTree = "<group>";
@@ -551,6 +574,9 @@
 				AE2949431F29357F004BFDD9 /* FakeVideoRepository.swift */,
 				AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */,
 				AE9024341F2A4DE000B56A11 /* FakePreviewBuilder.swift */,
+				AE90243F1F2A5F1C00B56A11 /* FakeCameraViewController.swift */,
+				AEE3AC681F2A6CA700D10EF4 /* FakeSongPlayer.swift */,
+				AEE3AC6A1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -688,6 +714,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE90243E1F2A5D6900B56A11 /* wild_thoughts.mp3 in Resources */,
 				AE97EB461F26605800E3F8B7 /* LaunchScreen.storyboard in Resources */,
 				AE97EB431F26605800E3F8B7 /* Assets.xcassets in Resources */,
 				AE97EB411F26605800E3F8B7 /* Main.storyboard in Resources */,
@@ -698,6 +725,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE90243A1F2A583200B56A11 /* wild_thoughts.mp3 in Resources */,
 				AE9024371F2A4F7400B56A11 /* perrier.MOV in Resources */,
 				AE6A10721F28027500BC6317 /* youngn.mp3 in Resources */,
 			);
@@ -707,6 +735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE90243B1F2A583200B56A11 /* wild_thoughts.mp3 in Resources */,
 				AE9024381F2A4F7B00B56A11 /* perrier.MOV in Resources */,
 				AE6A10731F28027500BC6317 /* youngn.mp3 in Resources */,
 			);
@@ -857,6 +886,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE90243D1F2A58C500B56A11 /* Song.swift in Sources */,
 				AE2949341F292F4A004BFDD9 /* VideoCollectionViewController.swift in Sources */,
 				AE29491E1F28F7A9004BFDD9 /* ViewDismisser.swift in Sources */,
 				AE2949401F2934C2004BFDD9 /* VideoRepository.swift in Sources */,
@@ -873,6 +903,7 @@
 				AE9024311F2A46D900B56A11 /* PreviewBuilder.swift in Sources */,
 				AE675BCB1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift in Sources */,
 				AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */,
+				AE9024421F2A614500B56A11 /* SongPlayer.swift in Sources */,
 				AE29491A1F28F524004BFDD9 /* VideoArchiver.swift in Sources */,
 				AE471F011F26702D00BB03B6 /* main.swift in Sources */,
 				AE6A10751F2804A700BC6317 /* AVPlayerProvider.swift in Sources */,
@@ -912,11 +943,15 @@
 				AE6A10791F28067900BC6317 /* FakeAVPlayer.swift in Sources */,
 				AE29492A1F2904F9004BFDD9 /* FakeDirectoryFinder.swift in Sources */,
 				DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */,
+				AE9024401F2A5F1C00B56A11 /* FakeCameraViewController.swift in Sources */,
+				AEE3AC691F2A6CA700D10EF4 /* FakeSongPlayer.swift in Sources */,
 				AE6724A21F26BA75002AB658 /* BallDropSpec.swift in Sources */,
 				AE2949301F291611004BFDD9 /* FakeNavigationPoppinOff.swift in Sources */,
 				AE67248A1F269C7C002AB658 /* FakeSwiftyCamViewController.swift in Sources */,
 				AE2949321F291671004BFDD9 /* NavigationPoppinOffSpec.swift in Sources */,
+				AE9024441F2A61A200B56A11 /* SongPlayerSpec.swift in Sources */,
 				AE6724981F26A8C2002AB658 /* FakeScheduler.swift in Sources */,
+				AE9024461F2A647100B56A11 /* SongSpec.swift in Sources */,
 				AE6A106D1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift in Sources */,
 				AE6724901F269F03002AB658 /* SubviewPresenterSpec.swift in Sources */,
 				AE90242D1F2941B600B56A11 /* FakeVideoCell.swift in Sources */,
@@ -932,6 +967,7 @@
 				AE2949241F28FEB9004BFDD9 /* FakeVideoArchiver.swift in Sources */,
 				AE675BCD1F281447005A7B4F /* AVPlayerProviderSpec.swift in Sources */,
 				AE9024331F2A48BB00B56A11 /* PreviewBuilderSpec.swift in Sources */,
+				AEE3AC6B1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift in Sources */,
 				AE29493C1F29310C004BFDD9 /* FakeVideoCollectionViewControllerProvider.swift in Sources */,
 				AE29493E1F293286004BFDD9 /* FakeVideoCollectionViewController.swift in Sources */,
 				AE2949201F28F7D3004BFDD9 /* ViewDismisserSpec.swift in Sources */,
