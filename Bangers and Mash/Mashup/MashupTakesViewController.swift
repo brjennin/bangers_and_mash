@@ -47,6 +47,6 @@ class MashupTakesViewController: UIViewController {
     func song() -> Song {
         let path = Bundle.main.path(forResource: "wild_thoughts", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
-        return Song(name: "DJ Khaled, Rihanna, Bryson Tiller - Wild Thoughts (Medasin Dance Remix)", url: url, recordingStartTime: 8)
+        return Song(name: "DJ Khaled, Rihanna, Bryson Tiller - Wild Thoughts (Medasin Dance Remix)", url: url, recordingStartTime: 8, recordingEndTime: 25)
     }
 }
