@@ -25,6 +25,10 @@ class ReviewViewController: UIViewController {
         super.viewDidLoad()
 
         subviewPresenter.add(subController: videoPlayerController, toController: self, view: playerView)
+        keepButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 50)
+        keepButton.setTitle(String.fontAwesomeIcon(name: .thumbsOUp), for: .normal)
+        retakeButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 50)
+        retakeButton.setTitle(String.fontAwesomeIcon(name: .ban), for: .normal)
     }
 
     @IBAction func didTapKeepTake(_ sender: Any) {

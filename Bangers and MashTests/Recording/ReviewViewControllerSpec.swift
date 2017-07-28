@@ -2,6 +2,7 @@ import UIKit
 import Quick
 import Nimble
 import Fleet
+import FontAwesome_swift
 @testable import Bangers_and_Mash
 
 class ReviewViewControllerSpec: QuickSpec {
@@ -52,6 +53,11 @@ class ReviewViewControllerSpec: QuickSpec {
                 describe("view did load") {
                     beforeEach {
                         TestViewRenderer.initiateViewLifeCycle(controller: subject)
+                    }
+
+                    it("sets the keep and retake buttons to be fontawesome buttons") {
+                        expect(subject.keepButton.title(for: .normal)).to(equal(String.fontAwesomeIcon(name: .thumbsOUp)))
+                        expect(subject.retakeButton.title(for: .normal)).to(equal(String.fontAwesomeIcon(name: .ban)))
                     }
 
                     it("presents a video player controller in the view") {
