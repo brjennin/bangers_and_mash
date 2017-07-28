@@ -25,6 +25,12 @@ class VideoPlayerViewController: UIViewController {
         notificationCenter.addObserver(self, selector: #selector(didReachEnd(_:)), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        player.pause()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

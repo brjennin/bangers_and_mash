@@ -107,6 +107,16 @@ class VideoPlayerViewControllerSpec: QuickSpec {
                                 expect(player.calledPlay).to(beTrue())
                             }
                         }
+
+                        describe("when the view disappears") {
+                            beforeEach {
+                                subject.viewDidDisappear(false)
+                            }
+
+                            it("pauses the player") {
+                                expect(player.calledPause).to(beTrue())
+                            }
+                        }
                     }
                 }
             }

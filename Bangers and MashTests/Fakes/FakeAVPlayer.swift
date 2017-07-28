@@ -13,6 +13,11 @@ class FakeAVPlayer: AVPlayer {
         }
     }
 
+    var calledPause = false
+    override func pause() {
+        calledPause = true
+    }
+
     var calledPlay = false
     override func play() {
         calledPlay = true
@@ -26,6 +31,7 @@ class FakeAVPlayer: AVPlayer {
     func reset() {
         _currentItem = nil
         calledPlay = false
+        calledPause = false
         capturedTimeForSeek = nil
     }
 }
