@@ -11,6 +11,7 @@ class CameraViewController: UIViewController {
     var focusTouch: FocusTouchProtocol = FocusTouch()
     var navigationPoppinOff: NavigationPoppinOffProtocol = NavigationPoppinOff()
     var songPlayer: SongPlayerProtocol = SongPlayer()
+    var youreJustMashingIt: YoureJustMashingItProtocol = YoureJustMashingIt()
 
     static let countdownTime = 3
 
@@ -91,7 +92,7 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: SwiftyCamViewControllerDelegate {
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didBeginRecordingVideo camera: SwiftyCamViewController.CameraSelection) {
-        scheduler.fireOnce(after: song.recordDuration, block: { [weak self] timer in
+        _ = scheduler.fireOnce(after: song.recordDuration, block: { [weak self] timer in
             self?.swiftyCamController.stopVideoRecording()
         })
     }
@@ -109,8 +110,12 @@ extension CameraViewController: SwiftyCamViewControllerDelegate {
     }
 
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
-        lastVideoUrl = url
-        seguePresenter.trigger(on: self, identifier: "reviewVideo")
+        youreJustMashingIt.combine(song: song, videoUrl: url) { [weak self] url in
+            if let weakSelf = self {
+                weakSelf.lastVideoUrl = url
+                weakSelf.seguePresenter.trigger(on: weakSelf, identifier: "reviewVideo")
+            }
+        }
     }
 
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint) {

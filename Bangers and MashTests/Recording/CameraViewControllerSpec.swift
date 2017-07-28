@@ -21,6 +21,7 @@ class CameraViewControllerSpec: QuickSpec {
             var focusTouch: FakeFocusTouch!
             var navigationPoppinOff: FakeNavigationPoppinOff!
             var songPlayer: FakeSongPlayer!
+            var youreJustMashingIt: FakeYoureJustMashingIt!
 
             beforeEach {
                 storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -52,6 +53,9 @@ class CameraViewControllerSpec: QuickSpec {
 
                 songPlayer = FakeSongPlayer()
                 subject.songPlayer = songPlayer
+
+                youreJustMashingIt = FakeYoureJustMashingIt()
+                subject.youreJustMashingIt = youreJustMashingIt
             }
 
             describe("configuring with a song") {
@@ -308,32 +312,47 @@ class CameraViewControllerSpec: QuickSpec {
                                 subject.swiftyCam(SwiftyCamViewController(), didFinishProcessVideoAt: url)
                             }
 
-                            it("triggers the segue") {
-                                expect(seguePresenter.capturedControllerForTrigger).to(be(subject))
-                                expect(seguePresenter.capturedIdentifierForTrigger).to(equal("reviewVideo"))
+                            it("mashes the song and video") {
+                                expect(youreJustMashingIt.capturedSongForCombine).to(equal(song))
+                                expect(youreJustMashingIt.capturedVideoUrlForCombine).to(equal(url))
                             }
 
-                            describe("preparing for segue") {
-                                var reviewViewController: FakeReviewViewController!
-                                
+                            describe("when the song and video have been mashed") {
+                                var mashUrl: URL!
+
                                 beforeEach {
-                                    reviewViewController = FakeReviewViewController()
-                                    let segue = UIStoryboardSegue(identifier: "reviewVideo", source: subject, destination: reviewViewController)
-                                    subject.prepare(for: segue, sender: nil)
+                                    mashUrl = URL(string: "https://example.com/mash.mov")
+
+                                    youreJustMashingIt.capturedCompletionForCombine?(mashUrl)
                                 }
-                                
-                                it("configures the video URL on the review view controller") {
-                                    expect(reviewViewController.capturedVideoUrlForConfigure).to(equal(url))
+
+                                it("triggers the segue") {
+                                    expect(seguePresenter.capturedControllerForTrigger).to(be(subject))
+                                    expect(seguePresenter.capturedIdentifierForTrigger).to(equal("reviewVideo"))
                                 }
-                                
-                                describe("When the user keeps their video take") {
+
+                                describe("preparing for segue") {
+                                    var reviewViewController: FakeReviewViewController!
+
                                     beforeEach {
-                                        reviewViewController.capturedVideoKeptCallbackForConfigure?()
+                                        reviewViewController = FakeReviewViewController()
+                                        let segue = UIStoryboardSegue(identifier: "reviewVideo", source: subject, destination: reviewViewController)
+                                        subject.prepare(for: segue, sender: nil)
                                     }
-                                    
-                                    it("pops back to the mashup view controller") {
-                                        expect(navigationPoppinOff.capturedAnimatedForPop).to(beFalse())
-                                        expect(navigationPoppinOff.capturedNavControllerForPop).to(be(navController))
+
+                                    it("configures the video URL on the review view controller") {
+                                        expect(reviewViewController.capturedVideoUrlForConfigure).to(equal(mashUrl))
+                                    }
+
+                                    describe("When the user keeps their video take") {
+                                        beforeEach {
+                                            reviewViewController.capturedVideoKeptCallbackForConfigure?()
+                                        }
+
+                                        it("pops back to the mashup view controller") {
+                                            expect(navigationPoppinOff.capturedAnimatedForPop).to(beFalse())
+                                            expect(navigationPoppinOff.capturedNavControllerForPop).to(be(navController))
+                                        }
                                     }
                                 }
                             }

@@ -26,6 +26,27 @@ class DirectoryFinderSpec: QuickSpec {
                     expect(url).to(equal(documentsDirectory))
                 }
             }
+
+            describe("generating a new temp url") {
+                var url: URL!
+
+                beforeEach {
+                    url = subject.generateNewTempFileUrl(extensionString: "mov")
+                }
+
+                it("returns a new url every time") {
+                    expect(url).toNot(equal(subject.generateNewTempFileUrl(extensionString: "mov")))
+                }
+
+                it("returns a url in the temp directory") {
+                    let tempDir = url.deletingLastPathComponent()
+                    expect(tempDir.absoluteString).to(equal(URL(fileURLWithPath: NSTemporaryDirectory()).absoluteString))
+                }
+
+                it("has the correct extension") {
+                    expect(url.pathExtension).to(equal("mov"))
+                }
+            }
         }
     }
 }

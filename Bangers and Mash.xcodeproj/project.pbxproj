@@ -102,6 +102,17 @@
 		AE97EB5C1F26605800E3F8B7 /* Bangers_and_MashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EB5B1F26605800E3F8B7 /* Bangers_and_MashUITests.swift */; };
 		AEE3AC691F2A6CA700D10EF4 /* FakeSongPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC681F2A6CA700D10EF4 /* FakeSongPlayer.swift */; };
 		AEE3AC6B1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC6A1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift */; };
+		AEE3AC6D1F2AA18400D10EF4 /* YoureJustMashingIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC6C1F2AA18400D10EF4 /* YoureJustMashingIt.swift */; };
+		AEE3AC6F1F2AAF7500D10EF4 /* FakeYoureJustMashingIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC6E1F2AAF7500D10EF4 /* FakeYoureJustMashingIt.swift */; };
+		AEE3AC711F2BC76F00D10EF4 /* AVAssetExportSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC701F2BC76F00D10EF4 /* AVAssetExportSessionProvider.swift */; };
+		AEE3AC731F2BD7BB00D10EF4 /* AVAssetExportSessionProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC721F2BD7BB00D10EF4 /* AVAssetExportSessionProviderSpec.swift */; };
+		AEE3AC751F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC741F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift */; };
+		AEE3AC771F2BD97300D10EF4 /* FakeAVAssetExportSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC761F2BD97300D10EF4 /* FakeAVAssetExportSession.swift */; };
+		AEE3AC7B1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC7A1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift */; };
+		AEE3AC7D1F2BE1EE00D10EF4 /* TrackStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC7C1F2BE1EE00D10EF4 /* TrackStar.swift */; };
+		AEE3AC7F1F2BE36200D10EF4 /* FakeTrackStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC7E1F2BE36200D10EF4 /* FakeTrackStar.swift */; };
+		AEE3AC811F2BE4A200D10EF4 /* TrackStarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3AC801F2BE4A200D10EF4 /* TrackStarSpec.swift */; };
+		AEE3AC831F2BF4C300D10EF4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE3AC821F2BF4C300D10EF4 /* CoreMedia.framework */; };
 		DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */; };
 		DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */; };
 		ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */; };
@@ -227,6 +238,17 @@
 		AE97EB5D1F26605800E3F8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE3AC681F2A6CA700D10EF4 /* FakeSongPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSongPlayer.swift; sourceTree = "<group>"; };
 		AEE3AC6A1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVAudioPlayer.swift; sourceTree = "<group>"; };
+		AEE3AC6C1F2AA18400D10EF4 /* YoureJustMashingIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoureJustMashingIt.swift; sourceTree = "<group>"; };
+		AEE3AC6E1F2AAF7500D10EF4 /* FakeYoureJustMashingIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeYoureJustMashingIt.swift; sourceTree = "<group>"; };
+		AEE3AC701F2BC76F00D10EF4 /* AVAssetExportSessionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetExportSessionProvider.swift; sourceTree = "<group>"; };
+		AEE3AC721F2BD7BB00D10EF4 /* AVAssetExportSessionProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetExportSessionProviderSpec.swift; sourceTree = "<group>"; };
+		AEE3AC741F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVAssetExportSessionProvider.swift; sourceTree = "<group>"; };
+		AEE3AC761F2BD97300D10EF4 /* FakeAVAssetExportSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVAssetExportSession.swift; sourceTree = "<group>"; };
+		AEE3AC7A1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoureJustMashingItSpec.swift; sourceTree = "<group>"; };
+		AEE3AC7C1F2BE1EE00D10EF4 /* TrackStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackStar.swift; sourceTree = "<group>"; };
+		AEE3AC7E1F2BE36200D10EF4 /* FakeTrackStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTrackStar.swift; sourceTree = "<group>"; };
+		AEE3AC801F2BE4A200D10EF4 /* TrackStarSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackStarSpec.swift; sourceTree = "<group>"; };
+		AEE3AC821F2BF4C300D10EF4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_Mash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.test.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE3AC831F2BF4C300D10EF4 /* CoreMedia.framework in Frameworks */,
 				AE6A106A1F27FEB300BC6317 /* AVFoundation.framework in Frameworks */,
 				AE6A106B1F27FEB300BC6317 /* AVKit.framework in Frameworks */,
 				ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */,
@@ -269,6 +292,7 @@
 		22513DE7058956DC3AA7C5BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEE3AC821F2BF4C300D10EF4 /* CoreMedia.framework */,
 				AE6A10681F27FEB300BC6317 /* AVFoundation.framework */,
 				AE6A10691F27FEB300BC6317 /* AVKit.framework */,
 				C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */,
@@ -401,6 +425,8 @@
 			children = (
 				DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */,
 				AE2949411F293569004BFDD9 /* VideoRepositorySpec.swift */,
+				AEE3AC7A1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift */,
+				AEE3AC801F2BE4A200D10EF4 /* TrackStarSpec.swift */,
 			);
 			path = Mashup;
 			sourceTree = "<group>";
@@ -472,6 +498,7 @@
 			children = (
 				AE2949191F28F524004BFDD9 /* VideoArchiver.swift */,
 				AE2949251F290133004BFDD9 /* DirectoryFinder.swift */,
+				AEE3AC701F2BC76F00D10EF4 /* AVAssetExportSessionProvider.swift */,
 			);
 			path = Filesystem;
 			sourceTree = "<group>";
@@ -533,6 +560,7 @@
 			children = (
 				AE29491B1F28F530004BFDD9 /* VideoArchiverSpec.swift */,
 				AE2949271F2904E9004BFDD9 /* DirectoryFinderSpec.swift */,
+				AEE3AC721F2BD7BB00D10EF4 /* AVAssetExportSessionProviderSpec.swift */,
 			);
 			path = Filesystem;
 			sourceTree = "<group>";
@@ -542,6 +570,8 @@
 			children = (
 				DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */,
 				AE29493F1F2934C2004BFDD9 /* VideoRepository.swift */,
+				AEE3AC6C1F2AA18400D10EF4 /* YoureJustMashingIt.swift */,
+				AEE3AC7C1F2BE1EE00D10EF4 /* TrackStar.swift */,
 			);
 			path = Mashup;
 			sourceTree = "<group>";
@@ -577,6 +607,10 @@
 				AE90243F1F2A5F1C00B56A11 /* FakeCameraViewController.swift */,
 				AEE3AC681F2A6CA700D10EF4 /* FakeSongPlayer.swift */,
 				AEE3AC6A1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift */,
+				AEE3AC6E1F2AAF7500D10EF4 /* FakeYoureJustMashingIt.swift */,
+				AEE3AC741F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift */,
+				AEE3AC761F2BD97300D10EF4 /* FakeAVAssetExportSession.swift */,
+				AEE3AC7E1F2BE36200D10EF4 /* FakeTrackStar.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -903,12 +937,15 @@
 				AE9024311F2A46D900B56A11 /* PreviewBuilder.swift in Sources */,
 				AE675BCB1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift in Sources */,
 				AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */,
+				AEE3AC6D1F2AA18400D10EF4 /* YoureJustMashingIt.swift in Sources */,
+				AEE3AC711F2BC76F00D10EF4 /* AVAssetExportSessionProvider.swift in Sources */,
 				AE9024421F2A614500B56A11 /* SongPlayer.swift in Sources */,
 				AE29491A1F28F524004BFDD9 /* VideoArchiver.swift in Sources */,
 				AE471F011F26702D00BB03B6 /* main.swift in Sources */,
 				AE6A10751F2804A700BC6317 /* AVPlayerProvider.swift in Sources */,
 				DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */,
 				AE6724A41F27A95A002AB658 /* ReviewViewController.swift in Sources */,
+				AEE3AC7D1F2BE1EE00D10EF4 /* TrackStar.swift in Sources */,
 				AE6A107F1F280CAC00BC6317 /* Array+BangersAndMash.swift in Sources */,
 				AE6A107D1F280BBA00BC6317 /* InjectionProtocols.swift in Sources */,
 				AE6724961F26A7A4002AB658 /* Scheduler.swift in Sources */,
@@ -933,17 +970,23 @@
 				AE6A10811F280CCE00BC6317 /* Array+BangersAndMashSpec.swift in Sources */,
 				AE6A10651F27EE9F00BC6317 /* FocusTouchSpec.swift in Sources */,
 				AE29491C1F28F530004BFDD9 /* VideoArchiverSpec.swift in Sources */,
+				AEE3AC771F2BD97300D10EF4 /* FakeAVAssetExportSession.swift in Sources */,
 				AE6724801F267AF4002AB658 /* RecordButtonSpec.swift in Sources */,
 				AE33986D1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift in Sources */,
 				AE2949381F293011004BFDD9 /* VideoCollectionViewControllerProviderSpec.swift in Sources */,
 				AE33986F1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift in Sources */,
+				AEE3AC7B1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift in Sources */,
 				AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */,
+				AEE3AC751F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift in Sources */,
 				AE6A10631F27ECE200BC6317 /* FakeFocusTouch.swift in Sources */,
+				AEE3AC731F2BD7BB00D10EF4 /* AVAssetExportSessionProviderSpec.swift in Sources */,
 				AE6724AA1F27AB78002AB658 /* FakeReviewViewController.swift in Sources */,
+				AEE3AC7F1F2BE36200D10EF4 /* FakeTrackStar.swift in Sources */,
 				AE6A10791F28067900BC6317 /* FakeAVPlayer.swift in Sources */,
 				AE29492A1F2904F9004BFDD9 /* FakeDirectoryFinder.swift in Sources */,
 				DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */,
 				AE9024401F2A5F1C00B56A11 /* FakeCameraViewController.swift in Sources */,
+				AEE3AC6F1F2AAF7500D10EF4 /* FakeYoureJustMashingIt.swift in Sources */,
 				AEE3AC691F2A6CA700D10EF4 /* FakeSongPlayer.swift in Sources */,
 				AE6724A21F26BA75002AB658 /* BallDropSpec.swift in Sources */,
 				AE2949301F291611004BFDD9 /* FakeNavigationPoppinOff.swift in Sources */,
@@ -960,6 +1003,7 @@
 				AE6A10771F28052200BC6317 /* FakeAVPlayerProvider.swift in Sources */,
 				AE2949221F28F80E004BFDD9 /* FakeViewDismisser.swift in Sources */,
 				AE6724A81F27AA76002AB658 /* FakeSeguePresenter.swift in Sources */,
+				AEE3AC811F2BE4A200D10EF4 /* TrackStarSpec.swift in Sources */,
 				AE6724921F269FCB002AB658 /* TestViewRenderer.swift in Sources */,
 				AE2949281F2904E9004BFDD9 /* DirectoryFinderSpec.swift in Sources */,
 				AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */,
