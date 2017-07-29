@@ -44,7 +44,7 @@ class MashupTakesViewController: UIViewController {
         if let cameraViewController = segue.destination as? CameraViewController {
             cameraViewController.configure(song: song())
         } else if let mashupEditController = segue.destination as? MashupEditViewController {
-            mashupEditController.configure(videos: videos)
+            mashupEditController.configure(videos: videos, song: song())
         }
     }
 

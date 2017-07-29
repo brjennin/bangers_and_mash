@@ -46,7 +46,7 @@ class YoureJustMashingIt: YoureJustMashingItProtocol {
 
         let songTrack = trackStar.audioTrack(from: songAsset)
         let videoTracks = videoAssets.map { asset in return self.trackStar.videoTrack(from: asset) }
-        compositionVideoTrack.preferredTransform = videoTracks.first!.preferredTransform
+        compositionVideoTrack.preferredTransform = videoTracks.last!.preferredTransform
 
         let videoDuration = CMTime(seconds: song.recordDuration, preferredTimescale: 1)
         let timeRange = CMTimeRange(start: kCMTimeZero, duration: videoDuration)
