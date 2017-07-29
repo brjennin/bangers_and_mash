@@ -35,6 +35,12 @@
 		AE33986D1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33986C1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift */; };
 		AE33986F1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33986E1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift */; };
 		AE471F011F26702D00BB03B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE471F001F26702D00BB03B6 /* main.swift */; };
+		AE4CAF821F2C03E0009805BC /* FakeMashupEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CAF811F2C03E0009805BC /* FakeMashupEditViewController.swift */; };
+		AE4CAF841F2C08B9009805BC /* MashupEditViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CAF831F2C08B9009805BC /* MashupEditViewControllerSpec.swift */; };
+		AE4CAF861F2C0EF9009805BC /* TimeSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CAF851F2C0EF9009805BC /* TimeSplitter.swift */; };
+		AE4CAF881F2C0F76009805BC /* TimeSplitterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CAF871F2C0F76009805BC /* TimeSplitterSpec.swift */; };
+		AE4CAF8A1F2C1537009805BC /* RandomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CAF891F2C1537009805BC /* RandomPicker.swift */; };
+		AE518A4B1F2C01D1007870F9 /* MashupEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE518A4A1F2C01D1007870F9 /* MashupEditViewController.swift */; };
 		AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6724791F2679F0002AB658 /* CameraViewController.swift */; };
 		AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */; };
 		AE67247E1F267ACF002AB658 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67247D1F267ACF002AB658 /* RecordButton.swift */; };
@@ -169,6 +175,12 @@
 		AE33986C1F2817C200A3FB8B /* FakeVideoPlayerViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoPlayerViewControllerProvider.swift; sourceTree = "<group>"; };
 		AE33986E1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		AE471F001F26702D00BB03B6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AE4CAF811F2C03E0009805BC /* FakeMashupEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMashupEditViewController.swift; sourceTree = "<group>"; };
+		AE4CAF831F2C08B9009805BC /* MashupEditViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MashupEditViewControllerSpec.swift; sourceTree = "<group>"; };
+		AE4CAF851F2C0EF9009805BC /* TimeSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSplitter.swift; sourceTree = "<group>"; };
+		AE4CAF871F2C0F76009805BC /* TimeSplitterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSplitterSpec.swift; sourceTree = "<group>"; };
+		AE4CAF891F2C1537009805BC /* RandomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPicker.swift; sourceTree = "<group>"; };
+		AE518A4A1F2C01D1007870F9 /* MashupEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MashupEditViewController.swift; sourceTree = "<group>"; };
 		AE6724791F2679F0002AB658 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AE67247B1F267A1D002AB658 /* CameraViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewControllerSpec.swift; sourceTree = "<group>"; };
 		AE67247D1F267ACF002AB658 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
@@ -427,6 +439,8 @@
 				AE2949411F293569004BFDD9 /* VideoRepositorySpec.swift */,
 				AEE3AC7A1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift */,
 				AEE3AC801F2BE4A200D10EF4 /* TrackStarSpec.swift */,
+				AE4CAF831F2C08B9009805BC /* MashupEditViewControllerSpec.swift */,
+				AE4CAF871F2C0F76009805BC /* TimeSplitterSpec.swift */,
 			);
 			path = Mashup;
 			sourceTree = "<group>";
@@ -572,6 +586,9 @@
 				AE29493F1F2934C2004BFDD9 /* VideoRepository.swift */,
 				AEE3AC6C1F2AA18400D10EF4 /* YoureJustMashingIt.swift */,
 				AEE3AC7C1F2BE1EE00D10EF4 /* TrackStar.swift */,
+				AE518A4A1F2C01D1007870F9 /* MashupEditViewController.swift */,
+				AE4CAF851F2C0EF9009805BC /* TimeSplitter.swift */,
+				AE4CAF891F2C1537009805BC /* RandomPicker.swift */,
 			);
 			path = Mashup;
 			sourceTree = "<group>";
@@ -611,6 +628,7 @@
 				AEE3AC741F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift */,
 				AEE3AC761F2BD97300D10EF4 /* FakeAVAssetExportSession.swift */,
 				AEE3AC7E1F2BE36200D10EF4 /* FakeTrackStar.swift */,
+				AE4CAF811F2C03E0009805BC /* FakeMashupEditViewController.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -923,6 +941,7 @@
 				AE90243D1F2A58C500B56A11 /* Song.swift in Sources */,
 				AE2949341F292F4A004BFDD9 /* VideoCollectionViewController.swift in Sources */,
 				AE29491E1F28F7A9004BFDD9 /* ViewDismisser.swift in Sources */,
+				AE518A4B1F2C01D1007870F9 /* MashupEditViewController.swift in Sources */,
 				AE2949401F2934C2004BFDD9 /* VideoRepository.swift in Sources */,
 				AE29492E1F2914AD004BFDD9 /* NavigationPoppinOff.swift in Sources */,
 				AE2949361F292FF1004BFDD9 /* VideoCollectionViewControllerProvider.swift in Sources */,
@@ -934,6 +953,7 @@
 				AE6A10671F27FE2600BC6317 /* VideoPlayerViewController.swift in Sources */,
 				AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */,
 				AE67249E1F26B91B002AB658 /* BallDrop.swift in Sources */,
+				AE4CAF861F2C0EF9009805BC /* TimeSplitter.swift in Sources */,
 				AE9024311F2A46D900B56A11 /* PreviewBuilder.swift in Sources */,
 				AE675BCB1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift in Sources */,
 				AE67247A1F2679F0002AB658 /* CameraViewController.swift in Sources */,
@@ -944,6 +964,7 @@
 				AE471F011F26702D00BB03B6 /* main.swift in Sources */,
 				AE6A10751F2804A700BC6317 /* AVPlayerProvider.swift in Sources */,
 				DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */,
+				AE4CAF8A1F2C1537009805BC /* RandomPicker.swift in Sources */,
 				AE6724A41F27A95A002AB658 /* ReviewViewController.swift in Sources */,
 				AEE3AC7D1F2BE1EE00D10EF4 /* TrackStar.swift in Sources */,
 				AE6A107F1F280CAC00BC6317 /* Array+BangersAndMash.swift in Sources */,
@@ -962,6 +983,8 @@
 				AE6724A01F26B9FD002AB658 /* FakeBallDrop.swift in Sources */,
 				AE6A107B1F280B6D00BC6317 /* FakeNotificationCenter.swift in Sources */,
 				AE2949441F29357F004BFDD9 /* FakeVideoRepository.swift in Sources */,
+				AE4CAF821F2C03E0009805BC /* FakeMashupEditViewController.swift in Sources */,
+				AE4CAF881F2C0F76009805BC /* TimeSplitterSpec.swift in Sources */,
 				AE9024351F2A4DE000B56A11 /* FakePreviewBuilder.swift in Sources */,
 				AE29492C1F2906FC004BFDD9 /* FakeFileManager.swift in Sources */,
 				AE67249A1F26AFED002AB658 /* CameraViewControllerProviderSpec.swift in Sources */,
@@ -1005,6 +1028,7 @@
 				AE6724A81F27AA76002AB658 /* FakeSeguePresenter.swift in Sources */,
 				AEE3AC811F2BE4A200D10EF4 /* TrackStarSpec.swift in Sources */,
 				AE6724921F269FCB002AB658 /* TestViewRenderer.swift in Sources */,
+				AE4CAF841F2C08B9009805BC /* MashupEditViewControllerSpec.swift in Sources */,
 				AE2949281F2904E9004BFDD9 /* DirectoryFinderSpec.swift in Sources */,
 				AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */,
 				AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */,

@@ -4,9 +4,9 @@ class VideoCollectionViewController: UITableViewController {
     @IBOutlet weak var footerView: UIView!
 
     var videos = [URL]()
-    var deleteCallback: ((URL) -> ())?
+    var deleteCallback: ((URL, [URL]) -> ())?
 
-    func load(videos: [URL], deleteCallback: ((URL) -> ())?) {
+    func load(videos: [URL], deleteCallback: ((URL, [URL]) -> ())?) {
         self.videos = videos
         self.deleteCallback = deleteCallback
         tableView.reloadData()
@@ -37,7 +37,7 @@ class VideoCollectionViewController: UITableViewController {
         if let deleteCallback = deleteCallback, editingStyle == .delete {
             let video = self.videos.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            deleteCallback(video)
+            deleteCallback(video, videos)
         }
     }
 }

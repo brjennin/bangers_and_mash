@@ -41,7 +41,7 @@ class YoureJustMashingItSpec: QuickSpec {
                     audioTrack = AVAsset(url: songUrl).tracks.first!
                     trackStar.returnAssetTrackForAudioTrack = audioTrack
                     videoTrack = AVAsset(url: videoUrl).tracks.first!
-                    trackStar.returnAssetTrackForVideoTrack = videoTrack
+                    trackStar.returnAssetTracksForVideoTrack = [videoTrack]
 
                     completionUrl = nil
                     subject.combine(song: song, videoUrl: videoUrl) { url in
@@ -68,7 +68,8 @@ class YoureJustMashingItSpec: QuickSpec {
                 }
 
                 it("gets the video track from video url") {
-                    expect((trackStar.capturedAssetForVideoTrack as? AVURLAsset)?.url).to(equal(videoUrl))
+                    expect(trackStar.capturedAssetsForVideoTrack.count).to(equal(1))
+                    expect((trackStar.capturedAssetsForVideoTrack.first as? AVURLAsset)?.url).to(equal(videoUrl))
                 }
 
                 it("adds 2 tracks with the track star") {

@@ -37,8 +37,16 @@ class MashupTakesViewControllerSpec: QuickSpec {
                     TestViewRenderer.initiateViewLifeCycle(controller: subject)
                 }
 
-                it("sets the button to be a fontawesome button") {
+                it("sets the add button to be a fontawesome button") {
                     expect(subject.addVideoButton.title(for: .normal)).to(equal(String.fontAwesomeIcon(name: .plusCircle)))
+                }
+
+                it("sets the mash button to be a fontawesome button") {
+                    expect(subject.mashButton.title(for: .normal)).to(equal(String.fontAwesomeIcon(name: .random)))
+                }
+
+                it("starts with the mash button disabled") {
+                    expect(subject.mashButton.isEnabled).to(beFalse())
                 }
 
                 it("presents a collection of all mashup videos") {
@@ -60,33 +68,93 @@ class MashupTakesViewControllerSpec: QuickSpec {
                         expect(videoRepository.capturedCallbackForGetVideos).toNot(beNil())
                     }
 
-                    describe("when the callback returns videos") {
+                    describe("when the callback returns") {
                         var videos: [URL]!
 
-                        beforeEach {
-                            videos = [
-                                URL(string: "https://example.com/video1.mp4")!,
-                                URL(string: "https://example.com/video2.mp4")!,
-                                URL(string: "https://example.com/video3.mp4")!
-                            ]
-                            videoRepository.capturedCallbackForGetVideos?(videos)
-                        }
-
-                        it("loads videos into the collection view controller") {
-                            expect(videoCollectionViewController.capturedVideosForLoad).to(equal(videos))
-                        }
-
-                        it("has a delete callback") {
-                            expect(videoCollectionViewController.capturedDeleteCallbackForLoad).toNot(beNil())
-                        }
-
-                        describe("when the delete callback is called") {
+                        context("when there are videos") {
                             beforeEach {
-                                videoCollectionViewController.capturedDeleteCallbackForLoad?(videos.first!)
+                                videos = [
+                                    URL(string: "https://example.com/video1.mp4")!,
+                                    URL(string: "https://example.com/video2.mp4")!,
+                                    URL(string: "https://example.com/video3.mp4")!
+                                ]
+                                videoRepository.capturedCallbackForGetVideos?(videos)
                             }
 
-                            it("deletes the video from the filesystem") {
-                                expect(videoRepository.capturedUrlForDelete).to(equal(videos.first!))
+                            it("loads videos into the collection view controller") {
+                                expect(videoCollectionViewController.capturedVideosForLoad).to(equal(videos))
+                            }
+
+                            it("has a delete callback") {
+                                expect(videoCollectionViewController.capturedDeleteCallbackForLoad).toNot(beNil())
+                            }
+
+                            it("enables the mashup button") {
+                                expect(subject.mashButton.isEnabled).to(beTrue())
+                            }
+
+                            describe("when the delete callback is called") {
+                                context("when deleting the last video") {
+                                    beforeEach {
+                                        videoCollectionViewController.capturedDeleteCallbackForLoad?(videos.first!, [])
+                                    }
+
+                                    it("deletes the video from the filesystem") {
+                                        expect(videoRepository.capturedUrlForDelete).to(equal(videos.first!))
+                                    }
+
+                                    it("disables the mash button") {
+                                        expect(subject.mashButton.isEnabled).to(beFalse())
+                                    }
+                                }
+
+                                context("when there are videos left") {
+                                    beforeEach {
+                                        videoCollectionViewController.capturedDeleteCallbackForLoad?(videos.first!, [videos.last!])
+                                    }
+
+                                    it("deletes the video from the filesystem") {
+                                        expect(videoRepository.capturedUrlForDelete).to(equal(videos.first!))
+                                    }
+
+                                    it("leaves the mash button enabled") {
+                                        expect(subject.mashButton.isEnabled).to(beTrue())
+                                    }
+                                }
+                            }
+
+                            describe("hitting the mash up button") {
+                                var mashupEditController: FakeMashupEditViewController!
+
+                                beforeEach {
+                                    mashupEditController = FakeMashupEditViewController()
+                                    let segue = UIStoryboardSegue(identifier: "mashUp", source: subject, destination: mashupEditController)
+                                    subject.prepare(for: segue, sender: nil)
+                                }
+
+                                it("passes the videos to the editing controller") {
+                                    expect(mashupEditController.capturedVideosForConfigure).to(equal(videos))
+                                }
+                            }
+                        }
+
+                        context("when there are no videos") {
+                            beforeEach {
+                                subject.mashButton.isEnabled = true
+                                videos = []
+                                videoRepository.capturedCallbackForGetVideos?(videos)
+                            }
+
+                            it("loads videos into the collection view controller") {
+                                expect(videoCollectionViewController.capturedVideosForLoad).to(equal(videos))
+                            }
+
+                            it("has a delete callback") {
+                                expect(videoCollectionViewController.capturedDeleteCallbackForLoad).toNot(beNil())
+                            }
+
+                            it("leaves the mashup button disabled") {
+                                expect(subject.mashButton.isEnabled).to(beFalse())
                             }
                         }
                     }

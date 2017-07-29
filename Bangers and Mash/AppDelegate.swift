@@ -33,13 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// Play song in review phase
 // Mash
-// Select to play video in mashup list// Upload video
-// Selective Mash
 // Shuffle Mash
 // Save Mash to phone
 // Watermark video
+// Select to play video in mashup list// Upload video
+// Selective Mash
 // Deep link invitation only
 // New song
 // Make sure downloaded videos aren't included in phone backups
