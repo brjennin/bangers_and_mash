@@ -128,6 +128,7 @@
 		AEF42CD51F2FAC0D008155DC /* DispatcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF42CD41F2FAC0D008155DC /* DispatcherSpec.swift */; };
 		AEF42CD71F2FAC56008155DC /* FakeOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF42CD61F2FAC56008155DC /* FakeOperationQueue.swift */; };
 		AEF42CD91F2FAC5D008155DC /* FakeDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF42CD81F2FAC5D008155DC /* FakeDispatcher.swift */; };
+		AEF42CDB1F2FD140008155DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF42CDA1F2FD140008155DC /* CoreGraphics.framework */; };
 		DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */; };
 		DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */; };
 		ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */; };
@@ -278,6 +279,7 @@
 		AEF42CD41F2FAC0D008155DC /* DispatcherSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatcherSpec.swift; sourceTree = "<group>"; };
 		AEF42CD61F2FAC56008155DC /* FakeOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeOperationQueue.swift; sourceTree = "<group>"; };
 		AEF42CD81F2FAC5D008155DC /* FakeDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatcher.swift; sourceTree = "<group>"; };
+		AEF42CDA1F2FD140008155DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_Mash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.test.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF42CDB1F2FD140008155DC /* CoreGraphics.framework in Frameworks */,
 				AEE3AC831F2BF4C300D10EF4 /* CoreMedia.framework in Frameworks */,
 				AE6A106A1F27FEB300BC6317 /* AVFoundation.framework in Frameworks */,
 				AE6A106B1F27FEB300BC6317 /* AVKit.framework in Frameworks */,
@@ -321,6 +324,7 @@
 		22513DE7058956DC3AA7C5BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEF42CDA1F2FD140008155DC /* CoreGraphics.framework */,
 				AEE3AC821F2BF4C300D10EF4 /* CoreMedia.framework */,
 				AE6A10681F27FEB300BC6317 /* AVFoundation.framework */,
 				AE6A10691F27FEB300BC6317 /* AVKit.framework */,
