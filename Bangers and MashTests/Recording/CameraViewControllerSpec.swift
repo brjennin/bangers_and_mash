@@ -22,6 +22,7 @@ class CameraViewControllerSpec: QuickSpec {
             var navigationPoppinOff: FakeNavigationPoppinOff!
             var songPlayer: FakeSongPlayer!
             var youreJustMashingIt: FakeYoureJustMashingIt!
+            var dispatcher: FakeDispatcher!
 
             beforeEach {
                 storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -56,6 +57,9 @@ class CameraViewControllerSpec: QuickSpec {
 
                 youreJustMashingIt = FakeYoureJustMashingIt()
                 subject.youreJustMashingIt = youreJustMashingIt
+
+                dispatcher = FakeDispatcher()
+                subject.dispatcher = dispatcher
             }
 
             describe("configuring with a song") {
@@ -326,32 +330,42 @@ class CameraViewControllerSpec: QuickSpec {
                                     youreJustMashingIt.capturedCompletionForCombine?(mashUrl)
                                 }
 
-                                it("triggers the segue") {
-                                    expect(seguePresenter.capturedControllerForTrigger).to(be(subject))
-                                    expect(seguePresenter.capturedIdentifierForTrigger).to(equal("reviewVideo"))
+                                it("it dispatches to the main queue") {
+                                    expect(dispatcher.capturedCompletionForDispatchToMainQueue).toNot(beNil())
                                 }
 
-                                describe("preparing for segue") {
-                                    var reviewViewController: FakeReviewViewController!
-
+                                describe("dispatching to the main queue") {
                                     beforeEach {
-                                        reviewViewController = FakeReviewViewController()
-                                        let segue = UIStoryboardSegue(identifier: "reviewVideo", source: subject, destination: reviewViewController)
-                                        subject.prepare(for: segue, sender: nil)
+                                        dispatcher.capturedCompletionForDispatchToMainQueue?()
                                     }
 
-                                    it("configures the video URL on the review view controller") {
-                                        expect(reviewViewController.capturedVideoUrlForConfigure).to(equal(mashUrl))
+                                    it("triggers the segue") {
+                                        expect(seguePresenter.capturedControllerForTrigger).to(be(subject))
+                                        expect(seguePresenter.capturedIdentifierForTrigger).to(equal("reviewVideo"))
                                     }
 
-                                    describe("When the user keeps their video take") {
+                                    describe("preparing for segue") {
+                                        var reviewViewController: FakeReviewViewController!
+
                                         beforeEach {
-                                            reviewViewController.capturedVideoKeptCallbackForConfigure?()
+                                            reviewViewController = FakeReviewViewController()
+                                            let segue = UIStoryboardSegue(identifier: "reviewVideo", source: subject, destination: reviewViewController)
+                                            subject.prepare(for: segue, sender: nil)
                                         }
 
-                                        it("pops back to the mashup view controller") {
-                                            expect(navigationPoppinOff.capturedAnimatedForPop).to(beFalse())
-                                            expect(navigationPoppinOff.capturedNavControllerForPop).to(be(navController))
+                                        it("configures the video URL on the review view controller") {
+                                            expect(reviewViewController.capturedVideoUrlForConfigure).to(equal(mashUrl))
+                                        }
+
+                                        describe("When the user keeps their video take") {
+                                            beforeEach {
+                                                reviewViewController.capturedVideoKeptCallbackForConfigure?()
+                                            }
+
+                                            it("pops back to the mashup view controller") {
+                                                expect(navigationPoppinOff.capturedAnimatedForPop).to(beFalse())
+                                                expect(navigationPoppinOff.capturedNavControllerForPop).to(be(navController))
+                                            }
                                         }
                                     }
                                 }

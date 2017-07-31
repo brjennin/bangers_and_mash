@@ -10,11 +10,11 @@ class FakeTrackStar: TrackStarProtocol {
         return returnAssetTrackForAudioTrack
     }
 
-    var capturedAssetForVideoTrack: AVAsset?
-    var returnAssetTrackForVideoTrack: AVAssetTrack!
+    var capturedAssetsForVideoTrack = [AVAsset]()
+    var returnAssetTracksForVideoTrack: [AVAssetTrack]!
     func videoTrack(from asset: AVAsset) -> AVAssetTrack {
-        capturedAssetForVideoTrack = asset
-        return returnAssetTrackForVideoTrack
+        capturedAssetsForVideoTrack.append(asset)
+        return returnAssetTracksForVideoTrack.remove(at: 0)
     }
 
     struct ArgumentsForAdd {

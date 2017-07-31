@@ -12,6 +12,7 @@ class CameraViewController: UIViewController {
     var navigationPoppinOff: NavigationPoppinOffProtocol = NavigationPoppinOff()
     var songPlayer: SongPlayerProtocol = SongPlayer()
     var youreJustMashingIt: YoureJustMashingItProtocol = YoureJustMashingIt()
+    var dispatcher: DispatcherProtocol = Dispatcher()
 
     static let countdownTime = 3
 
@@ -113,7 +114,9 @@ extension CameraViewController: SwiftyCamViewControllerDelegate {
         youreJustMashingIt.combine(song: song, videoUrl: url) { [weak self] url in
             if let weakSelf = self {
                 weakSelf.lastVideoUrl = url
-                weakSelf.seguePresenter.trigger(on: weakSelf, identifier: "reviewVideo")
+                weakSelf.dispatcher.dispatchToMainQueue {
+                    weakSelf.seguePresenter.trigger(on: weakSelf, identifier: "reviewVideo")
+                }
             }
         }
     }

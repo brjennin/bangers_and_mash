@@ -3,8 +3,8 @@ import UIKit
 
 class FakeVideoCollectionViewController: VideoCollectionViewController {
     var capturedVideosForLoad: [URL]?
-    var capturedDeleteCallbackForLoad: ((URL) -> ())?
-    override func load(videos: [URL], deleteCallback: ((URL) -> ())?) {
+    var capturedDeleteCallbackForLoad: ((URL, [URL]) -> ())?
+    override func load(videos: [URL], deleteCallback: ((URL, [URL]) -> ())?) {
         capturedVideosForLoad = videos
         capturedDeleteCallbackForLoad = deleteCallback
     }

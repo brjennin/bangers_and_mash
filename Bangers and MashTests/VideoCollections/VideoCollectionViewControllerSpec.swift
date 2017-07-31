@@ -87,11 +87,14 @@ class VideoCollectionViewControllerSpec: QuickSpec {
 
                     context("With deletion") {
                         var capturedUrlForDeleteCallback: URL?
+                        var capturedVideosForDeleteCallback: [URL]?
 
                         beforeEach {
                             capturedUrlForDeleteCallback = nil
-                            subject.load(videos: videos, deleteCallback: { url in
+                            capturedVideosForDeleteCallback = nil
+                            subject.load(videos: videos, deleteCallback: { url, videos in
                                 capturedUrlForDeleteCallback = url
+                                capturedVideosForDeleteCallback = videos
                             })
                         }
 
@@ -117,6 +120,33 @@ class VideoCollectionViewControllerSpec: QuickSpec {
                             it("doesn't come back when reloading the table data") {
                                 subject.tableView.reloadData()
                                 expect(subject.tableView.visibleCells.count).to(equal(1))
+                            }
+
+                            it("tells the callback there are videos left") {
+                                expect(capturedVideosForDeleteCallback).to(equal([videos.first!]))
+                            }
+
+                            describe("deleting the last video") {
+                                beforeEach {
+                                    subject.tableView(subject.tableView, commit: .delete, forRowAt: IndexPath(row: 0, section: 0))
+                                }
+
+                                it("calls deletion callback") {
+                                    expect(capturedUrlForDeleteCallback).to(equal(videos.first!))
+                                }
+
+                                it("hides the visible cell") {
+                                    expect(subject.tableView.visibleCells.count).to(equal(0))
+                                }
+
+                                it("doesn't come back when reloading the table data") {
+                                    subject.tableView.reloadData()
+                                    expect(subject.tableView.visibleCells.count).to(equal(0))
+                                }
+
+                                it("tells the callback there are no more videos left") {
+                                    expect(capturedVideosForDeleteCallback).to(equal([]))
+                                }
                             }
                         }
 

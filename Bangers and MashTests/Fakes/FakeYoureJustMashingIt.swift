@@ -10,4 +10,13 @@ class FakeYoureJustMashingIt: YoureJustMashingItProtocol {
         capturedVideoUrlForCombine = videoUrl
         capturedCompletionForCombine = completion
     }
+
+    var capturedSongForRandomMash: Song?
+    var capturedVideoUrlsForRandomMash: [URL]?
+    var capturedCompletionForRandomMash: ((URL) -> ())?
+    func randomMash(song: Song, videoUrls: [URL], completion: @escaping (URL) -> ()) {
+        capturedSongForRandomMash = song
+        capturedVideoUrlsForRandomMash = videoUrls
+        capturedCompletionForRandomMash = completion
+    }
 }
