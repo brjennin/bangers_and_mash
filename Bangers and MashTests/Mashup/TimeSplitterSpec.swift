@@ -18,7 +18,7 @@ class TimeSplitterSpec: QuickSpec {
                 var ranges: [CMTimeRange]!
 
                 beforeEach {
-                    ranges = subject.timeChunks(duration: CMTime(seconds: 20, preferredTimescale: 1), chunks: 5)
+                    ranges = subject.timeChunks(duration: CMTime(seconds: 20, preferredTimescale: 100), chunks: 5)
                 }
 
                 it("returns 5 ranges") {

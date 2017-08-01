@@ -14,7 +14,7 @@ class CameraViewController: UIViewController {
     var youreJustMashingIt: YoureJustMashingItProtocol = YoureJustMashingIt()
     var dispatcher: DispatcherProtocol = Dispatcher()
 
-    static let countdownTime = 3
+    static let countdownTime = 1
 
     @IBOutlet weak var cameraContainer: UIView!
     @IBOutlet weak var flashButton: UIButton!

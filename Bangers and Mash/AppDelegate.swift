@@ -33,16 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// Mash
-// Shuffle Mash
 // Save Mash to phone
+// Fix revered video bug
+// New song
+// Shuffle Mash
+// Preview song before recording
 // Watermark video
 // Select to play video in mashup list// Upload video
 // Selective Mash
 // Deep link invitation only
-// New song
 // Make sure downloaded videos aren't included in phone backups
-// Preview song before recording
 // Recording progress bar
 // Marquee the song title
 // AVAudioSession stuff?
