@@ -34,7 +34,7 @@ class CameraViewControllerProviderSpec: QuickSpec {
                 }
 
                 it("sets camera defaults") {
-                    expect(result.shouldUseDeviceOrientation).to(beTrue())
+                    expect(result.shouldUseDeviceOrientation).to(beFalse())
                     expect(result.allowAutoRotate).to(beFalse())
                     expect(result.defaultCamera).to(equal(SwiftyCamViewController.CameraSelection.front))
                     expect(result.videoQuality).to(equal(SwiftyCamViewController.VideoQuality.high))

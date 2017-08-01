@@ -19,7 +19,7 @@ class CameraViewControllerProvider: CameraViewControllerProviderProtocol {
     func get(delegate: SwiftyCamViewControllerDelegate) -> SwiftyCamViewControllerProtocol {
         let controller = SwiftyCamViewController()
         controller.cameraDelegate = delegate
-        controller.shouldUseDeviceOrientation = true
+        controller.shouldUseDeviceOrientation = false
         controller.allowAutoRotate = false
         controller.defaultCamera = .front
         controller.swipeToZoom = false

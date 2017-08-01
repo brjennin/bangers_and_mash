@@ -10,15 +10,25 @@ DEPENDENCIES:
   - FontAwesome.swift
   - Nimble
   - Quick
-  - SwiftyCam
+  - SwiftyCam (from `https://github.com/brjennin/SwiftyCam.git`, commit `627ddfa6d830148cf9f2ad8253ed23a3701f890b`)
+
+EXTERNAL SOURCES:
+  SwiftyCam:
+    :commit: 627ddfa6d830148cf9f2ad8253ed23a3701f890b
+    :git: https://github.com/brjennin/SwiftyCam.git
+
+CHECKOUT OPTIONS:
+  SwiftyCam:
+    :commit: 627ddfa6d830148cf9f2ad8253ed23a3701f890b
+    :git: https://github.com/brjennin/SwiftyCam.git
 
 SPEC CHECKSUMS:
   Fleet: 9620199386ff6da0b5a53556935ce7847259bc77
   FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  SwiftyCam: cb83b9a8e181f70fb741d30cea724c6b045a4549
+  SwiftyCam: fc025c91fa2af41f4d969cf6ea9e7c3759b352d9
 
-PODFILE CHECKSUM: 05339893e7a1d291b7eb1efda03c36d4041a5ec7
+PODFILE CHECKSUM: ff2588efffd5c3e02c38af9488beb0ebfced4546
 
 COCOAPODS: 1.2.1
