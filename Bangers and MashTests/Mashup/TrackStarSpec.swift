@@ -58,8 +58,8 @@ class TrackStarSpec: QuickSpec {
                 let videoUrl = URL(fileURLWithPath: videoPath)
                 let videoAsset = AVAsset(url: videoUrl)
                 let videoTrack = videoAsset.tracks(withMediaType: AVMediaTypeVideo).first!
-                let range = CMTimeRange(start: CMTime(seconds: 1, preferredTimescale: 1), duration: CMTime(seconds: 5, preferredTimescale: 1))
-                let addAtTime = CMTime(seconds: 3, preferredTimescale: 1)
+                let range = CMTimeRange(start: CMTime(seconds: 1, preferredTimescale: 100), duration: CMTime(seconds: 5, preferredTimescale: 100))
+                let addAtTime = CMTime(seconds: 3, preferredTimescale: 100)
                 var mutableCompositionTrack: AVMutableCompositionTrack!
 
                 beforeEach {

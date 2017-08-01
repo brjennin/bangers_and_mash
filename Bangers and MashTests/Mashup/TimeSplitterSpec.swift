@@ -18,7 +18,7 @@ class TimeSplitterSpec: QuickSpec {
                 var ranges: [CMTimeRange]!
 
                 beforeEach {
-                    ranges = subject.timeChunks(duration: CMTime(seconds: 20, preferredTimescale: 1), chunks: 5)
+                    ranges = subject.timeChunks(duration: CMTime(seconds: 20, preferredTimescale: 100), chunks: 5)
                 }
 
                 it("returns 5 ranges") {
@@ -40,6 +40,7 @@ class TimeSplitterSpec: QuickSpec {
                                 if let fourth = fourth {
                                     let fif = ranges.first { range in range.start == (fourth.start + fourth.duration) }
                                     expect(fif).toNot(beNil())
+                                    expect(fif?.end).to(equal(CMTime(seconds: 20, preferredTimescale: 100)))
                                 }
                             }
                         }

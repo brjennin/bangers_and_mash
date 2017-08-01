@@ -14,7 +14,7 @@ class TimeSplitter: TimeSplitterProtocol {
             let start = Double(index) * chunkDuration
             let end = Double(index + 1) * chunkDuration
 
-            let range = CMTimeRange(start: CMTime(seconds: start, preferredTimescale: 1), end: CMTime(seconds: end, preferredTimescale: 1))
+            let range = CMTimeRange(start: CMTime(value: CMTimeValue(start), timescale: 100), end: CMTime(value: CMTimeValue(end), timescale: 100))
             ranges.append(range)
         }
 

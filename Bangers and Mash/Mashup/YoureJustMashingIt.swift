@@ -26,12 +26,12 @@ class YoureJustMashingIt: YoureJustMashingItProtocol {
         let compositionVideoTrack = composition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid)
         let compositionAudioTrack = composition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: kCMPersistentTrackID_Invalid)
 
-        let videoDuration = CMTime(seconds: song.recordDuration, preferredTimescale: 1)
+        let videoDuration = CMTime(seconds: song.recordDuration, preferredTimescale: 100)
         let timeRange = CMTimeRange(start: kCMTimeZero, duration: videoDuration)
 
         let songAsset = AVAsset(url: song.url)
         let songTrack = trackStar.audioTrack(from: songAsset)
-        let songRecordStart = CMTime(seconds: song.recordingStartTime, preferredTimescale: 1)
+        let songRecordStart = CMTime(seconds: song.recordingStartTime, preferredTimescale: 100)
         let songRange = CMTimeRange(start: songRecordStart, duration: videoDuration)
         trackStar.add(track: songTrack, to: compositionAudioTrack, for: songRange, at: timeRange.start)
 

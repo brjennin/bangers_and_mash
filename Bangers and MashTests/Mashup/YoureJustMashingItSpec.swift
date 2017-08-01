@@ -60,7 +60,7 @@ class YoureJustMashingItSpec: QuickSpec {
                 describe("combining an audio and video") {
                     beforeEach {
                         timeChunks = [
-                            CMTimeRange(start: CMTime(seconds: 0, preferredTimescale: 1), end: CMTime(seconds: 5, preferredTimescale: 1))
+                            CMTimeRange(start: CMTime(seconds: 0, preferredTimescale: 100), end: CMTime(seconds: 5, preferredTimescale: 100))
                         ]
                         timeSplitter.returnTimeRangesForTimeChunks = timeChunks
                         
@@ -100,7 +100,7 @@ class YoureJustMashingItSpec: QuickSpec {
                     }
 
                     it("calls the time splitter with the video duration") {
-                        expect(timeSplitter.capturedDurationForTimeChunks).to(equal(CMTime(seconds: song.recordDuration, preferredTimescale: 1)))
+                        expect(timeSplitter.capturedDurationForTimeChunks).to(equal(CMTime(seconds: song.recordDuration, preferredTimescale: 100)))
                         expect(timeSplitter.capturedChunksForTimeChunks).to(equal(1))
                     }
 
@@ -116,7 +116,7 @@ class YoureJustMashingItSpec: QuickSpec {
                         expect(audioAdd?.capturedTime).to(equal(kCMTimeZero))
                         expect(audioAdd?.capturedTrack).to(equal(audioTrack))
 
-                        let songRange = CMTimeRange(start: CMTime(seconds: 20, preferredTimescale: 1), duration: CMTime(seconds: song.recordDuration, preferredTimescale: 1))
+                        let songRange = CMTimeRange(start: CMTime(seconds: 20, preferredTimescale: 100), duration: CMTime(seconds: song.recordDuration, preferredTimescale: 100))
                         expect(audioAdd?.capturedRange).to(equal(songRange))
                     }
 
@@ -148,9 +148,9 @@ class YoureJustMashingItSpec: QuickSpec {
                 describe("mashing up videos with a song") {
                     beforeEach {
                         timeChunks = [
-                            CMTimeRange(start: CMTime(seconds: 0, preferredTimescale: 1), end: CMTime(seconds: 2, preferredTimescale: 1)),
-                            CMTimeRange(start: CMTime(seconds: 2, preferredTimescale: 1), end: CMTime(seconds: 4, preferredTimescale: 1)),
-                            CMTimeRange(start: CMTime(seconds: 4, preferredTimescale: 1), end: CMTime(seconds: 5, preferredTimescale: 1))
+                            CMTimeRange(start: CMTime(seconds: 0, preferredTimescale: 100), end: CMTime(seconds: 2, preferredTimescale: 100)),
+                            CMTimeRange(start: CMTime(seconds: 2, preferredTimescale: 100), end: CMTime(seconds: 4, preferredTimescale: 100)),
+                            CMTimeRange(start: CMTime(seconds: 4, preferredTimescale: 100), end: CMTime(seconds: 5, preferredTimescale: 100))
                         ]
                         timeSplitter.returnTimeRangesForTimeChunks = timeChunks
 
@@ -197,12 +197,12 @@ class YoureJustMashingItSpec: QuickSpec {
                         expect(audioAdd?.capturedTime).to(equal(kCMTimeZero))
                         expect(audioAdd?.capturedTrack).to(equal(audioTrack))
 
-                        let songRange = CMTimeRange(start: CMTime(seconds: 20, preferredTimescale: 1), duration: CMTime(seconds: song.recordDuration, preferredTimescale: 1))
+                        let songRange = CMTimeRange(start: CMTime(seconds: 20, preferredTimescale: 100), duration: CMTime(seconds: song.recordDuration, preferredTimescale: 100))
                         expect(audioAdd?.capturedRange).to(equal(songRange))
                     }
 
                     it("calls the time splitter with the video duration") {
-                        expect(timeSplitter.capturedDurationForTimeChunks).to(equal(CMTime(seconds: song.recordDuration, preferredTimescale: 1)))
+                        expect(timeSplitter.capturedDurationForTimeChunks).to(equal(CMTime(seconds: song.recordDuration, preferredTimescale: 100)))
                         expect(timeSplitter.capturedChunksForTimeChunks).to(equal(10))
                     }
 
