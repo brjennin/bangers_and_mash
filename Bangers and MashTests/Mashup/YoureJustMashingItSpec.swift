@@ -3,6 +3,8 @@ import Quick
 import Nimble
 import Fleet
 import AVFoundation
+import CoreMedia
+import CoreGraphics
 @testable import Bangers_and_Mash
 
 class YoureJustMashingItSpec: QuickSpec {
@@ -13,6 +15,7 @@ class YoureJustMashingItSpec: QuickSpec {
             var trackStar: FakeTrackStar!
             var timeSplitter: FakeTimeSplitter!
             var randomPicker: FakeRandomPicker!
+            var reorienter: FakeReorienter!
 
             beforeEach {
                 subject = YoureJustMashingIt()
@@ -28,6 +31,9 @@ class YoureJustMashingItSpec: QuickSpec {
 
                 randomPicker = FakeRandomPicker()
                 subject.randomPicker = randomPicker
+
+                reorienter = FakeReorienter()
+                subject.reorienter = reorienter
             }
 
             describe("combining a song and video") {
@@ -46,6 +52,8 @@ class YoureJustMashingItSpec: QuickSpec {
                 var video1Track: AVAssetTrack!
                 var video2Track: AVAssetTrack!
                 var timeChunks: [CMTimeRange]!
+                var videoComposition: AVVideoComposition!
+                var instructions: [AVVideoCompositionInstruction]!
 
                 beforeEach {
                     song = Song(name: "", url: songUrl, recordingStartTime: 20)
@@ -66,12 +74,16 @@ class YoureJustMashingItSpec: QuickSpec {
                         
                         randomPicker.returnItemsForPick = [video1Track]
 
+                        instructions = [AVVideoCompositionInstruction()]
+                        reorienter.returnInstructionsForBuildInstructions = instructions
+
                         completionUrl = nil
                         subject.combine(song: song, videoUrl: video1Url) { url in
                             completionUrl = url
                         }
 
                         composition = videoArchiver.capturedAssetForExportTemp as? AVMutableComposition
+                        videoComposition = videoArchiver.capturedVideoCompositionForExportTemp
                     }
 
                     it("has an audio and video track") {
@@ -129,9 +141,20 @@ class YoureJustMashingItSpec: QuickSpec {
                         expect(videoAdd?.capturedRange).to(equal(timeChunks[0]))
                     }
                     
-                    it("sets the preferred transform of the video track") {
+                    it("makes a video composition") {
+                        expect(videoComposition.frameDuration).to(equal(CMTimeMake(1, 30)))
+                        expect(videoComposition.renderSize).to(equal(CGSize(width: 2160, height: 3840)))
+                        expect(videoComposition.instructions.count).to(equal(instructions.count))
+                    }
+
+                    it("reorients for each time chunk") {
+                        expect(reorienter.capturedArgsForBuildInstructions.count).to(equal(1))
+
                         let compositionVideoTrack = composition?.tracks(withMediaType: AVMediaTypeVideo).first
-                        expect(compositionVideoTrack?.preferredTransform).to(equal(video1Track.preferredTransform))
+                        let args = reorienter.capturedArgsForBuildInstructions.get(0)
+                        expect(args?.assetTrack).to(equal(video1Track))
+                        expect(args?.compositionAssetTrack).to(equal(compositionVideoTrack))
+                        expect(args?.timeRange).to(equal(timeChunks.first!))
                     }
                     
                     describe("when export finishes") {
@@ -156,12 +179,20 @@ class YoureJustMashingItSpec: QuickSpec {
 
                         randomPicker.returnItemsForPick = [video2Track, video1Track, video2Track]
 
+                        instructions = [
+                            AVVideoCompositionInstruction(),
+                            AVVideoCompositionInstruction(),
+                            AVVideoCompositionInstruction()
+                        ]
+                        reorienter.returnInstructionsForBuildInstructions = instructions
+
                         completionUrl = nil
                         subject.randomMash(song: song, videoUrls: [video1Url, video2Url]) { url in
                             completionUrl = url
                         }
 
                         composition = videoArchiver.capturedAssetForExportTemp as? AVMutableComposition
+                        videoComposition = videoArchiver.capturedVideoCompositionForExportTemp
                     }
 
                     it("has an audio and video track") {
@@ -235,9 +266,30 @@ class YoureJustMashingItSpec: QuickSpec {
                         expect(video3Add?.capturedRange).to(equal(timeChunks[2]))
                     }
 
-                    it("sets the preferred transform of the video track") {
+                    it("makes a video composition") {
+                        expect(videoComposition.frameDuration).to(equal(CMTimeMake(1, 30)))
+                        expect(videoComposition.renderSize).to(equal(CGSize(width: 2160, height: 3840)))
+                        expect(videoComposition.instructions.count).to(equal(instructions.count))
+                    }
+
+                    it("reorients for each time chunk") {
+                        expect(reorienter.capturedArgsForBuildInstructions.count).to(equal(3))
+
                         let compositionVideoTrack = composition?.tracks(withMediaType: AVMediaTypeVideo).first
-                        expect(compositionVideoTrack?.preferredTransform).to(equal(video2Track.preferredTransform))
+                        let args1 = reorienter.capturedArgsForBuildInstructions.get(0)
+                        expect(args1?.assetTrack).to(equal(video2Track))
+                        expect(args1?.compositionAssetTrack).to(equal(compositionVideoTrack))
+                        expect(args1?.timeRange).to(equal(timeChunks[0]))
+
+                        let args2 = reorienter.capturedArgsForBuildInstructions.get(1)
+                        expect(args2?.assetTrack).to(equal(video1Track))
+                        expect(args2?.compositionAssetTrack).to(equal(compositionVideoTrack))
+                        expect(args2?.timeRange).to(equal(timeChunks[1]))
+
+                        let args3 = reorienter.capturedArgsForBuildInstructions.get(2)
+                        expect(args3?.assetTrack).to(equal(video2Track))
+                        expect(args3?.compositionAssetTrack).to(equal(compositionVideoTrack))
+                        expect(args3?.timeRange).to(equal(timeChunks[2]))
                     }
                     
                     describe("when export finishes") {

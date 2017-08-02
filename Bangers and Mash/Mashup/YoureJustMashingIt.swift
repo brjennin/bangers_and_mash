@@ -1,6 +1,7 @@
 import Foundation
 import AVFoundation
 import CoreMedia
+import CoreGraphics
 
 protocol YoureJustMashingItProtocol {
     func combine(song: Song, videoUrl: URL, completion: @escaping (URL) -> ())
@@ -12,6 +13,7 @@ class YoureJustMashingIt: YoureJustMashingItProtocol {
     var trackStar: TrackStarProtocol = TrackStar()
     var timeSplitter: TimeSplitterProtocol = TimeSplitter()
     var randomPicker: RandomPickerProtocol = RandomPicker()
+    var reorienter: ReorienterProtocol = Reorienter()
 
     func combine(song: Song, videoUrl: URL, completion: @escaping (URL) -> ()) {
         buildComposition(song: song, videoUrls: [videoUrl], chunks: 1, completion: completion)
@@ -38,12 +40,21 @@ class YoureJustMashingIt: YoureJustMashingItProtocol {
         let videoAssets = videoUrls.map { videoUrl in return AVAsset(url: videoUrl) }
         let videoTracks = videoAssets.map { asset in return self.trackStar.videoTrack(from: asset) }
         let chunks = timeSplitter.timeChunks(duration: videoDuration, chunks: chunks)
+        var instructions = [AVVideoCompositionInstruction]()
         for chunk in chunks {
             let randomVideo = randomPicker.pick(from: videoTracks)
             trackStar.add(track: randomVideo, to: compositionVideoTrack, for: chunk, at: chunk.start)
+            let instruction = reorienter.buildInstructions(assetTrack: randomVideo, compositionAssetTrack: compositionVideoTrack, timeRange: chunk)
+            instructions.append(instruction)
         }
-        compositionVideoTrack.preferredTransform = videoTracks.last!.preferredTransform
 
-        videoArchiver.exportTemp(asset: composition, completion: completion)
+        let videoComposition = AVMutableVideoComposition()
+        videoComposition.frameDuration = CMTimeMake(1, 30)
+        let width = min(videoTracks.last!.naturalSize.width, videoTracks.last!.naturalSize.height)
+        let height = max(videoTracks.last!.naturalSize.width, videoTracks.last!.naturalSize.height)
+        videoComposition.renderSize = CGSize(width: width, height: height)
+        videoComposition.instructions = instructions
+
+        videoArchiver.exportTemp(asset: composition, videoComposition: videoComposition, completion: completion)
     }
 }

@@ -9,9 +9,11 @@ class FakeVideoArchiver: VideoArchiverProtocol {
     }
 
     var capturedAssetForExportTemp: AVAsset?
+    var capturedVideoCompositionForExportTemp: AVVideoComposition?
     var capturedCompletionForExportTemp: ((URL) -> ())?
-    func exportTemp(asset: AVAsset, completion: @escaping (URL) -> ()) {
+    func exportTemp(asset: AVAsset, videoComposition: AVVideoComposition, completion: @escaping (URL) -> ()) {
         capturedAssetForExportTemp = asset
+        capturedVideoCompositionForExportTemp = videoComposition
         capturedCompletionForExportTemp = completion
     }
 }

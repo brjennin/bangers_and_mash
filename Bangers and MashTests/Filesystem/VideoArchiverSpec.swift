@@ -49,6 +49,7 @@ class VideoArchiverSpec: QuickSpec {
                 let asset = AVAsset(url: url)
                 var capturedCompletionUrl: URL?
                 let tempUrl = URL(string: "file:///temp/thing.mov")
+                var videoComposition: AVVideoComposition!
 
                 beforeEach {
                     session = FakeAVAssetExportSession(asset: asset, presetName: AVAssetExportPresetHighestQuality)
@@ -56,8 +57,10 @@ class VideoArchiverSpec: QuickSpec {
 
                     directoryFinder.returnUrlForGenerateNewTempFile = tempUrl
 
+                    videoComposition = AVVideoComposition(propertiesOf: asset)
+
                     capturedCompletionUrl = nil
-                    subject.exportTemp(asset: asset) { url in
+                    subject.exportTemp(asset: asset, videoComposition: videoComposition) { url in
                         capturedCompletionUrl = url
                     }
                 }
@@ -77,6 +80,10 @@ class VideoArchiverSpec: QuickSpec {
 
                 it("sets the output filetype to be a quicktime movie") {
                     expect(session.outputFileType).to(equal(AVFileTypeQuickTimeMovie))
+                }
+
+                it("sets the video composition on the session") {
+                    expect(session.videoComposition).to(be(videoComposition))
                 }
 
                 it("exports async") {

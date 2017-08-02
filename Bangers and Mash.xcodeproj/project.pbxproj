@@ -90,6 +90,14 @@
 		AE6A107D1F280BBA00BC6317 /* InjectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A107C1F280BBA00BC6317 /* InjectionProtocols.swift */; };
 		AE6A107F1F280CAC00BC6317 /* Array+BangersAndMash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A107E1F280CAC00BC6317 /* Array+BangersAndMash.swift */; };
 		AE6A10811F280CCE00BC6317 /* Array+BangersAndMashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A10801F280CCE00BC6317 /* Array+BangersAndMashSpec.swift */; };
+		AE8B0A1C1F32329600295274 /* TransformTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A1B1F32329600295274 /* TransformTransformer.swift */; };
+		AE8B0A1E1F32330300295274 /* TransformTransformerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A1D1F32330300295274 /* TransformTransformerSpec.swift */; };
+		AE8B0A201F32353D00295274 /* FakeTransformTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A1F1F32353D00295274 /* FakeTransformTransformer.swift */; };
+		AE8B0A221F3235C300295274 /* ReorienterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A211F3235C300295274 /* ReorienterSpec.swift */; };
+		AE8B0A241F32368A00295274 /* Reorienter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A231F32368A00295274 /* Reorienter.swift */; };
+		AE8B0A261F32428500295274 /* MichaelBay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A251F32428500295274 /* MichaelBay.swift */; };
+		AE8B0A281F3244A100295274 /* FakeMichaelBay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A271F3244A100295274 /* FakeMichaelBay.swift */; };
+		AE8B0A2A1F3246A300295274 /* FakeReorienter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A291F3246A300295274 /* FakeReorienter.swift */; };
 		AE90242B1F29417E00B56A11 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242A1F29417E00B56A11 /* VideoCell.swift */; };
 		AE90242D1F2941B600B56A11 /* FakeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */; };
 		AE90242F1F29442500B56A11 /* VideoCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242E1F29442500B56A11 /* VideoCellSpec.swift */; };
@@ -128,6 +136,7 @@
 		AEF42CD51F2FAC0D008155DC /* DispatcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF42CD41F2FAC0D008155DC /* DispatcherSpec.swift */; };
 		AEF42CD71F2FAC56008155DC /* FakeOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF42CD61F2FAC56008155DC /* FakeOperationQueue.swift */; };
 		AEF42CD91F2FAC5D008155DC /* FakeDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF42CD81F2FAC5D008155DC /* FakeDispatcher.swift */; };
+		AEF42CDF1F30EA7A008155DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF42CDE1F30EA7A008155DC /* CoreGraphics.framework */; };
 		DE99C458DBE47F81BD46CAC5 /* MashupTakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C9C0EFB204A02ABECCE6 /* MashupTakesViewController.swift */; };
 		DE99CB3607F8D24FACAD8292 /* MashupTakesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C5021175A5F45AE5993C /* MashupTakesViewControllerSpec.swift */; };
 		ED188FB26E453B8EA715024C /* Pods_Bangers_and_Mash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */; };
@@ -237,6 +246,14 @@
 		AE6A107C1F280BBA00BC6317 /* InjectionProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionProtocols.swift; sourceTree = "<group>"; };
 		AE6A107E1F280CAC00BC6317 /* Array+BangersAndMash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+BangersAndMash.swift"; sourceTree = "<group>"; };
 		AE6A10801F280CCE00BC6317 /* Array+BangersAndMashSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+BangersAndMashSpec.swift"; sourceTree = "<group>"; };
+		AE8B0A1B1F32329600295274 /* TransformTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformTransformer.swift; sourceTree = "<group>"; };
+		AE8B0A1D1F32330300295274 /* TransformTransformerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformTransformerSpec.swift; sourceTree = "<group>"; };
+		AE8B0A1F1F32353D00295274 /* FakeTransformTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTransformTransformer.swift; sourceTree = "<group>"; };
+		AE8B0A211F3235C300295274 /* ReorienterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReorienterSpec.swift; sourceTree = "<group>"; };
+		AE8B0A231F32368A00295274 /* Reorienter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reorienter.swift; sourceTree = "<group>"; };
+		AE8B0A251F32428500295274 /* MichaelBay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MichaelBay.swift; sourceTree = "<group>"; };
+		AE8B0A271F3244A100295274 /* FakeMichaelBay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMichaelBay.swift; sourceTree = "<group>"; };
+		AE8B0A291F3246A300295274 /* FakeReorienter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReorienter.swift; sourceTree = "<group>"; };
 		AE90242A1F29417E00B56A11 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoCell.swift; sourceTree = "<group>"; };
 		AE90242E1F29442500B56A11 /* VideoCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCellSpec.swift; sourceTree = "<group>"; };
@@ -278,6 +295,7 @@
 		AEF42CD41F2FAC0D008155DC /* DispatcherSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatcherSpec.swift; sourceTree = "<group>"; };
 		AEF42CD61F2FAC56008155DC /* FakeOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeOperationQueue.swift; sourceTree = "<group>"; };
 		AEF42CD81F2FAC5D008155DC /* FakeDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatcher.swift; sourceTree = "<group>"; };
+		AEF42CDE1F30EA7A008155DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B3A53A65EC66B62DA3A83A7B /* Pods-Bangers and MashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and MashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and MashTests/Pods-Bangers and MashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C543D9CF50D04FA67A1ED3B4 /* Pods_Bangers_and_Mash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangers_and_Mash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EA248B01266920958130E0 /* Pods-Bangers and Mash.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangers and Mash.test.xcconfig"; path = "Pods/Target Support Files/Pods-Bangers and Mash/Pods-Bangers and Mash.test.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF42CDF1F30EA7A008155DC /* CoreGraphics.framework in Frameworks */,
 				AEE3AC831F2BF4C300D10EF4 /* CoreMedia.framework in Frameworks */,
 				AE6A106A1F27FEB300BC6317 /* AVFoundation.framework in Frameworks */,
 				AE6A106B1F27FEB300BC6317 /* AVKit.framework in Frameworks */,
@@ -321,6 +340,7 @@
 		22513DE7058956DC3AA7C5BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEF42CDE1F30EA7A008155DC /* CoreGraphics.framework */,
 				AEE3AC821F2BF4C300D10EF4 /* CoreMedia.framework */,
 				AE6A10681F27FEB300BC6317 /* AVFoundation.framework */,
 				AE6A10691F27FEB300BC6317 /* AVKit.framework */,
@@ -469,6 +489,8 @@
 				AE4CAF831F2C08B9009805BC /* MashupEditViewControllerSpec.swift */,
 				AE4CAF871F2C0F76009805BC /* TimeSplitterSpec.swift */,
 				AE4CAF8B1F2F951D009805BC /* RandomPickerSpec.swift */,
+				AE8B0A1D1F32330300295274 /* TransformTransformerSpec.swift */,
+				AE8B0A211F3235C300295274 /* ReorienterSpec.swift */,
 			);
 			path = Mashup;
 			sourceTree = "<group>";
@@ -511,6 +533,7 @@
 				AE6724811F267E4F002AB658 /* Animator.swift */,
 				AE6724951F26A7A4002AB658 /* Scheduler.swift */,
 				AEF42CD21F2FABD4008155DC /* Dispatcher.swift */,
+				AE8B0A251F32428500295274 /* MichaelBay.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -618,6 +641,8 @@
 				AE518A4A1F2C01D1007870F9 /* MashupEditViewController.swift */,
 				AE4CAF851F2C0EF9009805BC /* TimeSplitter.swift */,
 				AE4CAF891F2C1537009805BC /* RandomPicker.swift */,
+				AE8B0A1B1F32329600295274 /* TransformTransformer.swift */,
+				AE8B0A231F32368A00295274 /* Reorienter.swift */,
 			);
 			path = Mashup;
 			sourceTree = "<group>";
@@ -662,6 +687,9 @@
 				AE4CAF8F1F2F995F009805BC /* FakeTimeSplitter.swift */,
 				AEF42CD61F2FAC56008155DC /* FakeOperationQueue.swift */,
 				AEF42CD81F2FAC5D008155DC /* FakeDispatcher.swift */,
+				AE8B0A1F1F32353D00295274 /* FakeTransformTransformer.swift */,
+				AE8B0A271F3244A100295274 /* FakeMichaelBay.swift */,
+				AE8B0A291F3246A300295274 /* FakeReorienter.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -977,6 +1005,7 @@
 				AE2949341F292F4A004BFDD9 /* VideoCollectionViewController.swift in Sources */,
 				AEF42CD31F2FABD4008155DC /* Dispatcher.swift in Sources */,
 				AE29491E1F28F7A9004BFDD9 /* ViewDismisser.swift in Sources */,
+				AE8B0A241F32368A00295274 /* Reorienter.swift in Sources */,
 				AE518A4B1F2C01D1007870F9 /* MashupEditViewController.swift in Sources */,
 				AE2949401F2934C2004BFDD9 /* VideoRepository.swift in Sources */,
 				AE29492E1F2914AD004BFDD9 /* NavigationPoppinOff.swift in Sources */,
@@ -988,7 +1017,9 @@
 				AE6724861F2699F6002AB658 /* CameraControllerProvider.swift in Sources */,
 				AE6A10671F27FE2600BC6317 /* VideoPlayerViewController.swift in Sources */,
 				AE97EB3C1F26605800E3F8B7 /* AppDelegate.swift in Sources */,
+				AE8B0A261F32428500295274 /* MichaelBay.swift in Sources */,
 				AE67249E1F26B91B002AB658 /* BallDrop.swift in Sources */,
+				AE8B0A1C1F32329600295274 /* TransformTransformer.swift in Sources */,
 				AE4CAF861F2C0EF9009805BC /* TimeSplitter.swift in Sources */,
 				AE9024311F2A46D900B56A11 /* PreviewBuilder.swift in Sources */,
 				AE675BCB1F2813F8005A7B4F /* VideoPlayerViewControllerProvider.swift in Sources */,
@@ -1021,12 +1052,14 @@
 				AE2949441F29357F004BFDD9 /* FakeVideoRepository.swift in Sources */,
 				AE4CAF821F2C03E0009805BC /* FakeMashupEditViewController.swift in Sources */,
 				AE4CAF881F2C0F76009805BC /* TimeSplitterSpec.swift in Sources */,
+				AE8B0A2A1F3246A300295274 /* FakeReorienter.swift in Sources */,
 				AE9024351F2A4DE000B56A11 /* FakePreviewBuilder.swift in Sources */,
 				AE29492C1F2906FC004BFDD9 /* FakeFileManager.swift in Sources */,
 				AE67249A1F26AFED002AB658 /* CameraViewControllerProviderSpec.swift in Sources */,
 				AE67248E1F269EF3002AB658 /* FakeSubviewPresenter.swift in Sources */,
 				AE2949421F293569004BFDD9 /* VideoRepositorySpec.swift in Sources */,
 				AE6A10811F280CCE00BC6317 /* Array+BangersAndMashSpec.swift in Sources */,
+				AE8B0A1E1F32330300295274 /* TransformTransformerSpec.swift in Sources */,
 				AE6A10651F27EE9F00BC6317 /* FocusTouchSpec.swift in Sources */,
 				AE29491C1F28F530004BFDD9 /* VideoArchiverSpec.swift in Sources */,
 				AEE3AC771F2BD97300D10EF4 /* FakeAVAssetExportSession.swift in Sources */,
@@ -1037,6 +1070,7 @@
 				AEF42CD91F2FAC5D008155DC /* FakeDispatcher.swift in Sources */,
 				AE33986F1F28180C00A3FB8B /* FakeVideoPlayerViewController.swift in Sources */,
 				AEE3AC7B1F2BDE2400D10EF4 /* YoureJustMashingItSpec.swift in Sources */,
+				AE8B0A281F3244A100295274 /* FakeMichaelBay.swift in Sources */,
 				AE67247C1F267A1D002AB658 /* CameraViewControllerSpec.swift in Sources */,
 				AEE3AC751F2BD91500D10EF4 /* FakeAVAssetExportSessionProvider.swift in Sources */,
 				AE6A10631F27ECE200BC6317 /* FakeFocusTouch.swift in Sources */,
@@ -1051,6 +1085,7 @@
 				AEE3AC6F1F2AAF7500D10EF4 /* FakeYoureJustMashingIt.swift in Sources */,
 				AEE3AC691F2A6CA700D10EF4 /* FakeSongPlayer.swift in Sources */,
 				AE6724A21F26BA75002AB658 /* BallDropSpec.swift in Sources */,
+				AE8B0A201F32353D00295274 /* FakeTransformTransformer.swift in Sources */,
 				AE2949301F291611004BFDD9 /* FakeNavigationPoppinOff.swift in Sources */,
 				AE67248A1F269C7C002AB658 /* FakeSwiftyCamViewController.swift in Sources */,
 				AE2949321F291671004BFDD9 /* NavigationPoppinOffSpec.swift in Sources */,
@@ -1071,6 +1106,7 @@
 				AE4CAF841F2C08B9009805BC /* MashupEditViewControllerSpec.swift in Sources */,
 				AE2949281F2904E9004BFDD9 /* DirectoryFinderSpec.swift in Sources */,
 				AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */,
+				AE8B0A221F3235C300295274 /* ReorienterSpec.swift in Sources */,
 				AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */,
 				AEF42CD51F2FAC0D008155DC /* DispatcherSpec.swift in Sources */,
 				AE2949241F28FEB9004BFDD9 /* FakeVideoArchiver.swift in Sources */,

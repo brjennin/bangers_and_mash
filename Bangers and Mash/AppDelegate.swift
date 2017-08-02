@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// Mash
 // Shuffle Mash
 // Save Mash to phone
 // Watermark video
@@ -47,3 +46,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Marquee the song title
 // AVAudioSession stuff?
 // More randomness in the mashups
+// Spinners when processing videos
