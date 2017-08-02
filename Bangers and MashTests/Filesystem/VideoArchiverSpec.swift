@@ -12,6 +12,8 @@ class VideoArchiverSpec: QuickSpec {
             var directoryFinder: FakeDirectoryFinder!
             var fileManager: FakeFileManager!
             var avAssetExportSessionProvider: FakeAVAssetExportSessionProvider!
+            var photoLibrary: FakePHPhotoLibrary!
+            var cameraRollSaver: FakeCameraRollSaver!
 
             beforeEach {
                 subject = VideoArchiver()
@@ -24,6 +26,12 @@ class VideoArchiverSpec: QuickSpec {
 
                 avAssetExportSessionProvider = FakeAVAssetExportSessionProvider()
                 subject.avAssetExportSessionProvider = avAssetExportSessionProvider
+
+                photoLibrary = FakePHPhotoLibrary()
+                subject.photoLibrary = photoLibrary
+
+                cameraRollSaver = FakeCameraRollSaver()
+                subject.cameraRollSaver = cameraRollSaver
             }
 
             describe("persisting a temp url") {
@@ -110,6 +118,54 @@ class VideoArchiverSpec: QuickSpec {
 
                         it("does not call the callback") {
                             expect(capturedCompletionUrl).to(beNil())
+                        }
+                    }
+                }
+            }
+
+            describe("saving a video to the camera roll") {
+                var capturedSuccessValue: Bool!
+                let url = URL(string: "https://www.example.com/mov.mov")!
+
+                beforeEach {
+                    capturedSuccessValue = nil
+                    subject.downloadVideoToCameraRoll(url: url) { success in
+                        capturedSuccessValue = success
+                    }
+                }
+
+                it("makes changes to the photo library") {
+                    expect(photoLibrary.capturedChangeBlockForPerformChanges).toNot(beNil())
+                }
+
+                describe("making changes") {
+                    beforeEach {
+                        photoLibrary.capturedChangeBlockForPerformChanges?()
+                    }
+
+                    it("savea a url to the camera roll") {
+                        expect(cameraRollSaver.capturedUrlForSaveVideo).to(equal(url))
+                    }
+
+                    describe("on completion") {
+                        context("When successful") {
+                            beforeEach {
+                                photoLibrary.capturedCompletionForPerformChanges?(true, nil)
+                            }
+
+                            it("calls the callback with true") {
+                                expect(capturedSuccessValue).to(beTrue())
+                            }
+                        }
+
+                        context("When unsuccessful") {
+                            beforeEach {
+                                photoLibrary.capturedCompletionForPerformChanges?(false, nil)
+                            }
+
+                            it("calls the callback with false") {
+                                expect(capturedSuccessValue).to(beFalse())
+                            }
                         }
                     }
                 }

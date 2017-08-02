@@ -1,4 +1,5 @@
 import Foundation
+import Photos
 
 protocol NotificationCenterProtocol {
     func addObserver(_ observer: Any, selector aSelector: Selector, name aName: NSNotification.Name?, object anObject: Any?)
@@ -12,3 +13,8 @@ protocol FileManagerProtocol {
     func removeItem(at URL: URL) throws
 }
 extension FileManager: FileManagerProtocol {}
+
+protocol PHPhotoLibraryProtocol {
+    func performChanges(_ changeBlock: @escaping () -> Swift.Void, completionHandler: ((Bool, Error?) -> Swift.Void)?)
+}
+extension PHPhotoLibrary: PHPhotoLibraryProtocol {}

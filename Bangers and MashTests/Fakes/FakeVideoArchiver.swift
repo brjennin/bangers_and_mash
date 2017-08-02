@@ -16,4 +16,11 @@ class FakeVideoArchiver: VideoArchiverProtocol {
         capturedVideoCompositionForExportTemp = videoComposition
         capturedCompletionForExportTemp = completion
     }
+
+    var capturedUrlForDownloadVideoToCameraRoll: URL?
+    var capturedCompletionForDownloadVideoToCameraRoll: ((Bool) -> ())?
+    func downloadVideoToCameraRoll(url: URL, completion: @escaping (Bool) -> ()) {
+        capturedUrlForDownloadVideoToCameraRoll = url
+        capturedCompletionForDownloadVideoToCameraRoll = completion
+    }
 }

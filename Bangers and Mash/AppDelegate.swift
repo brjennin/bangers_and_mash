@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+// Notify user when mash is saved successfully to camera roll
 // Shuffle Mash
-// Save Mash to phone
 // Watermark video
 // Select to play video in mashup list// Upload video
 // Selective Mash

@@ -98,6 +98,10 @@
 		AE8B0A261F32428500295274 /* MichaelBay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A251F32428500295274 /* MichaelBay.swift */; };
 		AE8B0A281F3244A100295274 /* FakeMichaelBay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A271F3244A100295274 /* FakeMichaelBay.swift */; };
 		AE8B0A2A1F3246A300295274 /* FakeReorienter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A291F3246A300295274 /* FakeReorienter.swift */; };
+		AE8B0A2C1F32512D00295274 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8B0A2B1F32512D00295274 /* Photos.framework */; };
+		AE8B0A2E1F3270EC00295274 /* FakePHPhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A2D1F3270EC00295274 /* FakePHPhotoLibrary.swift */; };
+		AE8B0A301F32734800295274 /* CameraRollSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A2F1F32734800295274 /* CameraRollSaver.swift */; };
+		AE8B0A321F32738D00295274 /* FakeCameraRollSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A311F32738D00295274 /* FakeCameraRollSaver.swift */; };
 		AE90242B1F29417E00B56A11 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242A1F29417E00B56A11 /* VideoCell.swift */; };
 		AE90242D1F2941B600B56A11 /* FakeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */; };
 		AE90242F1F29442500B56A11 /* VideoCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242E1F29442500B56A11 /* VideoCellSpec.swift */; };
@@ -254,6 +258,10 @@
 		AE8B0A251F32428500295274 /* MichaelBay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MichaelBay.swift; sourceTree = "<group>"; };
 		AE8B0A271F3244A100295274 /* FakeMichaelBay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMichaelBay.swift; sourceTree = "<group>"; };
 		AE8B0A291F3246A300295274 /* FakeReorienter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeReorienter.swift; sourceTree = "<group>"; };
+		AE8B0A2B1F32512D00295274 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		AE8B0A2D1F3270EC00295274 /* FakePHPhotoLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePHPhotoLibrary.swift; sourceTree = "<group>"; };
+		AE8B0A2F1F32734800295274 /* CameraRollSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollSaver.swift; sourceTree = "<group>"; };
+		AE8B0A311F32738D00295274 /* FakeCameraRollSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCameraRollSaver.swift; sourceTree = "<group>"; };
 		AE90242A1F29417E00B56A11 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoCell.swift; sourceTree = "<group>"; };
 		AE90242E1F29442500B56A11 /* VideoCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCellSpec.swift; sourceTree = "<group>"; };
@@ -310,6 +318,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8B0A2C1F32512D00295274 /* Photos.framework in Frameworks */,
 				AEF42CDF1F30EA7A008155DC /* CoreGraphics.framework in Frameworks */,
 				AEE3AC831F2BF4C300D10EF4 /* CoreMedia.framework in Frameworks */,
 				AE6A106A1F27FEB300BC6317 /* AVFoundation.framework in Frameworks */,
@@ -340,6 +349,7 @@
 		22513DE7058956DC3AA7C5BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE8B0A2B1F32512D00295274 /* Photos.framework */,
 				AEF42CDE1F30EA7A008155DC /* CoreGraphics.framework */,
 				AEE3AC821F2BF4C300D10EF4 /* CoreMedia.framework */,
 				AE6A10681F27FEB300BC6317 /* AVFoundation.framework */,
@@ -534,6 +544,7 @@
 				AE6724951F26A7A4002AB658 /* Scheduler.swift */,
 				AEF42CD21F2FABD4008155DC /* Dispatcher.swift */,
 				AE8B0A251F32428500295274 /* MichaelBay.swift */,
+				AE8B0A2F1F32734800295274 /* CameraRollSaver.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -690,6 +701,8 @@
 				AE8B0A1F1F32353D00295274 /* FakeTransformTransformer.swift */,
 				AE8B0A271F3244A100295274 /* FakeMichaelBay.swift */,
 				AE8B0A291F3246A300295274 /* FakeReorienter.swift */,
+				AE8B0A2D1F3270EC00295274 /* FakePHPhotoLibrary.swift */,
+				AE8B0A311F32738D00295274 /* FakeCameraRollSaver.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -1012,6 +1025,7 @@
 				AE2949361F292FF1004BFDD9 /* VideoCollectionViewControllerProvider.swift in Sources */,
 				AE2949261F290133004BFDD9 /* DirectoryFinder.swift in Sources */,
 				AE6724A61F27A9C0002AB658 /* SeguePresenter.swift in Sources */,
+				AE8B0A301F32734800295274 /* CameraRollSaver.swift in Sources */,
 				AE90242B1F29417E00B56A11 /* VideoCell.swift in Sources */,
 				AE6724821F267E4F002AB658 /* Animator.swift in Sources */,
 				AE6724861F2699F6002AB658 /* CameraControllerProvider.swift in Sources */,
@@ -1049,6 +1063,7 @@
 			files = (
 				AE6724A01F26B9FD002AB658 /* FakeBallDrop.swift in Sources */,
 				AE6A107B1F280B6D00BC6317 /* FakeNotificationCenter.swift in Sources */,
+				AE8B0A321F32738D00295274 /* FakeCameraRollSaver.swift in Sources */,
 				AE2949441F29357F004BFDD9 /* FakeVideoRepository.swift in Sources */,
 				AE4CAF821F2C03E0009805BC /* FakeMashupEditViewController.swift in Sources */,
 				AE4CAF881F2C0F76009805BC /* TimeSplitterSpec.swift in Sources */,
@@ -1106,6 +1121,7 @@
 				AE4CAF841F2C08B9009805BC /* MashupEditViewControllerSpec.swift in Sources */,
 				AE2949281F2904E9004BFDD9 /* DirectoryFinderSpec.swift in Sources */,
 				AE6724881F269B3D002AB658 /* FakeCameraViewControllerProvider.swift in Sources */,
+				AE8B0A2E1F3270EC00295274 /* FakePHPhotoLibrary.swift in Sources */,
 				AE8B0A221F3235C300295274 /* ReorienterSpec.swift in Sources */,
 				AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */,
 				AEF42CD51F2FAC0D008155DC /* DispatcherSpec.swift in Sources */,

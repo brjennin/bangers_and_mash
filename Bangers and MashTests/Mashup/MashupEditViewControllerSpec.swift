@@ -2,6 +2,7 @@ import UIKit
 import Quick
 import Nimble
 import Fleet
+import FontAwesome_swift
 @testable import Bangers_and_Mash
 
 class MashupEditViewControllerSpec: QuickSpec {
@@ -12,6 +13,7 @@ class MashupEditViewControllerSpec: QuickSpec {
             var videoPlayerViewControllerProvider: FakeVideoPlayerViewControllerProvider!
             var youreJustMashingIt: FakeYoureJustMashingIt!
             var dispatcher: FakeDispatcher!
+            var videoArchiver: FakeVideoArchiver!
 
             beforeEach {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -28,6 +30,9 @@ class MashupEditViewControllerSpec: QuickSpec {
 
                 dispatcher = FakeDispatcher()
                 subject.dispatcher = dispatcher
+
+                videoArchiver = FakeVideoArchiver()
+                subject.videoArchiver = videoArchiver
             }
 
             describe("configuring with videos and a song") {
@@ -46,9 +51,17 @@ class MashupEditViewControllerSpec: QuickSpec {
                         TestViewRenderer.initiateViewLifeCycle(controller: subject)
                     }
 
+                    it("sets the add button to be a fontawesome button") {
+                        expect(subject.saveButton.title(for: .normal)).to(equal(String.fontAwesomeIcon(name: .floppyO)))
+                    }
+
                     it("mashes up the videos and song") {
                         expect(youreJustMashingIt.capturedSongForRandomMash).to(equal(song))
                         expect(youreJustMashingIt.capturedVideoUrlsForRandomMash).to(equal(videos))
+                    }
+
+                    it("starts with save button disabled") {
+                        expect(subject.saveButton.isEnabled).to(beFalse())
                     }
 
                     describe("when the mash is completed") {
@@ -79,6 +92,20 @@ class MashupEditViewControllerSpec: QuickSpec {
                                 expect(subviewPresenter.capturedSuperViewForAdd).to(equal(subject.playerView))
                                 expect(subviewPresenter.capturedSubControllerForAdd).to(be(controller))
                                 expect(subviewPresenter.capturedParentControllerForAdd).to(be(subject))
+                            }
+
+                            it("enables the save button") {
+                                expect(subject.saveButton.isEnabled).to(beTrue())
+                            }
+
+                            describe("saving the mashup") {
+                                beforeEach {
+                                    try! subject.saveButton.tap()
+                                }
+
+                                it("saves to the camera roll") {
+                                    expect(videoArchiver.capturedUrlForDownloadVideoToCameraRoll).to(equal(exportUrl))
+                                }
                             }
                         }
                     }

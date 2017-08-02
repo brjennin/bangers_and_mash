@@ -1,15 +1,19 @@
 import Foundation
 import AVFoundation
+import Photos
 
 protocol VideoArchiverProtocol {
     func persist(tempUrl: URL)
     func exportTemp(asset: AVAsset, videoComposition: AVVideoComposition, completion: @escaping (URL) -> ())
+    func downloadVideoToCameraRoll(url: URL, completion: @escaping (Bool) -> ())
 }
 
 class VideoArchiver: VideoArchiverProtocol {
     var directoryFinder: DirectoryFinderProtocol = DirectoryFinder()
     var fileManager: FileManagerProtocol = FileManager.default
     var avAssetExportSessionProvider: AVAssetExportSessionProviderProtocol = AVAssetExportSessionProvider()
+    var photoLibrary: PHPhotoLibraryProtocol = PHPhotoLibrary.shared()
+    var cameraRollSaver: CameraRollSaverProtocol = CameraRollSaver()
 
     func persist(tempUrl: URL) {
         let file = tempUrl.lastPathComponent
@@ -44,5 +48,16 @@ class VideoArchiver: VideoArchiverProtocol {
                 NSLog("waiting")
             }
         }
+    }
+
+    func downloadVideoToCameraRoll(url: URL, completion: @escaping (Bool) -> ()) {
+        photoLibrary.performChanges({ [weak self] in
+            self?.cameraRollSaver.saveVideo(url: url)
+        }, completionHandler: { isSuccess, error in
+            if let error = error {
+                NSLog("Error saving to camera roll: \(error)")
+            }
+            completion(isSuccess)
+        })
     }
 }

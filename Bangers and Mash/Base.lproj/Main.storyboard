@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qwh-WM-hG7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qwh-WM-hG7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -181,25 +181,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3e-qy-OI9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw6-jz-wmi">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3c-Sq-fwU">
+                                        <rect key="frame" x="291" y="20" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="didTapSaveButton:" destination="0ZI-ny-2mR" eventType="touchUpInside" id="2Id-Rk-gdx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="H3c-Sq-fwU" firstAttribute="centerY" secondItem="rw6-jz-wmi" secondAttribute="centerY" id="QQI-IY-RXk"/>
+                                    <constraint firstAttribute="trailing" secondItem="H3c-Sq-fwU" secondAttribute="trailing" constant="50" id="grx-8F-fwD"/>
+                                    <constraint firstAttribute="height" constant="70" id="jNv-7C-UzW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qK6-1N-JDI" firstAttribute="top" secondItem="rw6-jz-wmi" secondAttribute="bottom" id="2Br-H8-nOD"/>
                             <constraint firstAttribute="trailing" secondItem="L3e-qy-OI9" secondAttribute="trailing" id="GLc-yM-N3W"/>
-                            <constraint firstItem="qK6-1N-JDI" firstAttribute="top" secondItem="L3e-qy-OI9" secondAttribute="bottom" id="Ugu-BL-RS5"/>
+                            <constraint firstAttribute="trailing" secondItem="rw6-jz-wmi" secondAttribute="trailing" id="N9a-bZ-vif"/>
+                            <constraint firstItem="rw6-jz-wmi" firstAttribute="top" secondItem="L3e-qy-OI9" secondAttribute="bottom" id="TC2-je-5hp"/>
                             <constraint firstItem="L3e-qy-OI9" firstAttribute="leading" secondItem="7QU-eX-mV1" secondAttribute="leading" id="gPS-TD-Yl6"/>
                             <constraint firstItem="L3e-qy-OI9" firstAttribute="top" secondItem="zg7-cm-IiK" secondAttribute="bottom" id="mpc-hL-OZu"/>
+                            <constraint firstItem="rw6-jz-wmi" firstAttribute="leading" secondItem="7QU-eX-mV1" secondAttribute="leading" id="ogl-3M-Zae"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="L3e-qy-OI9" id="bgJ-p9-JQM"/>
+                        <outlet property="saveButton" destination="H3c-Sq-fwU" id="c4n-aV-7CD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvr-m0-GN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-770" y="63"/>
+            <point key="canvasLocation" x="-770.39999999999998" y="62.518740629685162"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="323-sA-4BR">
