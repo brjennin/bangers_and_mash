@@ -37,7 +37,7 @@ class CameraViewControllerProviderSpec: QuickSpec {
                     expect(result.shouldUseDeviceOrientation).to(beFalse())
                     expect(result.allowAutoRotate).to(beFalse())
                     expect(result.defaultCamera).to(equal(SwiftyCamViewController.CameraSelection.front))
-                    expect(result.videoQuality).to(equal(SwiftyCamViewController.VideoQuality.high))
+                    expect(result.videoQuality).to(equal(SwiftyCamViewController.VideoQuality.resolution1280x720))
                     expect(result.swipeToZoom).to(beFalse())
                     expect(result.allowBackgroundAudio).to(beFalse())
                     expect(result.audioEnabled).to(beFalse())

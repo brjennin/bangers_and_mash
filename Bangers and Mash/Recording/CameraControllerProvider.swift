@@ -26,6 +26,7 @@ class CameraViewControllerProvider: CameraViewControllerProviderProtocol {
         controller.allowBackgroundAudio = false
         controller.audioEnabled = false
         controller.lowLightBoost = false
+        controller.videoQuality = .resolution1280x720
 
         return controller
     }
