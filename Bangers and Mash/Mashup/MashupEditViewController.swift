@@ -7,6 +7,7 @@ class MashupEditViewController: UIViewController {
     var youreJustMashingIt: YoureJustMashingItProtocol = YoureJustMashingIt()
     var dispatcher: DispatcherProtocol = Dispatcher()
     var videoArchiver: VideoArchiverProtocol = VideoArchiver()
+    var confirmationDialogProvider: ConfirmationDialogProviderProtocol = ConfirmationDialogProvider()
 
     var videos: [URL]!
     var song: Song!
@@ -42,7 +43,27 @@ class MashupEditViewController: UIViewController {
 
     @IBAction func didTapSaveButton(_ sender: UIButton) {
         if let url = mostRecentMashUrl {
-            videoArchiver.downloadVideoToCameraRoll(url: url) { _ in }
+            saveButton.isEnabled = false
+
+            videoArchiver.downloadVideoToCameraRoll(url: url) { [weak self] wasSuccessful in
+                if let weakSelf = self {
+                    weakSelf.saveButton.isEnabled = true
+                    
+                    var title: String!
+                    var message: String!
+                    var confirmOption: String!
+                    if wasSuccessful {
+                        title = "Success!"
+                        message = "Video was saved to your camera roll."
+                        confirmOption = "OK!"
+                    } else {
+                        title = "Error!"
+                        message = "Video could not be saved. Please try again."
+                        confirmOption = "OK"
+                    }
+                    weakSelf.confirmationDialogProvider.buildDialog(title: title, message: message, confirmOptionTitle: confirmOption, denyOptionTitle: nil, controller: weakSelf) { _ in }
+                }
+            }
         }
     }
 }

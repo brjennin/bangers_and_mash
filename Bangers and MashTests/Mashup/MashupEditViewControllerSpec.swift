@@ -14,6 +14,7 @@ class MashupEditViewControllerSpec: QuickSpec {
             var youreJustMashingIt: FakeYoureJustMashingIt!
             var dispatcher: FakeDispatcher!
             var videoArchiver: FakeVideoArchiver!
+            var confirmationDialogProvider: FakeConfirmationDialogProvider!
 
             beforeEach {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -33,6 +34,9 @@ class MashupEditViewControllerSpec: QuickSpec {
 
                 videoArchiver = FakeVideoArchiver()
                 subject.videoArchiver = videoArchiver
+
+                confirmationDialogProvider = FakeConfirmationDialogProvider()
+                subject.confirmationDialogProvider = confirmationDialogProvider
             }
 
             describe("configuring with videos and a song") {
@@ -105,6 +109,48 @@ class MashupEditViewControllerSpec: QuickSpec {
 
                                 it("saves to the camera roll") {
                                     expect(videoArchiver.capturedUrlForDownloadVideoToCameraRoll).to(equal(exportUrl))
+                                }
+
+                                it("disables the save button") {
+                                    expect(subject.saveButton.isEnabled).to(beFalse())
+                                }
+
+                                describe("When the save attempt finished") {
+                                    context("when successful") {
+                                        beforeEach {
+                                            videoArchiver.capturedCompletionForDownloadVideoToCameraRoll?(true)
+                                        }
+
+                                        it("enabled the save button") {
+                                            expect(subject.saveButton.isEnabled).to(beTrue())
+                                        }
+
+                                        it("builds a success confirmation") {
+                                            expect(confirmationDialogProvider.capturedTitle).to(equal("Success!"))
+                                            expect(confirmationDialogProvider.capturedMessage).to(equal("Video was saved to your camera roll."))
+                                            expect(confirmationDialogProvider.capturedConfirmOption).to(equal("OK!"))
+                                            expect(confirmationDialogProvider.capturedDenyOption).to(beNil())
+                                            expect(confirmationDialogProvider.capturedController).to(be(subject))
+                                        }
+                                    }
+
+                                    context("when unsuccessful") {
+                                        beforeEach {
+                                            videoArchiver.capturedCompletionForDownloadVideoToCameraRoll?(false)
+                                        }
+
+                                        it("enabled the save button") {
+                                            expect(subject.saveButton.isEnabled).to(beTrue())
+                                        }
+
+                                        it("builds a success confirmation") {
+                                            expect(confirmationDialogProvider.capturedTitle).to(equal("Error!"))
+                                            expect(confirmationDialogProvider.capturedMessage).to(equal("Video could not be saved. Please try again."))
+                                            expect(confirmationDialogProvider.capturedConfirmOption).to(equal("OK"))
+                                            expect(confirmationDialogProvider.capturedDenyOption).to(beNil())
+                                            expect(confirmationDialogProvider.capturedController).to(be(subject))
+                                        }
+                                    }
                                 }
                             }
                         }

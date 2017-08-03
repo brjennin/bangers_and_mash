@@ -102,6 +102,13 @@
 		AE8B0A2E1F3270EC00295274 /* FakePHPhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A2D1F3270EC00295274 /* FakePHPhotoLibrary.swift */; };
 		AE8B0A301F32734800295274 /* CameraRollSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A2F1F32734800295274 /* CameraRollSaver.swift */; };
 		AE8B0A321F32738D00295274 /* FakeCameraRollSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A311F32738D00295274 /* FakeCameraRollSaver.swift */; };
+		AE8B0A341F32976B00295274 /* ConfirmationDialogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A331F32976B00295274 /* ConfirmationDialogProvider.swift */; };
+		AE8B0A361F32979200295274 /* ConfirmationDialogProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A351F32979200295274 /* ConfirmationDialogProviderSpec.swift */; };
+		AE8B0A381F3297D200295274 /* AlertActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A371F3297D200295274 /* AlertActionProvider.swift */; };
+		AE8B0A3A1F3297EB00295274 /* AlertActionProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A391F3297EB00295274 /* AlertActionProviderSpec.swift */; };
+		AE8B0A3C1F32980C00295274 /* FakeAlertActionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A3B1F32980C00295274 /* FakeAlertActionProvider.swift */; };
+		AE8B0A3E1F32985D00295274 /* FakeConfirmationDialogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A3D1F32985D00295274 /* FakeConfirmationDialogProvider.swift */; };
+		AE8B0A401F32988D00295274 /* TestFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B0A3F1F32988D00295274 /* TestFixtures.swift */; };
 		AE90242B1F29417E00B56A11 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242A1F29417E00B56A11 /* VideoCell.swift */; };
 		AE90242D1F2941B600B56A11 /* FakeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */; };
 		AE90242F1F29442500B56A11 /* VideoCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90242E1F29442500B56A11 /* VideoCellSpec.swift */; };
@@ -262,6 +269,13 @@
 		AE8B0A2D1F3270EC00295274 /* FakePHPhotoLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePHPhotoLibrary.swift; sourceTree = "<group>"; };
 		AE8B0A2F1F32734800295274 /* CameraRollSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollSaver.swift; sourceTree = "<group>"; };
 		AE8B0A311F32738D00295274 /* FakeCameraRollSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCameraRollSaver.swift; sourceTree = "<group>"; };
+		AE8B0A331F32976B00295274 /* ConfirmationDialogProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogProvider.swift; sourceTree = "<group>"; };
+		AE8B0A351F32979200295274 /* ConfirmationDialogProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogProviderSpec.swift; sourceTree = "<group>"; };
+		AE8B0A371F3297D200295274 /* AlertActionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionProvider.swift; sourceTree = "<group>"; };
+		AE8B0A391F3297EB00295274 /* AlertActionProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionProviderSpec.swift; sourceTree = "<group>"; };
+		AE8B0A3B1F32980C00295274 /* FakeAlertActionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAlertActionProvider.swift; sourceTree = "<group>"; };
+		AE8B0A3D1F32985D00295274 /* FakeConfirmationDialogProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeConfirmationDialogProvider.swift; sourceTree = "<group>"; };
+		AE8B0A3F1F32988D00295274 /* TestFixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFixtures.swift; sourceTree = "<group>"; };
 		AE90242A1F29417E00B56A11 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		AE90242C1F2941B600B56A11 /* FakeVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeVideoCell.swift; sourceTree = "<group>"; };
 		AE90242E1F29442500B56A11 /* VideoCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCellSpec.swift; sourceTree = "<group>"; };
@@ -403,6 +417,7 @@
 				DE99C3316EDFC93C346865C3 /* VideoCollections */,
 				DE99C27CCF4F3CD8E92F77BB /* ThumbnailBuilding */,
 				AE90243C1F2A58C500B56A11 /* Song.swift */,
+				DE99C285561B755C18FB3BB1 /* Generic */,
 			);
 			path = "Bangers and Mash";
 			sourceTree = "<group>";
@@ -423,6 +438,7 @@
 				DE99C06AB586A1D55291AF4A /* ThumbnailBuilding */,
 				AE9024451F2A647100B56A11 /* SongSpec.swift */,
 				DE99C149310183E92F79CDDD /* Wrappers */,
+				DE99C59A61C704B27675C9B2 /* Generic */,
 			);
 			path = "Bangers and MashTests";
 			sourceTree = "<group>";
@@ -479,6 +495,15 @@
 			path = ThumbnailBuilding;
 			sourceTree = "<group>";
 		};
+		DE99C285561B755C18FB3BB1 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B0A331F32976B00295274 /* ConfirmationDialogProvider.swift */,
+				AE8B0A371F3297D200295274 /* AlertActionProvider.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
 		DE99C3316EDFC93C346865C3 /* VideoCollections */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,6 +528,15 @@
 				AE8B0A211F3235C300295274 /* ReorienterSpec.swift */,
 			);
 			path = Mashup;
+			sourceTree = "<group>";
+		};
+		DE99C59A61C704B27675C9B2 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B0A351F32979200295274 /* ConfirmationDialogProviderSpec.swift */,
+				AE8B0A391F3297EB00295274 /* AlertActionProviderSpec.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 		DE99C5E6F2822F356CDAE593 /* Recording */ = {
@@ -555,6 +589,7 @@
 				AE6724911F269FCB002AB658 /* TestViewRenderer.swift */,
 				AE6724931F26A035002AB658 /* ViewLifecycleSwizzler.swift */,
 				DE99C207C14E76D611CE1819 /* Resources */,
+				AE8B0A3F1F32988D00295274 /* TestFixtures.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -703,6 +738,8 @@
 				AE8B0A291F3246A300295274 /* FakeReorienter.swift */,
 				AE8B0A2D1F3270EC00295274 /* FakePHPhotoLibrary.swift */,
 				AE8B0A311F32738D00295274 /* FakeCameraRollSaver.swift */,
+				AE8B0A3B1F32980C00295274 /* FakeAlertActionProvider.swift */,
+				AE8B0A3D1F32985D00295274 /* FakeConfirmationDialogProvider.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -1015,7 +1052,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE90243D1F2A58C500B56A11 /* Song.swift in Sources */,
+				AE8B0A341F32976B00295274 /* ConfirmationDialogProvider.swift in Sources */,
 				AE2949341F292F4A004BFDD9 /* VideoCollectionViewController.swift in Sources */,
+				AE8B0A381F3297D200295274 /* AlertActionProvider.swift in Sources */,
 				AEF42CD31F2FABD4008155DC /* Dispatcher.swift in Sources */,
 				AE29491E1F28F7A9004BFDD9 /* ViewDismisser.swift in Sources */,
 				AE8B0A241F32368A00295274 /* Reorienter.swift in Sources */,
@@ -1070,6 +1109,9 @@
 				AE8B0A2A1F3246A300295274 /* FakeReorienter.swift in Sources */,
 				AE9024351F2A4DE000B56A11 /* FakePreviewBuilder.swift in Sources */,
 				AE29492C1F2906FC004BFDD9 /* FakeFileManager.swift in Sources */,
+				AE8B0A3C1F32980C00295274 /* FakeAlertActionProvider.swift in Sources */,
+				AE8B0A3E1F32985D00295274 /* FakeConfirmationDialogProvider.swift in Sources */,
+				AE8B0A401F32988D00295274 /* TestFixtures.swift in Sources */,
 				AE67249A1F26AFED002AB658 /* CameraViewControllerProviderSpec.swift in Sources */,
 				AE67248E1F269EF3002AB658 /* FakeSubviewPresenter.swift in Sources */,
 				AE2949421F293569004BFDD9 /* VideoRepositorySpec.swift in Sources */,
@@ -1105,6 +1147,7 @@
 				AE67248A1F269C7C002AB658 /* FakeSwiftyCamViewController.swift in Sources */,
 				AE2949321F291671004BFDD9 /* NavigationPoppinOffSpec.swift in Sources */,
 				AE9024441F2A61A200B56A11 /* SongPlayerSpec.swift in Sources */,
+				AE8B0A3A1F3297EB00295274 /* AlertActionProviderSpec.swift in Sources */,
 				AE6724981F26A8C2002AB658 /* FakeScheduler.swift in Sources */,
 				AE9024461F2A647100B56A11 /* SongSpec.swift in Sources */,
 				AE6A106D1F27FED000BC6317 /* VideoPlayerViewControllerSpec.swift in Sources */,
@@ -1126,6 +1169,7 @@
 				AE67249C1F26B711002AB658 /* FakeRecordButton.swift in Sources */,
 				AEF42CD51F2FAC0D008155DC /* DispatcherSpec.swift in Sources */,
 				AE2949241F28FEB9004BFDD9 /* FakeVideoArchiver.swift in Sources */,
+				AE8B0A361F32979200295274 /* ConfirmationDialogProviderSpec.swift in Sources */,
 				AE675BCD1F281447005A7B4F /* AVPlayerProviderSpec.swift in Sources */,
 				AE9024331F2A48BB00B56A11 /* PreviewBuilderSpec.swift in Sources */,
 				AEE3AC6B1F2A728D00D10EF4 /* FakeAVAudioPlayer.swift in Sources */,
