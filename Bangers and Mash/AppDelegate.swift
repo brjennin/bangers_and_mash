@@ -33,17 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// Notify user when mash is saved successfully to camera roll
 // Shuffle Mash
+// New song
+// Preview song before recording
+// Recording progress bar
 // Watermark video
 // Select to play video in mashup list// Upload video
 // Selective Mash
 // Deep link invitation only
-// New song
 // Make sure downloaded videos aren't included in phone backups
-// Preview song before recording
-// Recording progress bar
 // Marquee the song title
 // AVAudioSession stuff?
 // More randomness in the mashups
 // Spinners when processing videos
+// Crashlytics
+// Mixpanel
